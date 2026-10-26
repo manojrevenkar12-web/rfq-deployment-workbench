@@ -1,0 +1,32 @@
+{
+  "id": "HO-gleiswerk-08",
+  "customer": "gleiswerk",
+  "language": "de",
+  "subject": "Zweiwegebagger für die Werks- und Hafenbahn",
+  "requirements": [
+    {"text": "Das Fahrzeug ist für Normalspur auszulegen.", "doc": "spec", "kind": "track_gauge_mm", "value": 1435, "unit": "mm", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Radsatzlast darf wegen älterer Hafenbrücken höchstens 20 t betragen.", "doc": "spec", "kind": "axle_load_t", "value": 20, "unit": "t", "priority": "mandatory", "verdict": "clarify", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Auf der Schiene sollte eine Fahrgeschwindigkeit von mindestens 25 km/h erreicht werden.", "doc": "spec", "kind": "travel_speed_kmh", "value": 25, "unit": "km/h", "priority": "desirable", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Motorleistung muss wenigstens 150 kW betragen.", "doc": "spec", "kind": "engine_power_kw", "value": 150, "unit": "kW", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Der Motor muss die Abgasstufe V erfüllen.", "doc": "spec", "kind": "emission_stage", "value": "V", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Das Fahrzeug muss zwischen -20 °C und +45 °C einsetzbar sein.", "doc": "spec", "kind": "ambient_temperature", "value": [-20, 45], "unit": "°C", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Steigungen bis 40 ‰ an der Hafenrampe muss das Fahrzeug sicher befahren können.", "doc": "spec", "kind": "gradient_permille", "value": 40, "unit": "‰", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Wegen angrenzender Wohnbebauung sollte der Schallpegel am Fahrerplatz 72 dB(A) nicht überschreiten.", "doc": "spec", "kind": "noise_dba", "value": 72, "unit": "dB(A)", "priority": "desirable", "verdict": "deviate", "severity": "minor", "red_flag": true, "norms": []},
+    {"text": "Eine Verfügbarkeit von mindestens 95 % ist sicherzustellen.", "doc": "spec", "kind": "availability_percent", "value": 95, "unit": "%", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Das Fahrzeug muss nach EN 15746-1 ausgeführt sein.", "doc": "spec", "kind": "norm", "value": "EN 15746-1", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": ["EN 15746-1"]},
+    {"text": "Wünschenswert ist zusätzlich die Erfüllung der EN 15746-2.", "doc": "spec", "kind": "norm", "value": "EN 15746-2", "unit": null, "priority": "desirable", "verdict": "deviate", "severity": "minor", "red_flag": true, "norms": ["EN 15746-2"]},
+    {"text": "Der Hersteller muss ein Qualitätsmanagementsystem nach DIN EN ISO 9001 nachweisen.", "doc": "spec", "kind": "norm", "value": "DIN EN ISO 9001", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": ["DIN EN ISO 9001"]},
+    {"text": "Die Lieferung hat innerhalb von 52 Wochen nach Auftragserteilung zu erfolgen.", "doc": "spec", "kind": "delivery_weeks", "value": 52, "unit": "weeks", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Gewährleistungsfrist beträgt 24 Monate.", "doc": "spec", "kind": "warranty_months", "value": 24, "unit": "months", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Haftung des Auftragnehmers ist der Höhe nach unbeschränkt.", "doc": "spec", "kind": "liability", "value": "unlimited", "unit": null, "priority": "mandatory", "verdict": "deviate", "severity": "major", "red_flag": true, "norms": []},
+    {"text": "Bei Verzug wird eine Vertragsstrafe von 0,2 % je Werktag, höchstens 5 % der Auftragssumme, vereinbart.", "doc": "spec", "kind": "penalty_cap_percent", "value": 5, "unit": "%", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Zahlung erfolgt innerhalb von 30 Tagen.", "doc": "spec", "kind": "payment_days", "value": 30, "unit": "days", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Bedienungs- und Wartungsanleitungen sind in französischer Sprache zu liefern.", "doc": "spec", "kind": "documentation_language", "value": "fr", "unit": null, "priority": "mandatory", "verdict": "clarify", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Eine Schulung des Personals an zwei Tagen am Standort Dillingen ist wünschenswert.", "doc": "spec", "kind": "training_days", "value": 2, "unit": "days", "priority": "desirable", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Angebote sind bis zum 10.03.2027, 12:00 Uhr, schriftlich in einem verschlossenen Umschlag einzureichen.", "doc": "spec", "kind": "procedural", "value": null, "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Dem Angebot ist eine Kopie der gültigen Betriebshaftpflichtversicherung beizufügen.", "doc": "spec", "kind": "procedural", "value": null, "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []}
+  ],
+  "norms": {"EN 15746-1": "certified", "EN 15746-2": "not_certified", "DIN EN ISO 9001": "certified"},
+  "bid": "bid",
+  "variant": "GW ZW 2"
+}

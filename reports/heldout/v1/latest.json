@@ -1,0 +1,2195 @@
+{
+ "set": "v1",
+ "status": "heldout",
+ "run_at": "2026-10-26T16:12:46+00:00",
+ "customers": {
+  "brandt": {
+   "tenders": 8,
+   "metrics": {
+    "bid_accuracy": {
+     "right": 7,
+     "of": 8,
+     "rate": 0.875,
+     "lower_bound": 0.5291
+    },
+    "kind_accuracy": {
+     "right": 140,
+     "of": 157,
+     "rate": 0.8917,
+     "lower_bound": 0.8334
+    },
+    "norm_precision": {
+     "right": 27,
+     "of": 27,
+     "rate": 1.0,
+     "lower_bound": 0.8754
+    },
+    "norm_recall": {
+     "right": 27,
+     "of": 28,
+     "rate": 0.9643,
+     "lower_bound": 0.8229
+    },
+    "norm_status_accuracy": {
+     "right": 27,
+     "of": 27,
+     "rate": 1.0,
+     "lower_bound": 0.8754
+    },
+    "priority_accuracy": {
+     "right": 157,
+     "of": 157,
+     "rate": 1.0,
+     "lower_bound": 0.9761
+    },
+    "red_flag_precision": {
+     "right": 9,
+     "of": 11,
+     "rate": 0.8182,
+     "lower_bound": 0.523
+    },
+    "red_flag_recall": {
+     "right": 9,
+     "of": 13,
+     "rate": 0.6923,
+     "lower_bound": 0.4237
+    },
+    "requirement_precision": {
+     "right": 157,
+     "of": 163,
+     "rate": 0.9632,
+     "lower_bound": 0.922
+    },
+    "requirement_recall": {
+     "right": 157,
+     "of": 164,
+     "rate": 0.9573,
+     "lower_bound": 0.9145
+    },
+    "unsafe_bid_avoided": {
+     "right": 8,
+     "of": 8,
+     "rate": 1.0,
+     "lower_bound": 0.6756
+    },
+    "value_accuracy": {
+     "right": 120,
+     "of": 140,
+     "rate": 0.8571,
+     "lower_bound": 0.7896
+    },
+    "variant_accuracy": {
+     "right": 5,
+     "of": 6,
+     "rate": 0.8333,
+     "lower_bound": 0.4365
+    },
+    "verdict_accuracy": {
+     "right": 138,
+     "of": 164,
+     "rate": 0.8415,
+     "lower_bound": 0.7778
+    }
+   },
+   "readiness": {
+    "requirement_extraction": {
+     "right": 157,
+     "of": 164,
+     "rate": 0.9573,
+     "lower_bound": 0.9145,
+     "level": "automate"
+    },
+    "red_flags": {
+     "right": 9,
+     "of": 13,
+     "rate": 0.6923,
+     "lower_bound": 0.4237,
+     "level": "not_enough_evidence"
+    },
+    "norms_report": {
+     "right": 27,
+     "of": 28,
+     "rate": 0.9643,
+     "lower_bound": 0.8229,
+     "level": "assist"
+    },
+    "bid_no_bid": {
+     "right": 7,
+     "of": 8,
+     "rate": 0.875,
+     "lower_bound": 0.5291,
+     "level": "not_enough_evidence"
+    },
+    "configuration": {
+     "right": 5,
+     "of": 6,
+     "rate": 0.8333,
+     "lower_bound": 0.4365,
+     "level": "not_enough_evidence"
+    },
+    "technical_documentation": {
+     "right": 138,
+     "of": 164,
+     "rate": 0.8415,
+     "lower_bound": 0.7778,
+     "level": "assist"
+    }
+   },
+   "misses": [
+    {
+     "tender": "HO-brandt-01",
+     "agent": "technical_documentation",
+     "cause": "value",
+     "owner": "platform",
+     "text": "Der Löschwasserbehälter muss ein Nutzvolumen von mindestens 2.000 Litern haben.",
+     "expected": {
+      "kind": "water_tank_l",
+      "value": 2000,
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "water_tank_l",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-brandt-01",
+     "agent": "requirement_extraction",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die Einweisung der Maschinisten erfolgt an zwei Tagen im Feuerwehrhaus.",
+     "expected": "training_days",
+     "got": null
+    },
+    {
+     "tender": "HO-brandt-02",
+     "agent": "requirement_extraction",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die Anforderungen der DIN EN 1846-2 sind einzuhalten.",
+     "expected": "norm",
+     "got": null
+    },
+    {
+     "tender": "HO-brandt-02",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die Pumpe sollte DIN EN 1028-1 erfüllen.",
+     "expected": {
+      "kind": "norm",
+      "value": "DIN EN 1028-1",
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "fire_pump",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-brandt-02",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Das Fahrzeug muss innerhalb von zwölf Monaten nach Zuschlag ausgeliefert werden, da die Fördermittel bis Ende 2027 abgerufen werden müssen.",
+     "expected": {
+      "kind": "delivery_weeks",
+      "value": 52,
+      "verdict": "deviate"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-brandt-02",
+     "agent": "requirement_extraction",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die Gewährleistungsfrist beträgt zwei Jahre.",
+     "expected": "warranty_months",
+     "got": null
+    },
+    {
+     "tender": "HO-brandt-02",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Der Bieter hat eine Bescheinigung über eine Betriebshaftpflichtversicherung mit mindestens 3 Mio. EUR Deckung vorzulegen.",
+     "expected": {
+      "kind": "procedural",
+      "value": null,
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-brandt-02",
+     "agent": "requirement_extraction",
+     "cause": "noise",
+     "owner": "platform",
+     "text": "Das bisherige TLF 16/25 wird nach Indienststellung des neuen Fahrzeugs veräußert.",
+     "expected": null,
+     "got": "vehicle_type"
+    },
+    {
+     "tender": "HO-brandt-02",
+     "agent": "requirement_extraction",
+     "cause": "noise",
+     "owner": "platform",
+     "text": "Ein Schaummittelbehälter ist nicht erforderlich; Schaummittel wird in Kanistern mitgeführt.",
+     "expected": null,
+     "got": "foam_tank_l"
+    },
+    {
+     "tender": "HO-brandt-02",
+     "agent": "norms_report",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "DIN EN 1846-2",
+     "expected": "certified",
+     "got": null
+    },
+    {
+     "tender": "HO-brandt-02",
+     "agent": "bid_no_bid",
+     "cause": "rule",
+     "owner": "platform",
+     "text": "Lieferung eines Hilfeleistungslöschgruppenfahrzeugs HLF 10",
+     "expected": "bid",
+     "got": "no_bid"
+    },
+    {
+     "tender": "HO-brandt-02",
+     "agent": "configuration",
+     "cause": "rule",
+     "owner": "platform",
+     "text": "Lieferung eines Hilfeleistungslöschgruppenfahrzeugs HLF 10",
+     "expected": "Brandt HLF 10",
+     "got": null
+    },
+    {
+     "tender": "HO-brandt-03",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die allgemeinen Anforderungen der DIN 14502-2 an Feuerwehrfahrzeuge sollten eingehalten werden.",
+     "expected": {
+      "kind": "norm",
+      "value": "DIN 14502-2",
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-brandt-03",
+     "agent": "requirement_extraction",
+     "cause": "noise",
+     "owner": "platform",
+     "text": "Der Landkreis Sandbergen ist zu 46 % bewaldet und verzeichnete im Sommer 2025 insgesamt 37 Wald- und Vegetationsbrände.",
+     "expected": null,
+     "got": "other"
+    },
+    {
+     "tender": "HO-brandt-03",
+     "agent": "requirement_extraction",
+     "cause": "noise",
+     "owner": "platform",
+     "text": "Ein Stromerzeuger ist nicht vorzusehen.",
+     "expected": null,
+     "got": "generator_kva"
+    },
+    {
+     "tender": "HO-brandt-04",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Das Fahrgestell muss die Anforderungen der DIN EN 1846-2 erfüllen.",
+     "expected": {
+      "kind": "norm",
+      "value": "DIN EN 1846-2",
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-brandt-04",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die allgemeinen Anforderungen der DIN 14502-2 sollten eingehalten werden.",
+     "expected": {
+      "kind": "norm",
+      "value": "DIN 14502-2",
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-brandt-04",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die Anforderungen der DIN 14502-3 sind ebenfalls zu erfüllen.",
+     "expected": {
+      "kind": "norm",
+      "value": "DIN 14502-3",
+      "verdict": "deviate"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-brandt-04",
+     "agent": "requirement_extraction",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die Einweisung der Maschinisten erfolgt an fünf Tagen.",
+     "expected": "training_days",
+     "got": null
+    },
+    {
+     "tender": "HO-brandt-04",
+     "agent": "requirement_extraction",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die Haftung ist auf die Auftragssumme begrenzt.",
+     "expected": "liability",
+     "got": null
+    },
+    {
+     "tender": "HO-brandt-05",
+     "agent": "technical_documentation",
+     "cause": "value",
+     "owner": "platform",
+     "text": "Für Schaummittel sollte ein Behälter mit 120 Litern eingebaut werden.",
+     "expected": {
+      "kind": "foam_tank_l",
+      "value": 120,
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "foam_tank_l",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-brandt-05",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die Feuerlöschkreiselpumpe sollte DIN EN 1028-1 erfüllen.",
+     "expected": {
+      "kind": "norm",
+      "value": "DIN EN 1028-1",
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "fire_pump",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-brandt-05",
+     "agent": "requirement_extraction",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die Vertragsstrafe ist auf 5 % des Auftragswerts begrenzt.",
+     "expected": "penalty_cap_percent",
+     "got": null
+    },
+    {
+     "tender": "HO-brandt-05",
+     "agent": "requirement_extraction",
+     "cause": "noise",
+     "owner": "platform",
+     "text": "Das neue Fahrzeug ersetzt ein LF 8/6 aus dem Jahr 1989.",
+     "expected": null,
+     "got": "vehicle_type"
+    },
+    {
+     "tender": "HO-brandt-06",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Das Fahrzeug hat die Anforderungen der DIN EN 1846-3 zu erfüllen.",
+     "expected": {
+      "kind": "norm",
+      "value": "DIN EN 1846-3",
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-brandt-06",
+     "agent": "technical_documentation",
+     "cause": "value",
+     "owner": "platform",
+     "text": "Für die Einweisung sollten drei Tage eingeplant werden.",
+     "expected": {
+      "kind": "training_days",
+      "value": 3,
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "training_days",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-brandt-07",
+     "agent": "technical_documentation",
+     "cause": "value",
+     "owner": "platform",
+     "text": "Es sollte ein Löschwasserbehälter mit 2.000 Litern Nutzinhalt eingebaut werden.",
+     "expected": {
+      "kind": "water_tank_l",
+      "value": 2000,
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "water_tank_l",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-brandt-07",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die Einhaltung der DIN 14530 sollte nachgewiesen werden.",
+     "expected": {
+      "kind": "norm",
+      "value": "DIN 14530",
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-brandt-07",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die Bedienungsanleitungen sind in deutscher Sprache zu übergeben.",
+     "expected": {
+      "kind": "documentation_language",
+      "value": "de",
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-brandt-08",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die Anforderungen der DIN EN 1846-2 sind zu erfüllen.",
+     "expected": {
+      "kind": "norm",
+      "value": "DIN EN 1846-2",
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-brandt-08",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die Einhaltung der DIN 14502-3 ist wünschenswert.",
+     "expected": {
+      "kind": "norm",
+      "value": "DIN 14502-3",
+      "verdict": "deviate"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-brandt-08",
+     "agent": "requirement_extraction",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Das Fahrzeug ist spätestens 15 Monate nach Zuschlag auszuliefern.",
+     "expected": "delivery_weeks",
+     "got": null
+    },
+    {
+     "tender": "HO-brandt-08",
+     "agent": "technical_documentation",
+     "cause": "value",
+     "owner": "platform",
+     "text": "Ersatzteile sollten für mindestens zehn Jahre lieferbar sein.",
+     "expected": {
+      "kind": "spare_parts_years",
+      "value": 10,
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "spare_parts_years",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-brandt-08",
+     "agent": "technical_documentation",
+     "cause": "value",
+     "owner": "platform",
+     "text": "Die Schulung des Personals sollte drei Tage an der Hauptwache umfassen.",
+     "expected": {
+      "kind": "training_days",
+      "value": 3,
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "training_days",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-brandt-08",
+     "agent": "requirement_extraction",
+     "cause": "noise",
+     "owner": "platform",
+     "text": "Das neue Fahrzeug ersetzt ein HLF 20 aus dem Jahr 2011, das in die Reserve überführt wird.",
+     "expected": null,
+     "got": "vehicle_type"
+    }
+   ]
+  },
+  "gleiswerk": {
+   "tenders": 8,
+   "metrics": {
+    "bid_accuracy": {
+     "right": 8,
+     "of": 8,
+     "rate": 1.0,
+     "lower_bound": 0.6756
+    },
+    "kind_accuracy": {
+     "right": 142,
+     "of": 166,
+     "rate": 0.8554,
+     "lower_bound": 0.7939
+    },
+    "norm_precision": {
+     "right": 28,
+     "of": 28,
+     "rate": 1.0,
+     "lower_bound": 0.8794
+    },
+    "norm_recall": {
+     "right": 28,
+     "of": 29,
+     "rate": 0.9655,
+     "lower_bound": 0.8282
+    },
+    "norm_status_accuracy": {
+     "right": 28,
+     "of": 28,
+     "rate": 1.0,
+     "lower_bound": 0.8794
+    },
+    "priority_accuracy": {
+     "right": 165,
+     "of": 166,
+     "rate": 0.994,
+     "lower_bound": 0.9667
+    },
+    "red_flag_precision": {
+     "right": 18,
+     "of": 18,
+     "rate": 1.0,
+     "lower_bound": 0.8241
+    },
+    "red_flag_recall": {
+     "right": 18,
+     "of": 27,
+     "rate": 0.6667,
+     "lower_bound": 0.4782
+    },
+    "requirement_precision": {
+     "right": 166,
+     "of": 168,
+     "rate": 0.9881,
+     "lower_bound": 0.9576
+    },
+    "requirement_recall": {
+     "right": 166,
+     "of": 177,
+     "rate": 0.9379,
+     "lower_bound": 0.8922
+    },
+    "unsafe_bid_avoided": {
+     "right": 8,
+     "of": 8,
+     "rate": 1.0,
+     "lower_bound": 0.6756
+    },
+    "value_accuracy": {
+     "right": 120,
+     "of": 148,
+     "rate": 0.8108,
+     "lower_bound": 0.7402
+    },
+    "variant_accuracy": {
+     "right": 8,
+     "of": 8,
+     "rate": 1.0,
+     "lower_bound": 0.6756
+    },
+    "verdict_accuracy": {
+     "right": 140,
+     "of": 177,
+     "rate": 0.791,
+     "lower_bound": 0.7252
+    }
+   },
+   "readiness": {
+    "requirement_extraction": {
+     "right": 166,
+     "of": 177,
+     "rate": 0.9379,
+     "lower_bound": 0.8922,
+     "level": "assist"
+    },
+    "red_flags": {
+     "right": 18,
+     "of": 27,
+     "rate": 0.6667,
+     "lower_bound": 0.4782,
+     "level": "not_yet"
+    },
+    "norms_report": {
+     "right": 28,
+     "of": 29,
+     "rate": 0.9655,
+     "lower_bound": 0.8282,
+     "level": "assist"
+    },
+    "bid_no_bid": {
+     "right": 8,
+     "of": 8,
+     "rate": 1.0,
+     "lower_bound": 0.6756,
+     "level": "not_enough_evidence"
+    },
+    "configuration": {
+     "right": 8,
+     "of": 8,
+     "rate": 1.0,
+     "lower_bound": 0.6756,
+     "level": "not_enough_evidence"
+    },
+    "technical_documentation": {
+     "right": 140,
+     "of": 177,
+     "rate": 0.791,
+     "lower_bound": 0.7252,
+     "level": "not_yet"
+    }
+   },
+   "misses": [
+    {
+     "tender": "HO-gleiswerk-01",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die Maschine muss für Normalspur (1.435 mm) ausgelegt sein.",
+     "expected": {
+      "kind": "track_gauge_mm",
+      "value": 1435,
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-gleiswerk-01",
+     "agent": "requirement_extraction",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die Anforderungen der EN 14033-2 an den Arbeitsbetrieb sind einzuhalten.",
+     "expected": "norm",
+     "got": null
+    },
+    {
+     "tender": "HO-gleiswerk-01",
+     "agent": "technical_documentation",
+     "cause": "value",
+     "owner": "platform",
+     "text": "Die Schulung des Bedien- und Werkstattpersonals sollte fünf Arbeitstage umfassen.",
+     "expected": {
+      "kind": "training_days",
+      "value": 5,
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "training_days",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-gleiswerk-01",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Sämtliche Betriebs- und Wartungsunterlagen sind in deutscher Sprache zu übergeben.",
+     "expected": {
+      "kind": "documentation_language",
+      "value": "de",
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-gleiswerk-01",
+     "agent": "requirement_extraction",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die Bieter sind bis zum Ablauf von 90 Kalendertagen nach der Angebotsfrist an ihr Angebot gebunden.",
+     "expected": "bid_validity_days",
+     "got": null
+    },
+    {
+     "tender": "HO-gleiswerk-01",
+     "agent": "norms_report",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "EN 14033-2",
+     "expected": "certified",
+     "got": null
+    },
+    {
+     "tender": "HO-gleiswerk-02",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "The vehicle shall be approved in accordance with EN 14033-1.",
+     "expected": {
+      "kind": "norm",
+      "value": "EN 14033-1",
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-gleiswerk-02",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "The supplier shall demonstrate RAMS management in accordance with EN 50126-1.",
+     "expected": {
+      "kind": "norm",
+      "value": "EN 50126-1",
+      "verdict": "deviate"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-gleiswerk-03",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Zusätzlich ist die Einhaltung der EN 15746-2 nachzuweisen.",
+     "expected": {
+      "kind": "norm",
+      "value": "EN 15746-2",
+      "verdict": "deviate"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-gleiswerk-03",
+     "agent": "requirement_extraction",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die Gewährleistung beträgt zwei Jahre.",
+     "expected": "warranty_months",
+     "got": null
+    },
+    {
+     "tender": "HO-gleiswerk-03",
+     "agent": "requirement_extraction",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die Haftung des Auftragnehmers ist auf die Höhe der Auftragssumme beschränkt.",
+     "expected": "liability",
+     "got": null
+    },
+    {
+     "tender": "HO-gleiswerk-03",
+     "agent": "technical_documentation",
+     "cause": "value",
+     "owner": "platform",
+     "text": "Die Einweisung von acht Maschinenführern sollte an drei Tagen vor Ort stattfinden.",
+     "expected": {
+      "kind": "training_days",
+      "value": 3,
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "training_days",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-gleiswerk-03",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die Bedienungsanleitung und die Ersatzteilliste sind in deutscher Sprache zu liefern.",
+     "expected": {
+      "kind": "documentation_language",
+      "value": "de",
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "spare_parts_years",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-gleiswerk-03",
+     "agent": "requirement_extraction",
+     "cause": "noise",
+     "owner": "platform",
+     "text": "Der bisherige Zweiwegebagger wurde 2009 beschafft und ist wirtschaftlich nicht mehr instand zu setzen.",
+     "expected": null,
+     "got": "other"
+    },
+    {
+     "tender": "HO-gleiswerk-04",
+     "agent": "requirement_extraction",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die Maschine ist für Normalspur auszulegen.",
+     "expected": "track_gauge_mm",
+     "got": null
+    },
+    {
+     "tender": "HO-gleiswerk-04",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die Maschine muss zwischen -25 °C und +45 °C betrieben werden können.",
+     "expected": {
+      "kind": "ambient_temperature",
+      "value": [
+       -25,
+       45
+      ],
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-gleiswerk-04",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Für die elektronische Ausrüstung sollte die EN 50155 eingehalten werden.",
+     "expected": {
+      "kind": "norm",
+      "value": "EN 50155",
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-gleiswerk-04",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die Einhaltung der TSI NOI ist wünschenswert.",
+     "expected": {
+      "kind": "norm",
+      "value": "TSI NOI",
+      "verdict": "deviate"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-gleiswerk-04",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Der Bieter hat einen Nachweis über eine Betriebshaftpflichtversicherung mit einer Deckungssumme von mindestens 5 Mio. EUR vorzulegen.",
+     "expected": {
+      "kind": "procedural",
+      "value": null,
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-gleiswerk-04",
+     "agent": "requirement_extraction",
+     "cause": "noise",
+     "owner": "platform",
+     "text": "Die neue Maschine soll ab der Bausaison 2028 im Zweischichtbetrieb eingesetzt werden.",
+     "expected": null,
+     "got": "other"
+    },
+    {
+     "tender": "HO-gleiswerk-05",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "The machine must be certified to EN 15746-1.",
+     "expected": {
+      "kind": "norm",
+      "value": "EN 15746-1",
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-gleiswerk-05",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Compliance with EN 15746-2 is mandatory.",
+     "expected": {
+      "kind": "norm",
+      "value": "EN 15746-2",
+      "verdict": "deviate"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-gleiswerk-05",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Welding of the rail gear frame should be carried out to EN 15085-2.",
+     "expected": {
+      "kind": "norm",
+      "value": "EN 15085-2",
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-gleiswerk-05",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "The machine shall be delivered within 9 months of contract award.",
+     "expected": {
+      "kind": "delivery_weeks",
+      "value": 39,
+      "verdict": "deviate"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-gleiswerk-05",
+     "agent": "requirement_extraction",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Delay damages are payable at 1 % of the contract price per week of delay up to a maximum of 5 %.",
+     "expected": "penalty_cap_percent",
+     "got": null
+    },
+    {
+     "tender": "HO-gleiswerk-05",
+     "agent": "technical_documentation",
+     "cause": "value",
+     "owner": "platform",
+     "text": "Operator training of four days should be included.",
+     "expected": {
+      "kind": "training_days",
+      "value": 4,
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "training_days",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-gleiswerk-06",
+     "agent": "requirement_extraction",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Der Schleifzug ist für Normalspur 1.435 mm auszulegen.",
+     "expected": "track_gauge_mm",
+     "got": null
+    },
+    {
+     "tender": "HO-gleiswerk-06",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die Einhaltung der EN 50126-1 sollte nachgewiesen werden.",
+     "expected": {
+      "kind": "norm",
+      "value": "EN 50126-1",
+      "verdict": "deviate"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-gleiswerk-06",
+     "agent": "requirement_extraction",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Das Angebot ist bis zum 19. Februar 2027 um 10:00 Uhr in Textform über die Vergabeplattform abzugeben.",
+     "expected": "procedural",
+     "got": null
+    },
+    {
+     "tender": "HO-gleiswerk-07",
+     "agent": "requirement_extraction",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "The maximum permitted axle load is 22.5 tonnes.",
+     "expected": "axle_load_t",
+     "got": null
+    },
+    {
+     "tender": "HO-gleiswerk-07",
+     "agent": "technical_documentation",
+     "cause": "value",
+     "owner": "platform",
+     "text": "The machine should be able to work on gradients of up to 30 per mille.",
+     "expected": {
+      "kind": "gradient_permille",
+      "value": 30,
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "gradient_permille",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-gleiswerk-07",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "On-board electronic equipment shall conform to EN 50155.",
+     "expected": {
+      "kind": "norm",
+      "value": "EN 50155",
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-gleiswerk-07",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Welding should be performed in accordance with EN 15085-2.",
+     "expected": {
+      "kind": "norm",
+      "value": "EN 15085-2",
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-gleiswerk-07",
+     "agent": "technical_documentation",
+     "cause": "capability_profile",
+     "owner": "deployment",
+     "text": "Liquidated damages for delay of 0.5 % of the contract value per week shall apply without an upper limit.",
+     "expected": {
+      "kind": "penalty_cap_percent",
+      "value": null,
+      "verdict": "deviate"
+     },
+     "got": {
+      "kind": "penalty_cap_percent",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-gleiswerk-08",
+     "agent": "requirement_extraction",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Das Fahrzeug ist für Normalspur auszulegen.",
+     "expected": "track_gauge_mm",
+     "got": null
+    },
+    {
+     "tender": "HO-gleiswerk-08",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Das Fahrzeug muss zwischen -20 °C und +45 °C einsetzbar sein.",
+     "expected": {
+      "kind": "ambient_temperature",
+      "value": [
+       -20,
+       45
+      ],
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-gleiswerk-08",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Wegen angrenzender Wohnbebauung sollte der Schallpegel am Fahrerplatz 72 dB(A) nicht überschreiten.",
+     "expected": {
+      "kind": "noise_dba",
+      "value": 72,
+      "verdict": "deviate"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-gleiswerk-08",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Wünschenswert ist zusätzlich die Erfüllung der EN 15746-2.",
+     "expected": {
+      "kind": "norm",
+      "value": "EN 15746-2",
+      "verdict": "deviate"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-gleiswerk-08",
+     "agent": "requirement_extraction",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die Haftung des Auftragnehmers ist der Höhe nach unbeschränkt.",
+     "expected": "liability",
+     "got": null
+    },
+    {
+     "tender": "HO-gleiswerk-08",
+     "agent": "technical_documentation",
+     "cause": "value",
+     "owner": "platform",
+     "text": "Eine Schulung des Personals an zwei Tagen am Standort Dillingen ist wünschenswert.",
+     "expected": {
+      "kind": "training_days",
+      "value": 2,
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "training_days",
+      "value": null,
+      "verdict": "clarify"
+     }
+    }
+   ]
+  },
+  "voltaro": {
+   "tenders": 8,
+   "metrics": {
+    "bid_accuracy": {
+     "right": 8,
+     "of": 8,
+     "rate": 1.0,
+     "lower_bound": 0.6756
+    },
+    "kind_accuracy": {
+     "right": 167,
+     "of": 188,
+     "rate": 0.8883,
+     "lower_bound": 0.8353
+    },
+    "norm_precision": {
+     "right": 29,
+     "of": 29,
+     "rate": 1.0,
+     "lower_bound": 0.883
+    },
+    "norm_recall": {
+     "right": 29,
+     "of": 32,
+     "rate": 0.9062,
+     "lower_bound": 0.7578
+    },
+    "norm_status_accuracy": {
+     "right": 27,
+     "of": 29,
+     "rate": 0.931,
+     "lower_bound": 0.7804
+    },
+    "priority_accuracy": {
+     "right": 188,
+     "of": 188,
+     "rate": 1.0,
+     "lower_bound": 0.98
+    },
+    "red_flag_precision": {
+     "right": 16,
+     "of": 17,
+     "rate": 0.9412,
+     "lower_bound": 0.7302
+    },
+    "red_flag_recall": {
+     "right": 16,
+     "of": 23,
+     "rate": 0.6957,
+     "lower_bound": 0.4913
+    },
+    "requirement_precision": {
+     "right": 188,
+     "of": 189,
+     "rate": 0.9947,
+     "lower_bound": 0.9706
+    },
+    "requirement_recall": {
+     "right": 188,
+     "of": 203,
+     "rate": 0.9261,
+     "lower_bound": 0.8817
+    },
+    "unsafe_bid_avoided": {
+     "right": 8,
+     "of": 8,
+     "rate": 1.0,
+     "lower_bound": 0.6756
+    },
+    "value_accuracy": {
+     "right": 139,
+     "of": 170,
+     "rate": 0.8176,
+     "lower_bound": 0.7528
+    },
+    "variant_accuracy": {
+     "right": 6,
+     "of": 6,
+     "rate": 1.0,
+     "lower_bound": 0.6097
+    },
+    "verdict_accuracy": {
+     "right": 156,
+     "of": 203,
+     "rate": 0.7685,
+     "lower_bound": 0.7058
+    }
+   },
+   "readiness": {
+    "requirement_extraction": {
+     "right": 188,
+     "of": 203,
+     "rate": 0.9261,
+     "lower_bound": 0.8817,
+     "level": "assist"
+    },
+    "red_flags": {
+     "right": 16,
+     "of": 23,
+     "rate": 0.6957,
+     "lower_bound": 0.4913,
+     "level": "not_yet"
+    },
+    "norms_report": {
+     "right": 29,
+     "of": 32,
+     "rate": 0.9062,
+     "lower_bound": 0.7578,
+     "level": "assist"
+    },
+    "bid_no_bid": {
+     "right": 8,
+     "of": 8,
+     "rate": 1.0,
+     "lower_bound": 0.6756,
+     "level": "not_enough_evidence"
+    },
+    "configuration": {
+     "right": 6,
+     "of": 6,
+     "rate": 1.0,
+     "lower_bound": 0.6097,
+     "level": "not_enough_evidence"
+    },
+    "technical_documentation": {
+     "right": 156,
+     "of": 203,
+     "rate": 0.7685,
+     "lower_bound": 0.7058,
+     "level": "not_yet"
+    }
+   },
+   "misses": [
+    {
+     "tender": "HO-voltaro-01",
+     "agent": "technical_documentation",
+     "cause": "value",
+     "owner": "platform",
+     "text": "Jede Ladestation muss zwei Ladepunkte mit CCS-Ladekabel aufweisen.",
+     "expected": {
+      "kind": "charge_points",
+      "value": 2,
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "charge_points",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-voltaro-01",
+     "agent": "requirement_extraction",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die Technischen Anschlussregeln Niederspannung (VDE-AR-N 4100) sind einzuhalten.",
+     "expected": "norm",
+     "got": null
+    },
+    {
+     "tender": "HO-voltaro-01",
+     "agent": "requirement_extraction",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die Gewährleistung beträgt zwei Jahre ab Abnahme.",
+     "expected": "warranty_months",
+     "got": null
+    },
+    {
+     "tender": "HO-voltaro-01",
+     "agent": "requirement_extraction",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die Haftung ist auf die Auftragssumme begrenzt.",
+     "expected": "liability",
+     "got": null
+    },
+    {
+     "tender": "HO-voltaro-01",
+     "agent": "technical_documentation",
+     "cause": "value",
+     "owner": "platform",
+     "text": "Ersatzteile sollten für zehn Jahre verfügbar sein.",
+     "expected": {
+      "kind": "spare_parts_years",
+      "value": 10,
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "spare_parts_years",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-voltaro-01",
+     "agent": "requirement_extraction",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Eine eintägige Schulung des Betriebspersonals ist in den Angebotspreis einzurechnen.",
+     "expected": "training_days",
+     "got": null
+    },
+    {
+     "tender": "HO-voltaro-01",
+     "agent": "requirement_extraction",
+     "cause": "noise",
+     "owner": "platform",
+     "text": "Bis Ende 2028 sollen im Stadtgebiet insgesamt 12 Schnellladestandorte entstehen; diese Ausschreibung umfasst die ersten vier Stationen.",
+     "expected": null,
+     "got": "other"
+    },
+    {
+     "tender": "HO-voltaro-01",
+     "agent": "norms_report",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "VDE-AR-N 4100",
+     "expected": "certified",
+     "got": null
+    },
+    {
+     "tender": "HO-voltaro-02",
+     "agent": "technical_documentation",
+     "cause": "value",
+     "owner": "platform",
+     "text": "Each charger shall provide two charge points.",
+     "expected": {
+      "kind": "charge_points",
+      "value": 2,
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "charge_points",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-voltaro-02",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Chargers should operate between -20 °C and +40 °C.",
+     "expected": {
+      "kind": "ambient_temperature",
+      "value": [
+       -20,
+       40
+      ],
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-voltaro-02",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "The chargers shall be certified to IEC 61851-23.",
+     "expected": {
+      "kind": "norm",
+      "value": "IEC 61851-23",
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-voltaro-02",
+     "agent": "technical_documentation",
+     "cause": "value",
+     "owner": "platform",
+     "text": "Training of two days for depot staff should be included.",
+     "expected": {
+      "kind": "training_days",
+      "value": 2,
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "training_days",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-voltaro-03",
+     "agent": "technical_documentation",
+     "cause": "value",
+     "owner": "platform",
+     "text": "Je Ladestation sind vier Ladepunkte vorzusehen, die gleichzeitig betrieben werden können.",
+     "expected": {
+      "kind": "charge_points",
+      "value": 4,
+      "verdict": "deviate"
+     },
+     "got": {
+      "kind": "charge_points",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-voltaro-03",
+     "agent": "requirement_extraction",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die Anforderungen der PTB-A 50.7 an eichrechtskonforme Ladeeinrichtungen sind einzuhalten.",
+     "expected": "norm",
+     "got": null
+    },
+    {
+     "tender": "HO-voltaro-03",
+     "agent": "technical_documentation",
+     "cause": "norm_profile",
+     "owner": "deployment",
+     "text": "Der Anschluss an das Mittelspannungsnetz hat nach VDE-AR-N 4110 zu erfolgen.",
+     "expected": {
+      "kind": "norm",
+      "value": "VDE-AR-N 4110",
+      "verdict": "deviate"
+     },
+     "got": {
+      "kind": "norm",
+      "value": "VDE-AR-N 4110",
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-voltaro-03",
+     "agent": "requirement_extraction",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die Lieferung der Ladestationen erfolgt spätestens vier Monate nach Zuschlag.",
+     "expected": "delivery_weeks",
+     "got": null
+    },
+    {
+     "tender": "HO-voltaro-03",
+     "agent": "requirement_extraction",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die Haftung des Auftragnehmers wird auf die Auftragssumme begrenzt.",
+     "expected": "liability",
+     "got": null
+    },
+    {
+     "tender": "HO-voltaro-03",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Der Bieter hat eine Haftpflichtversicherung mit einer Deckungssumme von mindestens 10 Mio. EUR nachzuweisen.",
+     "expected": {
+      "kind": "procedural",
+      "value": null,
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-voltaro-03",
+     "agent": "norms_report",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "PTB-A 50.7",
+     "expected": "certified",
+     "got": null
+    },
+    {
+     "tender": "HO-voltaro-03",
+     "agent": "norms_report",
+     "cause": "norm_profile",
+     "owner": "deployment",
+     "text": "VDE-AR-N 4110",
+     "expected": "not_certified",
+     "got": "unknown"
+    },
+    {
+     "tender": "HO-voltaro-04",
+     "agent": "technical_documentation",
+     "cause": "value",
+     "owner": "platform",
+     "text": "Je Ladestation sind zwei Ladepunkte vorzusehen.",
+     "expected": {
+      "kind": "charge_points",
+      "value": 2,
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "charge_points",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-voltaro-04",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die Ladestationen müssen die Anforderungen der IEC 61851-23 erfüllen.",
+     "expected": {
+      "kind": "norm",
+      "value": "IEC 61851-23",
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-voltaro-04",
+     "agent": "technical_documentation",
+     "cause": "norm_profile",
+     "owner": "deployment",
+     "text": "Der Netzanschluss ist nach VDE-AR-N 4110 auszuführen.",
+     "expected": {
+      "kind": "norm",
+      "value": "VDE-AR-N 4110",
+      "verdict": "deviate"
+     },
+     "got": {
+      "kind": "norm",
+      "value": "VDE-AR-N 4110",
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-voltaro-04",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die Inbetriebnahme muss spätestens 16 Wochen nach Auftragserteilung erfolgen.",
+     "expected": {
+      "kind": "delivery_weeks",
+      "value": 16,
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-voltaro-04",
+     "agent": "requirement_extraction",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Der Auftragnehmer haftet unbeschränkt.",
+     "expected": "liability",
+     "got": null
+    },
+    {
+     "tender": "HO-voltaro-04",
+     "agent": "requirement_extraction",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Angebote sind bis zum 15.02.2027 per E-Mail an die Einkaufsabteilung zu richten.",
+     "expected": "procedural",
+     "got": null
+    },
+    {
+     "tender": "HO-voltaro-04",
+     "agent": "norms_report",
+     "cause": "norm_profile",
+     "owner": "deployment",
+     "text": "VDE-AR-N 4110",
+     "expected": "not_certified",
+     "got": "unknown"
+    },
+    {
+     "tender": "HO-voltaro-05",
+     "agent": "technical_documentation",
+     "cause": "value",
+     "owner": "platform",
+     "text": "Each charging station shall have two charge points.",
+     "expected": {
+      "kind": "charge_points",
+      "value": 2,
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "charge_points",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-voltaro-05",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Card payment at the charger is desirable for occasional use by visitors.",
+     "expected": {
+      "kind": "adhoc_payment",
+      "value": true,
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "payment_days",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-voltaro-06",
+     "agent": "technical_documentation",
+     "cause": "value",
+     "owner": "platform",
+     "text": "Jede Ladesäule muss zwei Ladepunkte haben.",
+     "expected": {
+      "kind": "charge_points",
+      "value": 2,
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "charge_points",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-voltaro-06",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Der maximale Ausgangsstrom sollte mindestens 300 A betragen.",
+     "expected": {
+      "kind": "max_current_a",
+      "value": 300,
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-voltaro-06",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Der Netzanschluss muss die VDE-AR-N 4100 erfüllen.",
+     "expected": {
+      "kind": "norm",
+      "value": "VDE-AR-N 4100",
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-voltaro-06",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Abrufe sind jeweils innerhalb von 16 Wochen zu liefern.",
+     "expected": {
+      "kind": "delivery_weeks",
+      "value": 16,
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-voltaro-06",
+     "agent": "requirement_extraction",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Für jeden Tag des Lieferverzugs wird eine Vertragsstrafe von 0,5 % des Abrufwerts fällig; eine Obergrenze ist nicht vorgesehen.",
+     "expected": "penalty_cap_percent",
+     "got": null
+    },
+    {
+     "tender": "HO-voltaro-06",
+     "agent": "requirement_extraction",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die Haftung ist auf 500.000 EUR je Schadensfall begrenzt.",
+     "expected": "liability",
+     "got": null
+    },
+    {
+     "tender": "HO-voltaro-06",
+     "agent": "requirement_extraction",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die Schulung des Servicepersonals umfasst drei Tage.",
+     "expected": "training_days",
+     "got": null
+    },
+    {
+     "tender": "HO-voltaro-07",
+     "agent": "technical_documentation",
+     "cause": "value",
+     "owner": "platform",
+     "text": "Jede Ladestation ist mit zwei Ladepunkten auszustatten.",
+     "expected": {
+      "kind": "charge_points",
+      "value": 2,
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "charge_points",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-voltaro-07",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Der maximale Strom je Ladepunkt muss mindestens 250 A betragen.",
+     "expected": {
+      "kind": "max_current_a",
+      "value": 250,
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-voltaro-07",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die Ladestationen sollen von -25 °C bis +40 °C betrieben werden können.",
+     "expected": {
+      "kind": "ambient_temperature",
+      "value": [
+       -25,
+       40
+      ],
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-voltaro-07",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die Kommunikation zwischen Fahrzeug und Ladestation soll nach ISO 15118-20 erfolgen.",
+     "expected": {
+      "kind": "iso15118_part",
+      "value": "20",
+      "verdict": "clarify"
+     },
+     "got": {
+      "kind": "norm",
+      "value": "ISO 15118-20",
+      "verdict": "deviate"
+     }
+    },
+    {
+     "tender": "HO-voltaro-07",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die Ladestationen müssen IEC 61851-23 erfüllen.",
+     "expected": {
+      "kind": "norm",
+      "value": "IEC 61851-23",
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-voltaro-07",
+     "agent": "requirement_extraction",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die Grenzwerte der EN 61000-6-4 für Störaussendungen sind einzuhalten.",
+     "expected": "norm",
+     "got": null
+    },
+    {
+     "tender": "HO-voltaro-07",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die Ladeinfrastruktur muss spätestens zehn Wochen nach Auftragserteilung betriebsbereit übergeben werden, da die ersten Busse im Mai 2027 ausgeliefert werden.",
+     "expected": {
+      "kind": "delivery_weeks",
+      "value": 10,
+      "verdict": "deviate"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-voltaro-07",
+     "agent": "requirement_extraction",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die Vertragsstrafe ist auf 5 % der Auftragssumme begrenzt.",
+     "expected": "penalty_cap_percent",
+     "got": null
+    },
+    {
+     "tender": "HO-voltaro-07",
+     "agent": "requirement_extraction",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Die Haftung des Auftragnehmers ist nicht begrenzt.",
+     "expected": "liability",
+     "got": null
+    },
+    {
+     "tender": "HO-voltaro-07",
+     "agent": "technical_documentation",
+     "cause": "value",
+     "owner": "platform",
+     "text": "Es sind zwei Schulungstage für das Werkstattpersonal vorzusehen.",
+     "expected": {
+      "kind": "training_days",
+      "value": 2,
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "training_days",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-voltaro-07",
+     "agent": "technical_documentation",
+     "cause": "value",
+     "owner": "platform",
+     "text": "Ersatzteile sollen mindestens zehn Jahre verfügbar sein.",
+     "expected": {
+      "kind": "spare_parts_years",
+      "value": 10,
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "spare_parts_years",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-voltaro-07",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Ein Nachweis der Betriebshaftpflichtversicherung ist beizufügen.",
+     "expected": {
+      "kind": "procedural",
+      "value": null,
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-voltaro-07",
+     "agent": "norms_report",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "EN 61000-6-4",
+     "expected": "certified",
+     "got": null
+    },
+    {
+     "tender": "HO-voltaro-08",
+     "agent": "technical_documentation",
+     "cause": "value",
+     "owner": "platform",
+     "text": "Each charging station shall provide two charge points.",
+     "expected": {
+      "kind": "charge_points",
+      "value": 2,
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "charge_points",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-voltaro-08",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "Operation should be possible between -30 °C and +50 °C.",
+     "expected": {
+      "kind": "ambient_temperature",
+      "value": [
+       -30,
+       50
+      ],
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-voltaro-08",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "The stations shall be certified to IEC 61851-23.",
+     "expected": {
+      "kind": "norm",
+      "value": "IEC 61851-23",
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    },
+    {
+     "tender": "HO-voltaro-08",
+     "agent": "technical_documentation",
+     "cause": "vocabulary",
+     "owner": "platform",
+     "text": "All stations shall be delivered within six months of contract award.",
+     "expected": {
+      "kind": "delivery_weeks",
+      "value": 26,
+      "verdict": "comply"
+     },
+     "got": {
+      "kind": "other",
+      "value": null,
+      "verdict": "clarify"
+     }
+    }
+   ]
+  }
+ }
+}

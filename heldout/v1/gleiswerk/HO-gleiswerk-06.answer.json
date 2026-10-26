@@ -1,0 +1,33 @@
+{
+  "id": "HO-gleiswerk-06",
+  "customer": "gleiswerk",
+  "language": "de",
+  "subject": "Beschaffung eines Schienenschleifzugs für das Stadtbahn- und U-Bahn-Netz",
+  "requirements": [
+    {"text": "Der Schleifzug ist für Normalspur 1.435 mm auszulegen.", "doc": "spec", "kind": "track_gauge_mm", "value": 1435, "unit": "mm", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Wegen der langen Tunnelabschnitte muss das Fahrzeug die Anforderungen der Gefährdungsstufe HL3 nach EN 45545-2 erfüllen.", "doc": "spec", "kind": "fire_protection_level", "value": "HL3", "unit": null, "priority": "mandatory", "verdict": "deviate", "severity": "knockout", "red_flag": true, "norms": ["EN 45545-2"]},
+    {"text": "Die zulässige Radsatzlast im Stadtbahnnetz beträgt 12 t.", "doc": "spec", "kind": "axle_load_t", "value": 12, "unit": "t", "priority": "mandatory", "verdict": "deviate", "severity": "knockout", "red_flag": true, "norms": []},
+    {"text": "Eine Eigenfahrgeschwindigkeit von mindestens 70 km/h ist erforderlich.", "doc": "spec", "kind": "travel_speed_kmh", "value": 70, "unit": "km/h", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Antriebsleistung des Schleifzugs sollte mindestens 400 kW betragen.", "doc": "spec", "kind": "engine_power_kw", "value": 400, "unit": "kW", "priority": "desirable", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Dieselmotoren müssen die Abgasstufe V erfüllen.", "doc": "spec", "kind": "emission_stage", "value": "V", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Längsneigungen im Netz betragen bis zu 40 ‰; der Schleifzug muss diese auch im Arbeitsbetrieb beherrschen.", "doc": "spec", "kind": "gradient_permille", "value": 40, "unit": "‰", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Der Innengeräuschpegel im Führerstand sollte 75 dB(A) nicht überschreiten.", "doc": "spec", "kind": "noise_dba", "value": 75, "unit": "dB(A)", "priority": "desirable", "verdict": "clarify", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Das Fahrzeug soll bei Umgebungstemperaturen von -10 °C bis +40 °C betrieben werden können.", "doc": "spec", "kind": "ambient_temperature", "value": [-10, 40], "unit": "°C", "priority": "desirable", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Eine technische Verfügbarkeit von mindestens 95 % ist zu gewährleisten.", "doc": "spec", "kind": "availability_percent", "value": 95, "unit": "%", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Das Fahrzeug muss nach EN 14033-1 gebaut und zugelassen werden.", "doc": "spec", "kind": "norm", "value": "EN 14033-1", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": ["EN 14033-1"]},
+    {"text": "Die elektronischen Komponenten müssen der EN 50155 entsprechen.", "doc": "spec", "kind": "norm", "value": "EN 50155", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": ["EN 50155"]},
+    {"text": "Die Einhaltung der EN 50126-1 sollte nachgewiesen werden.", "doc": "spec", "kind": "norm", "value": "EN 50126-1", "unit": null, "priority": "desirable", "verdict": "deviate", "severity": "minor", "red_flag": true, "norms": ["EN 50126-1"]},
+    {"text": "Die Auslieferung hat binnen 18 Monaten nach Vertragsschluss zu erfolgen.", "doc": "spec", "kind": "delivery_weeks", "value": 78, "unit": "weeks", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Gewährleistung: 36 Monate ab Abnahme.", "doc": "spec", "kind": "warranty_months", "value": 36, "unit": "months", "priority": "mandatory", "verdict": "clarify", "severity": "major", "red_flag": true, "norms": []},
+    {"text": "Die Vertragsstrafe für verspätete Lieferung beträgt 0,25 % je Werktag und ist auf 5 % der Auftragssumme begrenzt.", "doc": "spec", "kind": "penalty_cap_percent", "value": 5, "unit": "%", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Rechnungen sind 30 Tage nach Zugang zahlbar.", "doc": "spec", "kind": "payment_days", "value": 30, "unit": "days", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Haftung des Auftragnehmers ist der Höhe nach auf den Auftragswert begrenzt.", "doc": "spec", "kind": "liability", "value": "contract_value", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die technische Dokumentation ist in deutscher Sprache zu liefern.", "doc": "spec", "kind": "documentation_language", "value": "de", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Das Angebot ist bis zum 19. Februar 2027 um 10:00 Uhr in Textform über die Vergabeplattform abzugeben.", "doc": "spec", "kind": "procedural", "value": null, "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Der Bieter hat mindestens zwei Referenzen über Schienenschleifmaschinen für Nahverkehrsnetze nachzuweisen.", "doc": "spec", "kind": "procedural", "value": null, "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Angebote müssen bis 90 Tage nach Ablauf der Angebotsfrist gültig bleiben.", "doc": "spec", "kind": "bid_validity_days", "value": 90, "unit": "days", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []}
+  ],
+  "norms": {"EN 45545-2": "certified", "EN 14033-1": "certified", "EN 50155": "certified", "EN 50126-1": "not_certified"},
+  "bid": "no_bid",
+  "variant": "GW Schleif 16"
+}

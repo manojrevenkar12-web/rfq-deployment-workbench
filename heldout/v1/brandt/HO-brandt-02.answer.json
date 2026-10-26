@@ -1,0 +1,30 @@
+{
+  "id": "HO-brandt-02",
+  "customer": "brandt",
+  "language": "de",
+  "subject": "Lieferung eines Hilfeleistungslöschgruppenfahrzeugs HLF 10",
+  "requirements": [
+    {"text": "Gegenstand der Ausschreibung ist ein HLF 10.", "doc": "spec", "kind": "vehicle_type", "value": "HLF 10", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die zulässige Gesamtmasse ist auf 14 t begrenzt.", "doc": "spec", "kind": "gross_mass_t", "value": 14, "unit": "t", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Antrieb: Allrad 4x4.", "doc": "spec", "kind": "drive", "value": "4x4", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Der Wassertank muss mindestens 1.600 l fassen.", "doc": "spec", "kind": "water_tank_l", "value": 1600, "unit": "l", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Eine Pumpe FPN 10-2000 ist vorzusehen.", "doc": "spec", "kind": "fire_pump", "value": "FPN 10-2000", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Besatzung beträgt 1+8.", "doc": "spec", "kind": "crew_cab", "value": "1+8", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Ein Stromerzeuger mit 8 kVA sollte im Geräteraum verlastet werden.", "doc": "spec", "kind": "generator_kva", "value": 8, "unit": "kVA", "priority": "desirable", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Ein Lichtmast ist wünschenswert.", "doc": "spec", "kind": "light_mast", "value": true, "unit": null, "priority": "desirable", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Das Fahrzeug ist nach DIN EN 1846-1 zu klassifizieren.", "doc": "spec", "kind": "norm", "value": "DIN EN 1846-1", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": ["DIN EN 1846-1"]},
+    {"text": "Die Anforderungen der DIN EN 1846-2 sind einzuhalten.", "doc": "spec", "kind": "norm", "value": "DIN EN 1846-2", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": ["DIN EN 1846-2"]},
+    {"text": "Die Pumpe sollte DIN EN 1028-1 erfüllen.", "doc": "spec", "kind": "norm", "value": "DIN EN 1028-1", "unit": null, "priority": "desirable", "verdict": "comply", "severity": null, "red_flag": false, "norms": ["DIN EN 1028-1"]},
+    {"text": "Das Fahrzeug muss innerhalb von zwölf Monaten nach Zuschlag ausgeliefert werden, da die Fördermittel bis Ende 2027 abgerufen werden müssen.", "doc": "spec", "kind": "delivery_weeks", "value": 52, "unit": "weeks", "priority": "mandatory", "verdict": "deviate", "severity": "major", "red_flag": true, "norms": []},
+    {"text": "Für jeden Kalendertag der Verspätung wird eine Vertragsstrafe von 0,2 % fällig, insgesamt höchstens 8 % der Auftragssumme.", "doc": "spec", "kind": "penalty_cap_percent", "value": 8, "unit": "%", "priority": "mandatory", "verdict": "deviate", "severity": "major", "red_flag": true, "norms": []},
+    {"text": "Die Gewährleistungsfrist beträgt zwei Jahre.", "doc": "spec", "kind": "warranty_months", "value": 24, "unit": "months", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Zahlungsziel: 30 Tage nach Rechnungseingang.", "doc": "spec", "kind": "payment_days", "value": 30, "unit": "days", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Haftung ist auf die Höhe des Auftragswerts begrenzt.", "doc": "spec", "kind": "liability", "value": "contract_value", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Ersatzteilversorgung sollte für mindestens 15 Jahre gewährleistet sein.", "doc": "spec", "kind": "spare_parts_years", "value": 15, "unit": "years", "priority": "desirable", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Angebote sind bis zum 01.02.2027, 10:00 Uhr, über die Vergabeplattform des Landes einzureichen.", "doc": "spec", "kind": "procedural", "value": null, "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Der Bieter hat eine Bescheinigung über eine Betriebshaftpflichtversicherung mit mindestens 3 Mio. EUR Deckung vorzulegen.", "doc": "spec", "kind": "procedural", "value": null, "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []}
+  ],
+  "norms": {"DIN EN 1846-1": "certified", "DIN EN 1846-2": "certified", "DIN EN 1028-1": "certified"},
+  "bid": "bid",
+  "variant": "Brandt HLF 10"
+}

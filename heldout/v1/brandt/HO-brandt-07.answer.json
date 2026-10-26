@@ -1,0 +1,33 @@
+{
+  "id": "HO-brandt-07",
+  "customer": "brandt",
+  "language": "de",
+  "subject": "Ersatzbeschaffung eines HLF 10 für die Ortsfeuerwehr Haselbach",
+  "requirements": [
+    {"text": "Beschafft wird ein HLF 10.", "doc": "spec", "kind": "vehicle_type", "value": "HLF 10", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die zulässige Gesamtmasse soll 13,5 t nicht überschreiten.", "doc": "spec", "kind": "gross_mass_t", "value": 13.5, "unit": "t", "priority": "desirable", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Das Fahrgestell ist mit Allradantrieb (4x4) auszustatten.", "doc": "spec", "kind": "drive", "value": "4x4", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Es sollte ein Löschwasserbehälter mit 2.000 Litern Nutzinhalt eingebaut werden.", "doc": "spec", "kind": "water_tank_l", "value": 2000, "unit": "l", "priority": "desirable", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Ein Schaummittelbehälter mit einem Volumen von 600 l ist erforderlich, da im Ausrückebereich ein Tanklager liegt.", "doc": "spec", "kind": "foam_tank_l", "value": 600, "unit": "l", "priority": "mandatory", "verdict": "clarify", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Pumpe ist als FPN 10-2000 auszuführen.", "doc": "spec", "kind": "fire_pump", "value": "FPN 10-2000", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Besatzung beträgt 1+8.", "doc": "spec", "kind": "crew_cab", "value": "1+8", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Ein Stromerzeuger mit 18 kVA ist fest einzubauen.", "doc": "spec", "kind": "generator_kva", "value": 18, "unit": "kVA", "priority": "mandatory", "verdict": "clarify", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Ein ausfahrbarer Lichtmast ist wünschenswert.", "doc": "spec", "kind": "light_mast", "value": true, "unit": null, "priority": "desirable", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Das Fahrzeug muss der DIN EN 1846-1 entsprechen.", "doc": "spec", "kind": "norm", "value": "DIN EN 1846-1", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": ["DIN EN 1846-1"]},
+    {"text": "Die Feuerlöschkreiselpumpe sollte nach DIN EN 1028-1 geliefert werden.", "doc": "spec", "kind": "norm", "value": "DIN EN 1028-1", "unit": null, "priority": "desirable", "verdict": "comply", "severity": null, "red_flag": false, "norms": ["DIN EN 1028-1"]},
+    {"text": "Die Einhaltung der DIN 14530 sollte nachgewiesen werden.", "doc": "spec", "kind": "norm", "value": "DIN 14530", "unit": null, "priority": "desirable", "verdict": "comply", "severity": null, "red_flag": false, "norms": ["DIN 14530"]},
+    {"text": "Die Lieferung muss innerhalb von 20 Monaten nach Auftragserteilung erfolgen.", "doc": "spec", "kind": "delivery_weeks", "value": 86.7, "unit": "weeks", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Gewährleistungsfrist beträgt 24 Monate.", "doc": "spec", "kind": "warranty_months", "value": 24, "unit": "months", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Vertragsstrafe ist auf höchstens 5 % des Auftragswerts begrenzt.", "doc": "spec", "kind": "penalty_cap_percent", "value": 5, "unit": "%", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Zahlung erfolgt innerhalb von 45 Tagen nach Rechnungseingang.", "doc": "spec", "kind": "payment_days", "value": 45, "unit": "days", "priority": "mandatory", "verdict": "deviate", "severity": "minor", "red_flag": true, "norms": []},
+    {"text": "Die Haftung des Auftragnehmers ist auf das Doppelte des Auftragswerts begrenzt.", "doc": "spec", "kind": "liability", "value": "double_contract_value", "unit": null, "priority": "mandatory", "verdict": "clarify", "severity": "major", "red_flag": true, "norms": []},
+    {"text": "Die Einweisung der Maschinisten ist an fünf Tagen durchzuführen.", "doc": "spec", "kind": "training_days", "value": 5, "unit": "days", "priority": "mandatory", "verdict": "clarify", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Bedienungsanleitungen sind in deutscher Sprache zu übergeben.", "doc": "spec", "kind": "documentation_language", "value": "de", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Angebote sind bis zum 27.01.2027 bei der Samtgemeinde Haselbach-Elbtal, Zentrale Vergabestelle, einzureichen.", "doc": "spec", "kind": "procedural", "value": null, "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Der Bieter hat Referenzen über mindestens zwei ausgelieferte HLF 10 vorzulegen.", "doc": "spec", "kind": "procedural", "value": null, "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Angebote müssen 90 Tage gültig bleiben.", "doc": "spec", "kind": "bid_validity_days", "value": 90, "unit": "days", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []}
+  ],
+  "norms": {"DIN EN 1846-1": "certified", "DIN EN 1028-1": "certified", "DIN 14530": "certified"},
+  "bid": "bid",
+  "variant": "Brandt HLF 10"
+}

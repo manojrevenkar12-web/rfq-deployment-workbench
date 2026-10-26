@@ -1,0 +1,33 @@
+{
+  "id": "HO-voltaro-04",
+  "customer": "voltaro",
+  "language": "de",
+  "subject": "Megawatt-Ladeinfrastruktur für schwere Nutzfahrzeuge",
+  "requirements": [
+    {"text": "Die Ladeleistung je Ladepunkt muss mindestens 0,72 MW betragen, damit die gesetzlichen Lenkzeitpausen von 45 Minuten zum Nachladen genutzt werden können.", "doc": "spec", "kind": "charging_power_kw", "value": 720, "unit": "kW", "priority": "mandatory", "verdict": "deviate", "severity": "knockout", "red_flag": true, "norms": []},
+    {"text": "Die Ausgangsspannung muss einen Bereich von 400 V bis 1.250 V abdecken.", "doc": "spec", "kind": "output_voltage_v", "value": [400, 1250], "unit": "V", "priority": "mandatory", "verdict": "deviate", "severity": "knockout", "red_flag": true, "norms": []},
+    {"text": "Der maximale Ladestrom je Ladepunkt hat mindestens 1.000 A zu betragen.", "doc": "spec", "kind": "max_current_a", "value": 1000, "unit": "A", "priority": "mandatory", "verdict": "deviate", "severity": "major", "red_flag": true, "norms": []},
+    {"text": "Je Ladestation sind zwei Ladepunkte vorzusehen.", "doc": "spec", "kind": "charge_points", "value": 2, "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Ladestationen sind in Schutzart IP54 auszuführen.", "doc": "spec", "kind": "ip_rating", "value": 54, "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Es soll ein Umgebungstemperaturbereich von -20 °C bis +40 °C abgedeckt werden.", "doc": "spec", "kind": "ambient_temperature", "value": [-20, 40], "unit": "°C", "priority": "desirable", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Anbindung an das Energiemanagement muss über OCPP 2.0.1 erfolgen.", "doc": "spec", "kind": "ocpp_version", "value": "2.0.1", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Unterstützung von OCPP 2.1 ist wünschenswert.", "doc": "spec", "kind": "ocpp_version", "value": "2.1", "unit": null, "priority": "desirable", "verdict": "clarify", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Ladekabel sollen eine Länge von 7 m haben.", "doc": "spec", "kind": "cable_length_m", "value": 7, "unit": "m", "priority": "desirable", "verdict": "clarify", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Verfügbarkeit soll mindestens 98 % betragen.", "doc": "spec", "kind": "availability_percent", "value": 98, "unit": "%", "priority": "desirable", "verdict": "clarify", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Eine Servicereaktionszeit von höchstens 12 Stunden wird gefordert.", "doc": "spec", "kind": "service_response_hours", "value": 12, "unit": "h", "priority": "mandatory", "verdict": "clarify", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Stationen müssen einen Wirkungsgrad von mindestens 95 % aufweisen.", "doc": "spec", "kind": "efficiency_percent", "value": 95, "unit": "%", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Ladestationen müssen die Anforderungen der IEC 61851-23 erfüllen.", "doc": "spec", "kind": "norm", "value": "IEC 61851-23", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": ["IEC 61851-23"]},
+    {"text": "Der Netzanschluss ist nach VDE-AR-N 4110 auszuführen.", "doc": "spec", "kind": "norm", "value": "VDE-AR-N 4110", "unit": null, "priority": "mandatory", "verdict": "deviate", "severity": "major", "red_flag": true, "norms": ["VDE-AR-N 4110"]},
+    {"text": "Die elektromagnetische Verträglichkeit sollte nach EN 61000-6-2 nachgewiesen werden.", "doc": "spec", "kind": "norm", "value": "EN 61000-6-2", "unit": null, "priority": "desirable", "verdict": "comply", "severity": null, "red_flag": false, "norms": ["EN 61000-6-2"]},
+    {"text": "Die Inbetriebnahme muss spätestens 16 Wochen nach Auftragserteilung erfolgen.", "doc": "spec", "kind": "delivery_weeks", "value": 16, "unit": "weeks", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Gewährleistung: 24 Monate.", "doc": "spec", "kind": "warranty_months", "value": 24, "unit": "months", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Vertragsstrafe für Verzug beträgt 0,5 % je Woche, maximal 5 % der Netto-Auftragssumme.", "doc": "spec", "kind": "penalty_cap_percent", "value": 5, "unit": "%", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Zahlung erfolgt 30 Tage nach Abnahme.", "doc": "spec", "kind": "payment_days", "value": 30, "unit": "days", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Der Auftragnehmer haftet unbeschränkt.", "doc": "spec", "kind": "liability", "value": "unlimited", "unit": null, "priority": "mandatory", "verdict": "deviate", "severity": "major", "red_flag": true, "norms": []},
+    {"text": "Angebote sind bis zum 15.02.2027 per E-Mail an die Einkaufsabteilung zu richten.", "doc": "spec", "kind": "procedural", "value": null, "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Es sind Referenzen über Ladeinfrastruktur für schwere Nutzfahrzeuge vorzulegen.", "doc": "spec", "kind": "procedural", "value": null, "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []}
+  ],
+  "norms": {"IEC 61851-23": "certified", "VDE-AR-N 4110": "not_certified", "EN 61000-6-2": "certified"},
+  "bid": "no_bid",
+  "variant": null
+}

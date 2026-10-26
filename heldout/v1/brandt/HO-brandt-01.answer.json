@@ -1,0 +1,32 @@
+{
+  "id": "HO-brandt-01",
+  "customer": "brandt",
+  "language": "de",
+  "subject": "Beschaffung eines Hilfeleistungslöschgruppenfahrzeugs HLF 20",
+  "requirements": [
+    {"text": "Zu beschaffen ist ein Hilfeleistungslöschgruppenfahrzeug HLF 20 nach DIN 14530-27.", "doc": "spec", "kind": "vehicle_type", "value": "HLF 20", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": ["DIN 14530-27"]},
+    {"text": "Die zulässige Gesamtmasse darf 16 t nicht überschreiten.", "doc": "spec", "kind": "gross_mass_t", "value": 16, "unit": "t", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Das Fahrgestell muss über Allradantrieb (4x4) verfügen.", "doc": "spec", "kind": "drive", "value": "4x4", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Der Löschwasserbehälter muss ein Nutzvolumen von mindestens 2.000 Litern haben.", "doc": "spec", "kind": "water_tank_l", "value": 2000, "unit": "l", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Ein Schaummittelbehälter mit 120 l sollte vorgesehen werden.", "doc": "spec", "kind": "foam_tank_l", "value": 120, "unit": "l", "priority": "desirable", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Als Feuerlöschkreiselpumpe ist eine FPN 10-2000 einzubauen.", "doc": "spec", "kind": "fire_pump", "value": "FPN 10-2000", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Mannschaftskabine ist für eine Besatzung von 1+8 auszulegen.", "doc": "spec", "kind": "crew_cab", "value": "1+8", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Ein fest eingebauter Generator mit mindestens 13 kVA soll vorgesehen werden.", "doc": "spec", "kind": "generator_kva", "value": 13, "unit": "kVA", "priority": "desirable", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Wünschenswert ist ein pneumatisch ausfahrbarer Lichtmast mit LED-Scheinwerfern.", "doc": "spec", "kind": "light_mast", "value": true, "unit": null, "priority": "desirable", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Das Fahrzeug muss den Anforderungen der DIN EN 1846-2 entsprechen.", "doc": "spec", "kind": "norm", "value": "DIN EN 1846-2", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": ["DIN EN 1846-2"]},
+    {"text": "Die Feuerlöschkreiselpumpe muss nach DIN EN 1028-1 geprüft sein.", "doc": "spec", "kind": "norm", "value": "DIN EN 1028-1", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": ["DIN EN 1028-1"]},
+    {"text": "Die fest eingebauten Löschanlagen sollten der DIN EN 1846-3 entsprechen.", "doc": "spec", "kind": "norm", "value": "DIN EN 1846-3", "unit": null, "priority": "desirable", "verdict": "comply", "severity": null, "red_flag": false, "norms": ["DIN EN 1846-3"]},
+    {"text": "Die Auslieferung des Fahrzeugs hat spätestens 18 Monate nach Auftragserteilung zu erfolgen.", "doc": "spec", "kind": "delivery_weeks", "value": 78, "unit": "weeks", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Gewährleistung für Fahrgestell und Aufbau beträgt 24 Monate.", "doc": "spec", "kind": "warranty_months", "value": 24, "unit": "months", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Bei Überschreitung des Liefertermins wird eine Vertragsstrafe von 0,1 % des Auftragswerts je Werktag fällig, höchstens jedoch 5 %.", "doc": "spec", "kind": "penalty_cap_percent", "value": 5, "unit": "%", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Rechnung wird innerhalb von 30 Tagen nach Abnahme bezahlt.", "doc": "spec", "kind": "payment_days", "value": 30, "unit": "days", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Einweisung der Maschinisten erfolgt an zwei Tagen im Feuerwehrhaus.", "doc": "spec", "kind": "training_days", "value": 2, "unit": "days", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Betriebsanleitungen sind in deutscher Sprache zu übergeben.", "doc": "spec", "kind": "documentation_language", "value": "de", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Das Angebot ist bis zum 25.01.2027, 11:00 Uhr, im Rathaus der Gemeinde Wiesental-Oberhofen, Zimmer 104, einzureichen.", "doc": "spec", "kind": "procedural", "value": null, "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Dem Angebot ist eine Referenzliste über mindestens drei in den letzten vier Jahren ausgelieferte HLF 20 beizufügen.", "doc": "spec", "kind": "procedural", "value": null, "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Zuschlags- und Bindefrist endet 90 Tage nach Ablauf der Angebotsfrist.", "doc": "spec", "kind": "bid_validity_days", "value": 90, "unit": "days", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []}
+  ],
+  "norms": {"DIN 14530-27": "certified", "DIN EN 1846-2": "certified", "DIN EN 1028-1": "certified", "DIN EN 1846-3": "certified"},
+  "bid": "bid",
+  "variant": "Brandt HLF 20"
+}

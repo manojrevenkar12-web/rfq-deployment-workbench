@@ -1,0 +1,31 @@
+{
+  "id": "HO-gleiswerk-03",
+  "customer": "gleiswerk",
+  "language": "de",
+  "subject": "Lieferung eines Zweiwegebaggers für das Straßenbahnnetz",
+  "requirements": [
+    {"text": "Das Schienenfahrwerk ist für eine Spurweite von 1000 mm auszulegen.", "doc": "spec", "kind": "track_gauge_mm", "value": 1000, "unit": "mm", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Achslast des Fahrzeugs im Schienenbetrieb darf 10 t nicht überschreiten, da Teile des Netzes über Brückenbauwerke mit begrenzter Tragfähigkeit verlaufen.", "doc": "spec", "kind": "axle_load_t", "value": 10, "unit": "t", "priority": "mandatory", "verdict": "deviate", "severity": "knockout", "red_flag": true, "norms": []},
+    {"text": "Das Fahrzeug muss auf der Schiene Steigungen von bis zu 62 ‰ sicher befahren und dort auch arbeiten können.", "doc": "spec", "kind": "gradient_permille", "value": 62, "unit": "‰", "priority": "mandatory", "verdict": "deviate", "severity": "knockout", "red_flag": true, "norms": []},
+    {"text": "Auf der Schiene muss eine Fahrgeschwindigkeit von mindestens 20 km/h erreicht werden.", "doc": "spec", "kind": "travel_speed_kmh", "value": 20, "unit": "km/h", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Motorleistung soll mindestens 110 kW betragen.", "doc": "spec", "kind": "engine_power_kw", "value": 110, "unit": "kW", "priority": "desirable", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Gefordert wird ein Motor der Abgasstufe V.", "doc": "spec", "kind": "emission_stage", "value": "V", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Der Schalldruckpegel am Fahrerplatz darf 75 dB(A) nicht überschreiten.", "doc": "spec", "kind": "noise_dba", "value": 75, "unit": "dB(A)", "priority": "mandatory", "verdict": "clarify", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Das Gerät muss im Temperaturbereich von -20 °C bis +40 °C einsetzbar sein.", "doc": "spec", "kind": "ambient_temperature", "value": [-20, 40], "unit": "°C", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Eine technische Verfügbarkeit von 95 % wird angestrebt.", "doc": "spec", "kind": "availability_percent", "value": 95, "unit": "%", "priority": "desirable", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Das Zweiwegefahrzeug muss den Anforderungen der EN 15746-1 entsprechen.", "doc": "spec", "kind": "norm", "value": "EN 15746-1", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": ["EN 15746-1"]},
+    {"text": "Zusätzlich ist die Einhaltung der EN 15746-2 nachzuweisen.", "doc": "spec", "kind": "norm", "value": "EN 15746-2", "unit": null, "priority": "mandatory", "verdict": "deviate", "severity": "major", "red_flag": true, "norms": ["EN 15746-2"]},
+    {"text": "Der Hersteller sollte über ein Qualitätsmanagementsystem nach DIN EN ISO 9001 verfügen.", "doc": "spec", "kind": "norm", "value": "DIN EN ISO 9001", "unit": null, "priority": "desirable", "verdict": "comply", "severity": null, "red_flag": false, "norms": ["DIN EN ISO 9001"]},
+    {"text": "Die Lieferung muss innerhalb von 10 Monaten nach Auftragserteilung erfolgen.", "doc": "spec", "kind": "delivery_weeks", "value": 43.3, "unit": "weeks", "priority": "mandatory", "verdict": "deviate", "severity": "major", "red_flag": true, "norms": []},
+    {"text": "Die Gewährleistung beträgt zwei Jahre.", "doc": "spec", "kind": "warranty_months", "value": 24, "unit": "months", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Vertragsstrafe bei Lieferverzug beträgt 0,3 % der Netto-Auftragssumme pro Kalendertag, maximal 5 %.", "doc": "spec", "kind": "penalty_cap_percent", "value": 5, "unit": "%", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Haftung des Auftragnehmers ist auf die Höhe der Auftragssumme beschränkt.", "doc": "spec", "kind": "liability", "value": "contract_value", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Einweisung von acht Maschinenführern sollte an drei Tagen vor Ort stattfinden.", "doc": "spec", "kind": "training_days", "value": 3, "unit": "days", "priority": "desirable", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Bedienungsanleitung und die Ersatzteilliste sind in deutscher Sprache zu liefern.", "doc": "spec", "kind": "documentation_language", "value": "de", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Angebote sind bis zum 03.02.2027, 10:00 Uhr, über die Vergabeplattform der Stadt Talstadt einzureichen.", "doc": "spec", "kind": "procedural", "value": null, "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Mit dem Angebot ist eine Referenzliste über mindestens zwei vergleichbare Lieferungen an Straßenbahnbetriebe einzureichen.", "doc": "spec", "kind": "procedural", "value": null, "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []}
+  ],
+  "norms": {"EN 15746-1": "certified", "EN 15746-2": "not_certified", "DIN EN ISO 9001": "certified"},
+  "bid": "no_bid",
+  "variant": "GW ZW 2"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "HO-brandt-03",
+  "customer": "brandt",
+  "language": "de",
+  "subject": "Tanklöschfahrzeug TLF 3000 für die Vegetationsbrandbekämpfung",
+  "requirements": [
+    {"text": "Beschafft wird ein Tanklöschfahrzeug TLF 3000.", "doc": "spec", "kind": "vehicle_type", "value": "TLF 3000", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die zulässige Gesamtmasse darf höchstens 18 t betragen.", "doc": "spec", "kind": "gross_mass_t", "value": 18, "unit": "t", "priority": "mandatory", "verdict": "clarify", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Das Fahrgestell ist mit permanentem Allradantrieb 4x4 und Geländeuntersetzung auszustatten.", "doc": "spec", "kind": "drive", "value": "4x4", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Der Löschwasserbehälter muss mindestens 3.000 Liter fassen.", "doc": "spec", "kind": "water_tank_l", "value": 3000, "unit": "l", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Der Schaummittelbehälter sollte 500 l fassen.", "doc": "spec", "kind": "foam_tank_l", "value": 500, "unit": "l", "priority": "desirable", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Feuerlöschkreiselpumpe ist als FPN 10-3000 auszuführen.", "doc": "spec", "kind": "fire_pump", "value": "FPN 10-3000", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Das Fahrerhaus soll für eine Besatzung von 1+2 ausgelegt sein.", "doc": "spec", "kind": "crew_cab", "value": "1+2", "unit": null, "priority": "desirable", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Ein Lichtmast sollte vorhanden sein.", "doc": "spec", "kind": "light_mast", "value": true, "unit": null, "priority": "desirable", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Das Fahrzeug muss DIN EN 1846-2 entsprechen.", "doc": "spec", "kind": "norm", "value": "DIN EN 1846-2", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": ["DIN EN 1846-2"]},
+    {"text": "Die Feuerlöschkreiselpumpe ist nach DIN EN 1028-1 auszuführen.", "doc": "spec", "kind": "norm", "value": "DIN EN 1028-1", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": ["DIN EN 1028-1"]},
+    {"text": "Die allgemeinen Anforderungen der DIN 14502-2 an Feuerwehrfahrzeuge sollten eingehalten werden.", "doc": "spec", "kind": "norm", "value": "DIN 14502-2", "unit": null, "priority": "desirable", "verdict": "comply", "severity": null, "red_flag": false, "norms": ["DIN 14502-2"]},
+    {"text": "Die Lieferung muss spätestens 17 Monate nach Auftragserteilung erfolgen.", "doc": "spec", "kind": "delivery_weeks", "value": 73.7, "unit": "weeks", "priority": "mandatory", "verdict": "clarify", "severity": "major", "red_flag": true, "norms": []},
+    {"text": "Gewährleistung: 36 Monate auf den Aufbau.", "doc": "spec", "kind": "warranty_months", "value": 36, "unit": "months", "priority": "mandatory", "verdict": "clarify", "severity": "major", "red_flag": true, "norms": []},
+    {"text": "Die Vertragsstrafe beträgt 0,15 % je Werktag, höchstens 5 % des Auftragswerts.", "doc": "spec", "kind": "penalty_cap_percent", "value": 5, "unit": "%", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Zahlung erfolgt innerhalb von 30 Tagen.", "doc": "spec", "kind": "payment_days", "value": 30, "unit": "days", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Eine Einweisung von vier Tagen für die Maschinisten der umliegenden Feuerwehren ist vorzusehen.", "doc": "spec", "kind": "training_days", "value": 4, "unit": "days", "priority": "mandatory", "verdict": "clarify", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Ersatzteile sollen 15 Jahre verfügbar sein.", "doc": "spec", "kind": "spare_parts_years", "value": 15, "unit": "years", "priority": "desirable", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Das Angebot ist bis zum 18.02.2027 in einem verschlossenen Umschlag mit der Aufschrift „Angebot TLF 3000 – nicht öffnen“ einzureichen.", "doc": "spec", "kind": "procedural", "value": null, "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Es sind mindestens zwei Referenzen über gelieferte Tanklöschfahrzeuge beizufügen.", "doc": "spec", "kind": "procedural", "value": null, "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Bindefrist beträgt 90 Tage.", "doc": "spec", "kind": "bid_validity_days", "value": 90, "unit": "days", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []}
+  ],
+  "norms": {"DIN EN 1846-2": "certified", "DIN EN 1028-1": "certified", "DIN 14502-2": "certified"},
+  "bid": "bid",
+  "variant": "Brandt TLF 3000"
+}

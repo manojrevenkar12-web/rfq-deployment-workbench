@@ -1,0 +1,30 @@
+{
+  "id": "HO-brandt-04",
+  "customer": "brandt",
+  "language": "de",
+  "subject": "Beschaffung einer Drehleiter mit Korb DLK 23-12",
+  "requirements": [
+    {"text": "Zu liefern ist eine Drehleiter mit Korb DLK 23-12 nach DIN EN 14043.", "doc": "spec", "kind": "vehicle_type", "value": "DLK 23-12", "unit": null, "priority": "mandatory", "verdict": "deviate", "severity": "knockout", "red_flag": true, "norms": ["DIN EN 14043"]},
+    {"text": "Die zulässige Gesamtmasse darf 16 t nicht übersteigen.", "doc": "spec", "kind": "gross_mass_t", "value": 16, "unit": "t", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Das Fahrgestell ist mit Hinterradantrieb 4x2 auszuführen.", "doc": "spec", "kind": "drive", "value": "4x2", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Kabine soll für eine Besatzung von 1+2 ausgelegt sein.", "doc": "spec", "kind": "crew_cab", "value": "1+2", "unit": null, "priority": "desirable", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Ein Stromerzeuger mit mindestens 5 kVA sollte mitgeliefert werden.", "doc": "spec", "kind": "generator_kva", "value": 5, "unit": "kVA", "priority": "desirable", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Zusätzlich ist ein ausfahrbarer Lichtmast am Fahrzeugheck wünschenswert.", "doc": "spec", "kind": "light_mast", "value": true, "unit": null, "priority": "desirable", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Hubrettungsfunktion ist nach DIN EN 14043 zu prüfen und abzunehmen.", "doc": "spec", "kind": "norm", "value": "DIN EN 14043", "unit": null, "priority": "mandatory", "verdict": "deviate", "severity": "major", "red_flag": true, "norms": ["DIN EN 14043"]},
+    {"text": "Das Fahrgestell muss die Anforderungen der DIN EN 1846-2 erfüllen.", "doc": "spec", "kind": "norm", "value": "DIN EN 1846-2", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": ["DIN EN 1846-2"]},
+    {"text": "Die allgemeinen Anforderungen der DIN 14502-2 sollten eingehalten werden.", "doc": "spec", "kind": "norm", "value": "DIN 14502-2", "unit": null, "priority": "desirable", "verdict": "comply", "severity": null, "red_flag": false, "norms": ["DIN 14502-2"]},
+    {"text": "Die Anforderungen der DIN 14502-3 sind ebenfalls zu erfüllen.", "doc": "spec", "kind": "norm", "value": "DIN 14502-3", "unit": null, "priority": "mandatory", "verdict": "deviate", "severity": "major", "red_flag": true, "norms": ["DIN 14502-3"]},
+    {"text": "Die Lieferung hat innerhalb von 20 Monaten nach Auftragserteilung zu erfolgen.", "doc": "spec", "kind": "delivery_weeks", "value": 86.7, "unit": "weeks", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Gewährleistungsfrist beträgt 24 Monate.", "doc": "spec", "kind": "warranty_months", "value": 24, "unit": "months", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Vertragsstrafe: 0,2 % je Werktag, höchstens 5 % der Auftragssumme.", "doc": "spec", "kind": "penalty_cap_percent", "value": 5, "unit": "%", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Zahlungsfrist beträgt 30 Tage.", "doc": "spec", "kind": "payment_days", "value": 30, "unit": "days", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Einweisung der Maschinisten erfolgt an fünf Tagen.", "doc": "spec", "kind": "training_days", "value": 5, "unit": "days", "priority": "mandatory", "verdict": "clarify", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Haftung ist auf die Auftragssumme begrenzt.", "doc": "spec", "kind": "liability", "value": "contract_value", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Angebote sind bis zum 11.02.2027, 10:00 Uhr, elektronisch über die Vergabeplattform einzureichen.", "doc": "spec", "kind": "procedural", "value": null, "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Der Bieter hat nachzuweisen, dass er in den letzten fünf Jahren mindestens drei Hubrettungsfahrzeuge ausgeliefert hat.", "doc": "spec", "kind": "procedural", "value": null, "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Bindefrist beträgt 100 Tage.", "doc": "spec", "kind": "bid_validity_days", "value": 100, "unit": "days", "priority": "mandatory", "verdict": "clarify", "severity": null, "red_flag": false, "norms": []}
+  ],
+  "norms": {"DIN EN 14043": "not_certified", "DIN EN 1846-2": "certified", "DIN 14502-2": "certified", "DIN 14502-3": "not_certified"},
+  "bid": "no_bid",
+  "variant": null
+}

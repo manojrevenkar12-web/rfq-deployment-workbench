@@ -1,0 +1,31 @@
+{
+  "id": "HO-brandt-06",
+  "customer": "brandt",
+  "language": "de",
+  "subject": "Beschaffung eines HLF 20 mit erweiterter Ausstattung für die technische Hilfeleistung",
+  "requirements": [
+    {"text": "Gegenstand ist ein HLF 20 nach DIN 14530-27.", "doc": "spec", "kind": "vehicle_type", "value": "HLF 20", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": ["DIN 14530-27"]},
+    {"text": "Wegen der erweiterten Beladung ist eine zulässige Gesamtmasse von 19,5 t vorzusehen.", "doc": "spec", "kind": "gross_mass_t", "value": 19.5, "unit": "t", "priority": "mandatory", "verdict": "deviate", "severity": "knockout", "red_flag": true, "norms": []},
+    {"text": "Das Fahrzeug ist mit Allradantrieb 4x4 auszuführen.", "doc": "spec", "kind": "drive", "value": "4x4", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Der Löschwasserbehälter soll mindestens 2.500 l fassen.", "doc": "spec", "kind": "water_tank_l", "value": 2500, "unit": "l", "priority": "desirable", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Ein Schaummitteltank mit 200 l sollte vorgesehen werden.", "doc": "spec", "kind": "foam_tank_l", "value": 200, "unit": "l", "priority": "desirable", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Feuerlöschkreiselpumpe muss eine FPN 10-3000 sein.", "doc": "spec", "kind": "fire_pump", "value": "FPN 10-3000", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Besatzung beträgt 1+8.", "doc": "spec", "kind": "crew_cab", "value": "1+8", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Ein fest eingebauter Generator mit mindestens 20 kVA ist für die hydraulischen Rettungsgeräte und die Umfeldbeleuchtung erforderlich.", "doc": "spec", "kind": "generator_kva", "value": 20, "unit": "kVA", "priority": "mandatory", "verdict": "clarify", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Ein Lichtmast sollte vorgesehen werden.", "doc": "spec", "kind": "light_mast", "value": true, "unit": null, "priority": "desirable", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Das Fahrzeug hat die Anforderungen der DIN EN 1846-3 zu erfüllen.", "doc": "spec", "kind": "norm", "value": "DIN EN 1846-3", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": ["DIN EN 1846-3"]},
+    {"text": "Die allgemeinen Anforderungen nach DIN 14502-2 sollten eingehalten werden.", "doc": "spec", "kind": "norm", "value": "DIN 14502-2", "unit": null, "priority": "desirable", "verdict": "comply", "severity": null, "red_flag": false, "norms": ["DIN 14502-2"]},
+    {"text": "Die Pumpe muss nach DIN EN 1028-1 geprüft sein.", "doc": "spec", "kind": "norm", "value": "DIN EN 1028-1", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": ["DIN EN 1028-1"]},
+    {"text": "Liefertermin ist spätestens 19 Monate nach Auftragsvergabe.", "doc": "spec", "kind": "delivery_weeks", "value": 82.3, "unit": "weeks", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Gewährleistung beträgt 24 Monate.", "doc": "spec", "kind": "warranty_months", "value": 24, "unit": "months", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Bei Lieferverzug wird eine Vertragsstrafe von 0,2 % je Werktag erhoben, maximal 5 % der Auftragssumme.", "doc": "spec", "kind": "penalty_cap_percent", "value": 5, "unit": "%", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Zahlung erfolgt 30 Tage nach Rechnungseingang.", "doc": "spec", "kind": "payment_days", "value": 30, "unit": "days", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Für die Einweisung sollten drei Tage eingeplant werden.", "doc": "spec", "kind": "training_days", "value": 3, "unit": "days", "priority": "desirable", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Dokumentation ist in deutscher Sprache zu liefern.", "doc": "spec", "kind": "documentation_language", "value": "de", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Das Angebot ist bis zum 04.03.2027 über die Vergabeplattform einzureichen.", "doc": "spec", "kind": "procedural", "value": null, "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Dem Angebot sind Nachweise über mindestens drei ausgelieferte HLF 20 beizufügen.", "doc": "spec", "kind": "procedural", "value": null, "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []}
+  ],
+  "norms": {"DIN 14530-27": "certified", "DIN EN 1846-3": "certified", "DIN 14502-2": "certified", "DIN EN 1028-1": "certified"},
+  "bid": "no_bid",
+  "variant": "Brandt HLF 20"
+}

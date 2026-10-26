@@ -1,0 +1,31 @@
+{
+  "id": "HO-brandt-05",
+  "customer": "brandt",
+  "language": "de",
+  "subject": "Löschgruppenfahrzeug LF 20 für die Ortswehr Altenmoor-Nord",
+  "requirements": [
+    {"text": "Zu beschaffen ist ein Löschgruppenfahrzeug LF 20 nach DIN 14530-11.", "doc": "spec", "kind": "vehicle_type", "value": "LF 20", "unit": null, "priority": "mandatory", "verdict": "clarify", "severity": null, "red_flag": false, "norms": ["DIN 14530-11"]},
+    {"text": "Die zulässige Gesamtmasse beträgt höchstens 15 t.", "doc": "spec", "kind": "gross_mass_t", "value": 15, "unit": "t", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Das Fahrgestell muss mindestens als 4x2 ausgeführt sein.", "doc": "spec", "kind": "drive", "value": "4x2", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Allradantrieb (4x4) ist wünschenswert.", "doc": "spec", "kind": "drive", "value": "4x4", "unit": null, "priority": "desirable", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Der Löschwassertank muss mindestens 2.000 l Wasser fassen.", "doc": "spec", "kind": "water_tank_l", "value": 2000, "unit": "l", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Für Schaummittel sollte ein Behälter mit 120 Litern eingebaut werden.", "doc": "spec", "kind": "foam_tank_l", "value": 120, "unit": "l", "priority": "desirable", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Pumpe ist als FPN 10-2000 auszuführen.", "doc": "spec", "kind": "fire_pump", "value": "FPN 10-2000", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Besatzung des Fahrzeugs beträgt 1+8.", "doc": "spec", "kind": "crew_cab", "value": "1+8", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Ein Stromerzeuger mit 13 kVA sollte fest eingebaut werden.", "doc": "spec", "kind": "generator_kva", "value": 13, "unit": "kVA", "priority": "desirable", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Ein Lichtmast muss vorhanden sein.", "doc": "spec", "kind": "light_mast", "value": true, "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Das Fahrzeug muss der DIN EN 1846-2 entsprechen.", "doc": "spec", "kind": "norm", "value": "DIN EN 1846-2", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": ["DIN EN 1846-2"]},
+    {"text": "Die Feuerlöschkreiselpumpe sollte DIN EN 1028-1 erfüllen.", "doc": "spec", "kind": "norm", "value": "DIN EN 1028-1", "unit": null, "priority": "desirable", "verdict": "comply", "severity": null, "red_flag": false, "norms": ["DIN EN 1028-1"]},
+    {"text": "Die Lieferung erfolgt spätestens 18 Monate nach Zuschlag.", "doc": "spec", "kind": "delivery_weeks", "value": 78, "unit": "weeks", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Gewährleistung: 24 Monate.", "doc": "spec", "kind": "warranty_months", "value": 24, "unit": "months", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Vertragsstrafe ist auf 5 % des Auftragswerts begrenzt.", "doc": "spec", "kind": "penalty_cap_percent", "value": 5, "unit": "%", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Zahlung innerhalb von 30 Tagen nach Abnahme.", "doc": "spec", "kind": "payment_days", "value": 30, "unit": "days", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Haftung ist auf 1 Mio. EUR begrenzt.", "doc": "spec", "kind": "liability", "value": "limited", "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Das Angebot ist bis zum 14.01.2027, 12:00 Uhr, bei der Gemeindeverwaltung einzureichen.", "doc": "spec", "kind": "procedural", "value": null, "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Referenzen über mindestens zwei gelieferte Löschgruppenfahrzeuge sind beizufügen.", "doc": "spec", "kind": "procedural", "value": null, "unit": null, "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []},
+    {"text": "Die Bindefrist beträgt 60 Tage.", "doc": "spec", "kind": "bid_validity_days", "value": 60, "unit": "days", "priority": "mandatory", "verdict": "comply", "severity": null, "red_flag": false, "norms": []}
+  ],
+  "norms": {"DIN 14530-11": "certified", "DIN EN 1846-2": "certified", "DIN EN 1028-1": "certified"},
+  "bid": "no_bid",
+  "variant": null
+}
