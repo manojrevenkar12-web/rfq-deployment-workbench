@@ -1,0 +1,36 @@
+# What Gleiswerk's sales engineering lead told us in discovery: what the machines can do, what the company
+# accepts commercially, what is certified. The agents compare every requirement against this.
+id: gleiswerk
+name: Gleiswerk Maschinenbau GmbH
+domain: rail
+industry: Rail maintenance machines
+location: Schwäbisch Hall
+capabilities:
+  travel_speed_kmh: {op: max, standard: 100, limit: 100, severity: knockout}
+  axle_load_t: {op: min, standard: 20.5, limit: 18.0, severity: knockout}
+  engine_power_kw: {op: max, standard: 750, limit: 750, severity: knockout}
+  emission_stage: {op: set, standard: [V, IIIB], limit: [Tier 4 final], severity: major}
+  ambient_temperature: {op: range, standard: [-25, 45], limit: [-30, 45], severity: major}
+  track_gauge_mm: {op: set, standard: [1435, 1000], limit: [], severity: knockout}
+  fire_protection_level: {op: set, standard: [HL1, HL2], limit: [], severity: knockout}
+  noise_dba: {op: min, standard: 78, limit: 75, severity: minor}
+  availability_percent: {op: max, standard: 95, limit: 97, severity: major}
+  gradient_permille: {op: max, standard: 40, limit: 40, severity: knockout}
+  penalty_cap_percent: {op: max, standard: 5, limit: 8, severity: major}
+  warranty_months: {op: max, standard: 24, limit: 36, severity: major}
+  payment_days: {op: max, standard: 30, limit: 60, severity: minor}
+  liability: {op: set, standard: [contract_value, limited], limit: [double_contract_value], severity: major}
+  delivery_weeks: {op: min, standard: 52, limit: 44, severity: major}
+  spare_parts_years: {op: max, standard: 15, limit: 15, severity: minor}
+  training_days: {op: max, standard: 5, limit: 8, severity: minor}
+  documentation_language: {op: set, standard: [de, en], limit: [fr], severity: minor}
+  bid_validity_days: {op: max, standard: 90, limit: 120, severity: minor}
+norms:
+  certified: [EN 14033-1, EN 14033-2, EN 14033-3, EN 15746-1, EN 50155, EN 45545-2, EN 15085-2, DIN EN ISO 9001, EN 13715]
+  not_certified: [EN 15746-2, EN 50126-1, TSI NOI]
+catalog:
+  select_by: subject
+  variants:
+    - {name: GW Stopf 08, match: [stopfmaschine, tamping]}
+    - {name: GW Schleif 16, match: [schleifzug, schleif, grinding]}
+    - {name: GW ZW 2, match: [zweiwege, road-rail]}

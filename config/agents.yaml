@@ -1,0 +1,41 @@
+# The agents a deployment can switch on, which quote-process activities each one takes work from, and how much.
+# effort: share of the activity's work hours that goes away at each readiness level (net of the human check
+# that every agent output still gets). Readiness comes from scoring the agent on the customer's own past tenders.
+agents:
+  requirement_extraction:
+    label: Requirement extraction
+    does: Turns specifications, bills of quantities and e-mails into a list of requirements with their source
+    key_metric: requirement_recall
+    activities:
+      Read requirements: {automate: 0.70, assist: 0.40}
+  red_flags:
+    label: Red-flag detection
+    does: Compares every requirement with what the company can meet and accepts, and flags what needs pushback
+    key_metric: red_flag_recall
+    activities:
+      Commercial review: {automate: 0.45, assist: 0.25}
+      Technical review: {automate: 0.30, assist: 0.15}
+  norms_report:
+    label: Norms and standards
+    does: Lists every cited norm and whether the company is certified
+    key_metric: norm_recall
+    activities:
+      Norms check: {automate: 0.65, assist: 0.35}
+  bid_no_bid:
+    label: Bid / no-bid
+    does: Recommends whether to bid, with the reasons
+    key_metric: bid_accuracy
+    activities:
+      Qualify: {automate: 0.50, assist: 0.25}
+  configuration:
+    label: Configuration (CPQ)
+    does: Picks the product variant that meets the requirements
+    key_metric: variant_accuracy
+    activities:
+      Configure and price: {automate: 0.40, assist: 0.20}
+  technical_documentation:
+    label: Technical documentation
+    does: Drafts the compliance matrix and the clarification letter
+    key_metric: verdict_accuracy
+    activities:
+      Write documentation: {automate: 0.55, assist: 0.30}

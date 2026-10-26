@@ -1,0 +1,28 @@
+stage: pilot
+kickoff: 2026-09-21
+go_live: 2026-11-16
+renewal: 2027-11-15
+contract: {annual_fee: 60000, seats: 15}
+scope: [requirement_extraction, red_flags, norms_report, technical_documentation]
+not_in_scope:
+  configuration: "Machines are built to order; variant choice is the easy part. Revisit for spare-part tenders."
+  bid_no_bid: "Scored, but the decision stays with the managing director."
+stakeholders:
+  - {name: Helmut Brenner, role: Managing Director, side: executive, note: "Former chief engineer; wants proof on rail norms."}
+  - {name: Sabine Krauß, role: Head of Sales, side: champion, note: "Lost two tenders last year to late submissions."}
+  - {name: Markus Vogt, role: Engineering (technical review), side: user, note: "The single engineer every tender waits for."}
+milestones:
+  - {name: Kickoff and process walk-through, date: 2026-09-21, done: 2026-09-21}
+  - {name: CRM export of the quote process received, date: 2026-09-28, done: 2026-09-30}
+  - {name: Pilot on 36 past tenders scored, date: 2026-10-16, done: 2026-10-20}
+  - {name: Pilot readout to the managing director, date: 2026-10-30}
+  - {name: Go-live for sales engineering, date: 2026-11-16}
+kpis:
+  - {key: requirement_recall, label: Requirements found on scored tenders, target: 0.95, better: higher, format: percent}
+  - {key: red_flag_recall, label: Red flags found, target: 0.98, better: higher, format: percent}
+  - {key: lead_time_days, label: Median days from request to bid, target: 10.0, better: lower, format: days}
+  - {key: engineering_wait_days, label: Days a tender waits for technical review, target: 2.0, better: lower, format: days}
+risks:
+  - {risk: "One engineer reviews every tender: if he is ill, bids stop.", owner: Sabine Krauß, mitigation: "Red-flag list first, so technical review covers only flagged requirements."}
+decisions:
+  - {date: 2026-09-21, decision: "Pilot measured on 36 past tenders with their submitted compliance matrices.", by: Helmut Brenner}

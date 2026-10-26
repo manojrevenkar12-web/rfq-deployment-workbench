@@ -1,0 +1,34 @@
+id: brandt
+name: Brandt Fahrzeugbau GmbH
+domain: fire
+industry: Fire-fighting vehicles
+location: Landshut
+capabilities:
+  vehicle_type: {op: set, standard: [HLF 10, HLF 20, TLF 3000], limit: [LF 20], severity: knockout}
+  gross_mass_t: {op: max, standard: 16, limit: 18, severity: knockout}
+  # Discovery note: "tanks up to 4,000 litres". The pilot showed 5,000 is possible with the long body.
+  water_tank_l: {op: max, standard: 3000, limit: 4000, severity: major}
+  foam_tank_l: {op: max, standard: 500, limit: 800, severity: minor}
+  fire_pump: {op: set, standard: [FPN 10-2000, FPN 10-3000], limit: [FPN 10-4000], severity: knockout}
+  crew_cab: {op: set, standard: ["1+8", "1+5", "1+2"], limit: [], severity: major}
+  generator_kva: {op: max, standard: 14, limit: 20, severity: minor}
+  light_mast: {op: bool, standard: true, limit: true, severity: minor}
+  drive: {op: set, standard: [4x2, 4x4], limit: [6x6], severity: knockout}
+  penalty_cap_percent: {op: max, standard: 5, limit: 5, severity: major}
+  warranty_months: {op: max, standard: 24, limit: 36, severity: major}
+  payment_days: {op: max, standard: 30, limit: 30, severity: minor}
+  liability: {op: set, standard: [contract_value, limited], limit: [double_contract_value], severity: major}
+  delivery_weeks: {op: min, standard: 78, limit: 70, severity: major}
+  spare_parts_years: {op: max, standard: 15, limit: 15, severity: minor}
+  training_days: {op: max, standard: 3, limit: 5, severity: minor}
+  documentation_language: {op: set, standard: [de, en], limit: [fr], severity: minor}
+  bid_validity_days: {op: max, standard: 90, limit: 120, severity: minor}
+norms:
+  certified: [DIN EN 1846-1, DIN EN 1846-2, DIN EN 1846-3, DIN 14530-11, DIN 14530-27, DIN EN 1028-1, DIN 14502-2, DIN 14530]
+  not_certified: [DIN EN 14043, DIN 14502-3]
+catalog:
+  select_by: vehicle_type
+  variants:
+    - {name: Brandt HLF 10, vehicle_type: HLF 10}
+    - {name: Brandt HLF 20, vehicle_type: HLF 20}
+    - {name: Brandt TLF 3000, vehicle_type: TLF 3000}

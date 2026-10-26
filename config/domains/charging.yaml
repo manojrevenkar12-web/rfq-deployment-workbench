@@ -1,0 +1,93 @@
+# DC fast charging infrastructure (IEC 61851, ISO 15118, OCPP, German calibration law, AFIR).
+kinds:
+  charging_power_kw:
+    label: Charging power per charge point
+    value: number
+    unit: kW
+    units: [kw, mw]
+    keywords_de: [ladeleistung]
+    keywords_en: [charging power, kw dc, deliver at least]
+  charge_points:
+    label: Charge points per station
+    value: number
+    unit: charge points
+    units: [ladepunkte, charge points]
+    keywords_de: [ladepunkte, gleichzeitig nutzbare]
+    keywords_en: [charge points, simultaneously]
+  output_voltage_v:
+    label: Output voltage range
+    value: range
+    unit: V
+    units: [v]
+    keywords_de: [ausgangsspannung, spannungsbereich]
+    keywords_en: [output voltage, voltage range]
+  max_current_a:
+    label: Maximum charging current
+    value: number
+    unit: A
+    units: [a]
+    keywords_de: [ladestrom]
+    keywords_en: [charging current, current]
+  efficiency_percent:
+    label: Efficiency at rated power
+    value: number
+    unit: "%"
+    units: ["%"]
+    keywords_de: [wirkungsgrad]
+    keywords_en: [efficiency]
+  ip_rating:
+    label: Protection rating (IEC 60529)
+    value: enum_number
+    patterns: ['\bIP\s?(\d\d)\b']
+    keywords_de: [schutzart]
+    keywords_en: [protection rating, ingress protection]
+  ambient_temperature:
+    label: Ambient temperature range
+    value: range
+    unit: °C
+    units: [°c]
+    keywords_de: [temperatur, umgebungstemperatur]
+    keywords_en: [temperature]
+  ocpp_version:
+    label: Backend protocol (OCPP)
+    value: enum
+    patterns: ['OCPP\s*(\d\.\d(?:\.\d)?J?)']
+    keywords_de: [ocpp, backend]
+    keywords_en: [ocpp, backend]
+  iso15118_part:
+    label: Plug & Charge (ISO 15118)
+    value: enum
+    patterns: ['ISO\s*15118-(\d+)']
+    keywords_de: [plug & charge, plug and charge, iso 15118]
+    keywords_en: [plug & charge, plug and charge, iso 15118]
+  calibration_law:
+    label: Calibration law (Eichrecht)
+    value: bool
+    keywords_de: [eichrecht, eichrechtskonform, mess- und eichrecht]
+    keywords_en: [calibration law, eichrecht]
+  adhoc_payment:
+    label: Ad-hoc payment by card (AFIR)
+    value: bool
+    keywords_de: [ad-hoc, kreditkarte, debitkarte, kartenterminal, zahlungskarten]
+    keywords_en: [ad-hoc, credit card, debit card]
+  availability_percent:
+    label: Charge point availability
+    value: number
+    unit: "%"
+    units: ["%"]
+    keywords_de: [verfügbarkeit]
+    keywords_en: [availability]
+  service_response_hours:
+    label: Service response time
+    value: number
+    unit: h
+    units: [h, stunden, hours]
+    keywords_de: [reaktionszeit, servicetechniker, störungsmeldung, störungsfall]
+    keywords_en: [service technician, response time, fault report]
+  cable_length_m:
+    label: Charging cable length
+    value: number
+    unit: m
+    units: [m]
+    keywords_de: [ladekabel, kabellänge]
+    keywords_en: [charging cables, cable length]

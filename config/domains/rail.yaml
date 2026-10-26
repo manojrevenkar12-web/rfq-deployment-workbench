@@ -1,0 +1,70 @@
+# Rail-bound construction and maintenance machines (EN 14033, EN 15746).
+kinds:
+  travel_speed_kmh:
+    label: Travel speed (self-propelled)
+    value: number
+    unit: km/h
+    units: [km/h]
+    keywords_de: [geschwindigkeit, eigenfahrt, überführung, fahrgeschwindigkeit]
+    keywords_en: [travel speed, speed]
+  axle_load_t:
+    label: Axle load
+    value: number
+    unit: t
+    units: [t]
+    keywords_de: [radsatzlast, achslast]
+    keywords_en: [axle load]
+  engine_power_kw:
+    label: Engine power
+    value: number
+    unit: kW
+    units: [kw, mw]
+    keywords_de: [motorleistung, antriebsleistung, dieselmotor, nennleistung]
+    keywords_en: [engine power, rated power, diesel engine]
+  emission_stage:
+    label: Emission stage
+    value: enum
+    patterns: ['(?:stufe|stage)\s+(V|IIIB)\b', '(Tier 4 final)']
+    keywords_de: [abgas, abgasstufe, emission]
+    keywords_en: [emission stage, emission]
+  ambient_temperature:
+    label: Ambient temperature range
+    value: range
+    unit: °C
+    units: [°c]
+    keywords_de: [temperatur, umgebungstemperatur, einsatztemperatur]
+    keywords_en: [temperature]
+  track_gauge_mm:
+    label: Track gauge
+    value: number
+    unit: mm
+    units: [mm]
+    keywords_de: [spurweite]
+    keywords_en: [track gauge, gauge]
+  fire_protection_level:
+    label: Fire protection hazard level (EN 45545-2)
+    value: enum
+    patterns: ['\b(HL\s?[1-3])\b']
+    keywords_de: [brandschutz, gefährdungsstufe]
+    keywords_en: [fire protection, hazard level]
+  noise_dba:
+    label: Sound pressure at the operator position
+    value: number
+    unit: dB(A)
+    units: [db(a), dba]
+    keywords_de: [schalldruck, lärm, geräusch]
+    keywords_en: [sound pressure, noise]
+  availability_percent:
+    label: Technical availability
+    value: number
+    unit: "%"
+    units: ["%"]
+    keywords_de: [verfügbarkeit]
+    keywords_en: [availability]
+  gradient_permille:
+    label: Gradient
+    value: number
+    unit: ‰
+    units: [‰, promille]
+    keywords_de: [steigung, neigung]
+    keywords_en: [gradient, incline]

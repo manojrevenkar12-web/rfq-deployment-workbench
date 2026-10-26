@@ -1,0 +1,67 @@
+# Commercial and contractual terms every industrial tender carries. Shared by all domains.
+kinds:
+  penalty_cap_percent:
+    label: Penalty cap for late delivery
+    value: penalty
+    unit: "%"
+    commercial: true
+    keywords_de: [vertragsstrafe, pönale, verzugsstrafe, lieferverzug]
+    keywords_en: [liquidated damages, penalty, penalties, late delivery]
+  warranty_months:
+    label: Warranty period
+    value: duration_months
+    unit: months
+    commercial: true
+    keywords_de: [gewährleistung, mängelhaftung, garantie, mängelansprüche]
+    keywords_en: [warranty, guarantee period, defects liability]
+  payment_days:
+    label: Payment term
+    value: number
+    unit: days
+    units: [tage, tagen, days]
+    commercial: true
+    keywords_de: [zahlung, rechnung, zahlungsziel, zahlungsbedingung]
+    keywords_en: [payment, invoice]
+  liability:
+    label: Liability
+    value: liability
+    commercial: true
+    keywords_de: [haftung, haftet]
+    keywords_en: [liability, liable]
+  delivery_weeks:
+    label: Delivery time after award
+    value: duration_weeks
+    unit: weeks
+    commercial: true
+    keywords_de: [lieferung, liefertermin, lieferzeit, übergabe, auslieferung]
+    keywords_en: [delivery, handed over, hand-over, lead time]
+  spare_parts_years:
+    label: Spare parts availability
+    value: number
+    unit: years
+    units: [jahre, jahren, years]
+    commercial: true
+    keywords_de: [ersatzteil]
+    keywords_en: [spare parts]
+  training_days:
+    label: Operator training
+    value: number
+    unit: days
+    units: [tage, tagen, schulungstage, days]
+    commercial: true
+    keywords_de: [schulung, einweisung, training]
+    keywords_en: [training]
+  documentation_language:
+    label: Documentation language
+    value: language
+    commercial: true
+    keywords_de: [dokumentation, betriebsanleitung, handbücher, handbuch]
+    keywords_en: [documentation, manuals]
+  bid_validity_days:
+    label: Offer validity
+    value: number
+    unit: days
+    units: [tage, kalendertage, days]
+    commercial: true
+    keywords_de: [bindefrist, gültig, angebotsgültigkeit]
+    keywords_en: [valid for, validity]

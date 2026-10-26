@@ -1,0 +1,34 @@
+# The deployment as the strategist runs it. Dates are planned unless "done" is set.
+stage: scale
+kickoff: 2026-06-15
+go_live: 2026-08-03
+renewal: 2027-07-31
+contract: {annual_fee: 72000, seats: 25}
+scope: [requirement_extraction, red_flags, norms_report, configuration, technical_documentation]
+not_in_scope:
+  bid_no_bid: "Sales qualifies on the first call with the buyer; revisit when inbound volume passes 400 a year."
+stakeholders:
+  - {name: Dr. Katrin Albers, role: Managing Director, side: executive, note: "Signs the renewal. Cares about bids per head, not hours."}
+  - {name: Jonas Reiter, role: Head of Sales Engineering, side: champion, note: "Owns the rollout internally."}
+  - {name: Miriam Okafor, role: Legal Counsel, side: user, note: "Was the bottleneck; now reviews pre-flagged terms only."}
+  - {name: Tobias Lenz, role: Engineering Lead, side: user, note: "Still reads every specification in full."}
+milestones:
+  - {name: Kickoff and process walk-through, date: 2026-06-15, done: 2026-06-15}
+  - {name: Pilot on 40 past tenders scored, date: 2026-07-10, done: 2026-07-14}
+  - {name: Capability profile signed off by sales engineering, date: 2026-07-20, done: 2026-07-22}
+  - {name: Go-live for sales engineering and legal, date: 2026-08-03, done: 2026-08-03}
+  - {name: Engineering uses red flags instead of a full read, date: 2026-10-15}
+  - {name: Quarterly business review with the managing director, date: 2026-11-05}
+  - {name: Renewal decision, date: 2027-06-30}
+kpis:
+  - {key: requirement_recall, label: Requirements found on scored tenders, target: 0.95, better: higher, format: percent}
+  - {key: red_flag_recall, label: Red flags found, target: 0.95, better: higher, format: percent}
+  - {key: lead_time_days, label: Median days from request to bid, target: 4.0, better: lower, format: days}
+  - {key: se_hours_per_tender, label: Sales engineering hours per submitted bid, target: 9.0, better: lower, format: hours}
+  - {key: review_acceptance, label: Agent answers confirmed unchanged, target: 0.85, better: higher, format: percent}
+risks:
+  - {risk: "Engineering keeps reading every specification in full, so technical review time has not moved.", owner: Jonas Reiter, mitigation: "Calibration session: engineering reviews 10 tenders from the red-flag list only and compares."}
+  - {risk: "Grid-connection norm VDE-AR-N 4110 missing from the capability profile: the agents ask on every tender.", owner: Strategist, mitigation: "Confirm the certificate status with quality and update the profile."}
+decisions:
+  - {date: 2026-07-22, decision: "Bid / no-bid stays with sales for now.", by: Jonas Reiter}
+  - {date: 2026-09-10, decision: "Legal reviews flagged terms only; unflagged terms are accepted as standard.", by: Miriam Okafor}

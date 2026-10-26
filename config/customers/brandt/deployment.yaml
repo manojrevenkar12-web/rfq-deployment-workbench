@@ -1,0 +1,23 @@
+stage: discovery
+kickoff: 2026-10-12
+go_live: 2027-01-18
+renewal: 2028-01-17
+contract: {annual_fee: 48000, seats: 8}
+scope: [requirement_extraction, red_flags, technical_documentation]
+not_in_scope:
+  configuration: "Vehicle types map one to one to products today."
+stakeholders:
+  - {name: Andrea Brandt, role: Managing Director (owner family), side: executive, note: "Decides on gut feel; bring two examples, not a dashboard."}
+  - {name: Felix Huber, role: Sales Engineer, side: champion, note: "Writes most clarification letters to municipalities."}
+milestones:
+  - {name: Kickoff and process walk-through, date: 2026-10-12, done: 2026-10-12}
+  - {name: CRM export of the quote process received, date: 2026-10-19, done: 2026-10-21}
+  - {name: Pilot on 32 past tenders scored, date: 2026-11-06}
+  - {name: Scope decision with the managing director, date: 2026-11-13}
+kpis:
+  - {key: requirement_recall, label: Requirements found on scored tenders, target: 0.95, better: higher, format: percent}
+  - {key: clarification_rounds, label: Clarification rounds per tender, target: 0.4, better: lower, format: number}
+  - {key: lead_time_days, label: Median days from request to bid, target: 14.0, better: lower, format: days}
+risks:
+  - {risk: "Most of the lead time is waiting for municipalities to answer questions; agents cannot shorten that wait.", owner: Strategist, mitigation: "Ask every open question in the first letter: fewer rounds, not faster rounds."}
+decisions: []

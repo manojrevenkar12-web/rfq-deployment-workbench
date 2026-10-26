@@ -1,0 +1,36 @@
+# Thresholds and defaults. Business numbers live here, not in code.
+readiness:
+  # Lower bound of a Wilson interval at this confidence, so a small pilot cannot look better than it is.
+  confidence: 0.95
+  automate: 0.90
+  assist: 0.75
+  # Below this many scored items an agent stays "not enough evidence", whatever its score.
+  min_items: 20
+red_flags:
+  # A clarification becomes a red flag when it is a commercial term of at least this severity.
+  commercial_clarify_severity: major
+bid:
+  no_bid_on: [knockout_deviation, no_variant]
+  conditions_on_major_flags: 1
+evaluation:
+  # A found requirement matches a key requirement when their normalised texts overlap this much.
+  match_jaccard: 0.6
+value:
+  currency: EUR
+  # Loaded cost per working hour, by role (salary, social charges, overhead).
+  hourly_cost:
+    sales: 85
+    sales_engineering: 95
+    engineering: 110
+    quality: 90
+    legal: 120
+    management: 150
+  # Hours of tender work a person has in a year after holidays, training and other duties.
+  hours_per_person_year: 1500
+  bootstrap_samples: 400
+  # The licence and service fee assumed for the payback, per year (edit per customer).
+  annual_fee: 60000
+deployment:
+  # SteerCo health thresholds
+  kpi_amber_share: 0.9  # amber when a KPI reaches 90 % of its target
+  stale_review_days: 14

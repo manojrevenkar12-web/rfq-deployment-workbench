@@ -1,0 +1,59 @@
+# Fire-fighting vehicles (DIN EN 1846, DIN 14530, DIN EN 1028).
+kinds:
+  vehicle_type:
+    label: Vehicle type
+    value: enum
+    patterns: ['\b((?:HLF|LF|TLF|DLK|RW|MLF)\s?\d+(?:-\d+)?(?:/\d+)?)\b']
+    keywords_de: [fahrzeugtyp, fahrzeug vom typ, typ]
+    keywords_en: [vehicle type]
+  gross_mass_t:
+    label: Gross vehicle mass
+    value: number
+    unit: t
+    units: [t]
+    keywords_de: [gesamtmasse, gesamtgewicht]
+    keywords_en: [gross vehicle mass]
+  water_tank_l:
+    label: Water tank
+    value: number
+    unit: l
+    units: [l, liter]
+    keywords_de: [löschwasserbehälter, löschwassertank, wassertank]
+    keywords_en: [water tank]
+  foam_tank_l:
+    label: Foam tank
+    value: number
+    unit: l
+    units: [l, liter]
+    keywords_de: [schaummittel]
+    keywords_en: [foam]
+  fire_pump:
+    label: Fire pump (DIN EN 1028)
+    value: enum
+    patterns: ['\b(FP[NH]\s?\d+-\d+)\b']
+    keywords_de: [feuerlöschkreiselpumpe, feuerlöschpumpe, pumpe]
+    keywords_en: [fire pump]
+  crew_cab:
+    label: Crew
+    value: enum
+    patterns: ['\b(1\s?\+\s?\d)\b']
+    keywords_de: [besatzung, mannschaftskabine, sitzplätze]
+    keywords_en: [crew]
+  generator_kva:
+    label: Portable generator
+    value: number
+    unit: kVA
+    units: [kva]
+    keywords_de: [stromerzeuger, generator]
+    keywords_en: [generator]
+  light_mast:
+    label: Light mast
+    value: bool
+    keywords_de: [lichtmast]
+    keywords_en: [light mast]
+  drive:
+    label: Drive
+    value: enum
+    patterns: ['\b(\dx\d)\b']
+    keywords_de: [antrieb, antriebsart, allrad]
+    keywords_en: [drive]

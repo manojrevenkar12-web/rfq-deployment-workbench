@@ -1,0 +1,361 @@
+{
+ "customers": {
+  "brandt": {
+   "stage": "discovery",
+   "health": "red",
+   "metrics": {
+    "bid_accuracy": {
+     "right": 32,
+     "of": 32,
+     "rate": 1.0,
+     "lower_bound": 0.8928
+    },
+    "kind_accuracy": {
+     "right": 593,
+     "of": 593,
+     "rate": 1.0,
+     "lower_bound": 0.9936
+    },
+    "norm_precision": {
+     "right": 111,
+     "of": 111,
+     "rate": 1.0,
+     "lower_bound": 0.9665
+    },
+    "norm_recall": {
+     "right": 111,
+     "of": 111,
+     "rate": 1.0,
+     "lower_bound": 0.9665
+    },
+    "norm_status_accuracy": {
+     "right": 111,
+     "of": 111,
+     "rate": 1.0,
+     "lower_bound": 0.9665
+    },
+    "priority_accuracy": {
+     "right": 593,
+     "of": 593,
+     "rate": 1.0,
+     "lower_bound": 0.9936
+    },
+    "red_flag_precision": {
+     "right": 128,
+     "of": 132,
+     "rate": 0.9697,
+     "lower_bound": 0.9247
+    },
+    "red_flag_recall": {
+     "right": 128,
+     "of": 128,
+     "rate": 1.0,
+     "lower_bound": 0.9709
+    },
+    "requirement_precision": {
+     "right": 593,
+     "of": 593,
+     "rate": 1.0,
+     "lower_bound": 0.9936
+    },
+    "requirement_recall": {
+     "right": 593,
+     "of": 593,
+     "rate": 1.0,
+     "lower_bound": 0.9936
+    },
+    "unsafe_bid_avoided": {
+     "right": 32,
+     "of": 32,
+     "rate": 1.0,
+     "lower_bound": 0.8928
+    },
+    "value_accuracy": {
+     "right": 488,
+     "of": 488,
+     "rate": 1.0,
+     "lower_bound": 0.9922
+    },
+    "variant_accuracy": {
+     "right": 21,
+     "of": 21,
+     "rate": 1.0,
+     "lower_bound": 0.8454
+    },
+    "verdict_accuracy": {
+     "right": 589,
+     "of": 593,
+     "rate": 0.9933,
+     "lower_bound": 0.9828
+    }
+   },
+   "readiness": {
+    "requirement_extraction": "automate",
+    "red_flags": "automate",
+    "norms_report": "automate",
+    "bid_no_bid": "assist",
+    "configuration": "assist",
+    "technical_documentation": "automate"
+   },
+   "bottleneck": {
+    "activity": "Buyer answer",
+    "kind": "external",
+    "wait_hours_per_case": 205.0
+   },
+   "lead_time_days": {
+    "median": 17.8,
+    "p80": 26.1
+   },
+   "value": {
+    "hours_per_year": 1412,
+    "capacity_people": 0.94,
+    "gross_per_year": 139846,
+    "net_per_year": 91846.0,
+    "lead_time_days": {
+     "before": 17.8,
+     "after": 14.4,
+     "saved_low": 2.0,
+     "saved_high": 5.3
+    }
+   }
+  },
+  "gleiswerk": {
+   "stage": "pilot",
+   "health": "red",
+   "metrics": {
+    "bid_accuracy": {
+     "right": 36,
+     "of": 36,
+     "rate": 1.0,
+     "lower_bound": 0.9036
+    },
+    "kind_accuracy": {
+     "right": 719,
+     "of": 719,
+     "rate": 1.0,
+     "lower_bound": 0.9947
+    },
+    "norm_precision": {
+     "right": 123,
+     "of": 123,
+     "rate": 1.0,
+     "lower_bound": 0.9697
+    },
+    "norm_recall": {
+     "right": 123,
+     "of": 123,
+     "rate": 1.0,
+     "lower_bound": 0.9697
+    },
+    "norm_status_accuracy": {
+     "right": 123,
+     "of": 123,
+     "rate": 1.0,
+     "lower_bound": 0.9697
+    },
+    "priority_accuracy": {
+     "right": 719,
+     "of": 719,
+     "rate": 1.0,
+     "lower_bound": 0.9947
+    },
+    "red_flag_precision": {
+     "right": 101,
+     "of": 101,
+     "rate": 1.0,
+     "lower_bound": 0.9634
+    },
+    "red_flag_recall": {
+     "right": 101,
+     "of": 101,
+     "rate": 1.0,
+     "lower_bound": 0.9634
+    },
+    "requirement_precision": {
+     "right": 719,
+     "of": 719,
+     "rate": 1.0,
+     "lower_bound": 0.9947
+    },
+    "requirement_recall": {
+     "right": 719,
+     "of": 719,
+     "rate": 1.0,
+     "lower_bound": 0.9947
+    },
+    "unsafe_bid_avoided": {
+     "right": 36,
+     "of": 36,
+     "rate": 1.0,
+     "lower_bound": 0.9036
+    },
+    "value_accuracy": {
+     "right": 612,
+     "of": 612,
+     "rate": 1.0,
+     "lower_bound": 0.9938
+    },
+    "variant_accuracy": {
+     "right": 36,
+     "of": 36,
+     "rate": 1.0,
+     "lower_bound": 0.9036
+    },
+    "verdict_accuracy": {
+     "right": 719,
+     "of": 719,
+     "rate": 1.0,
+     "lower_bound": 0.9947
+    }
+   },
+   "readiness": {
+    "requirement_extraction": "automate",
+    "red_flags": "automate",
+    "norms_report": "automate",
+    "bid_no_bid": "automate",
+    "configuration": "automate",
+    "technical_documentation": "automate"
+   },
+   "bottleneck": {
+    "activity": "Technical review",
+    "kind": "queue",
+    "wait_hours_per_case": 117.9
+   },
+   "lead_time_days": {
+    "median": 17.2,
+    "p80": 25.6
+   },
+   "value": {
+    "hours_per_year": 2952,
+    "capacity_people": 1.97,
+    "gross_per_year": 293042,
+    "net_per_year": 233042.0,
+    "lead_time_days": {
+     "before": 17.2,
+     "after": 8.8,
+     "saved_low": 7.6,
+     "saved_high": 10.4
+    }
+   }
+  },
+  "voltaro": {
+   "stage": "scale",
+   "health": "amber",
+   "metrics": {
+    "bid_accuracy": {
+     "right": 40,
+     "of": 40,
+     "rate": 1.0,
+     "lower_bound": 0.9124
+    },
+    "kind_accuracy": {
+     "right": 894,
+     "of": 894,
+     "rate": 1.0,
+     "lower_bound": 0.9957
+    },
+    "norm_precision": {
+     "right": 162,
+     "of": 162,
+     "rate": 1.0,
+     "lower_bound": 0.9768
+    },
+    "norm_recall": {
+     "right": 162,
+     "of": 162,
+     "rate": 1.0,
+     "lower_bound": 0.9768
+    },
+    "norm_status_accuracy": {
+     "right": 158,
+     "of": 162,
+     "rate": 0.9753,
+     "lower_bound": 0.9382
+    },
+    "priority_accuracy": {
+     "right": 894,
+     "of": 894,
+     "rate": 1.0,
+     "lower_bound": 0.9957
+    },
+    "red_flag_precision": {
+     "right": 162,
+     "of": 162,
+     "rate": 1.0,
+     "lower_bound": 0.9768
+    },
+    "red_flag_recall": {
+     "right": 162,
+     "of": 166,
+     "rate": 0.9759,
+     "lower_bound": 0.9397
+    },
+    "requirement_precision": {
+     "right": 894,
+     "of": 894,
+     "rate": 1.0,
+     "lower_bound": 0.9957
+    },
+    "requirement_recall": {
+     "right": 894,
+     "of": 894,
+     "rate": 1.0,
+     "lower_bound": 0.9957
+    },
+    "unsafe_bid_avoided": {
+     "right": 40,
+     "of": 40,
+     "rate": 1.0,
+     "lower_bound": 0.9124
+    },
+    "value_accuracy": {
+     "right": 765,
+     "of": 765,
+     "rate": 1.0,
+     "lower_bound": 0.995
+    },
+    "variant_accuracy": {
+     "right": 36,
+     "of": 36,
+     "rate": 1.0,
+     "lower_bound": 0.9036
+    },
+    "verdict_accuracy": {
+     "right": 890,
+     "of": 894,
+     "rate": 0.9955,
+     "lower_bound": 0.9886
+    }
+   },
+   "readiness": {
+    "requirement_extraction": "automate",
+    "red_flags": "automate",
+    "norms_report": "automate",
+    "bid_no_bid": "automate",
+    "configuration": "automate",
+    "technical_documentation": "automate"
+   },
+   "bottleneck": {
+    "activity": "Commercial review",
+    "kind": "queue",
+    "wait_hours_per_case": 28.0
+   },
+   "lead_time_days": {
+    "median": 6.5,
+    "p80": 8.9
+   },
+   "value": {
+    "hours_per_year": 3293,
+    "capacity_people": 2.2,
+    "gross_per_year": 333501,
+    "net_per_year": 261501.0,
+    "lead_time_days": {
+     "before": 6.5,
+     "after": 2.9,
+     "saved_low": 3.4,
+     "saved_high": 3.8
+    }
+   }
+  }
+ }
+}
