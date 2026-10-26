@@ -1,0 +1,22 @@
+# docker compose up: the workbench on http://localhost:8000 with PostgreSQL for reviews and decisions.
+services:
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: rdw
+      POSTGRES_PASSWORD: rdw
+      POSTGRES_DB: rdw
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "rdw"]
+      interval: 5s
+      retries: 10
+  workbench:
+    build: .
+    ports: ["8000:8000"]
+    environment:
+      RDW_DATABASE_URL: postgresql+psycopg://rdw:rdw@db:5432/rdw
+      RDW_TODAY: "2026-10-26"
+      # RDW_API_TOKEN: set it to require a bearer token on every API call
+    depends_on:
+      db:
+        condition: service_healthy

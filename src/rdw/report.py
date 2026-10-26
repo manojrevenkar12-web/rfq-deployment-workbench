@@ -61,6 +61,24 @@ def write_reports(wb: Workbench, out: Path) -> list[Path]:
             f"to bid; most waiting before *{b['activity']}* ({b['kind']}, {b['wait_hours_per_case']} hours per tender).",
             "",
         ]
+    for h in wb.heldout():
+        names = list(h["customers"])
+        md += [
+            f"## Held-out set {h['set']} ({h['status']}, first run {h['run_at'][:10]})",
+            "",
+            "Tenders written by someone who never saw the code; these are the scores to quote.",
+            "",
+            "| Measure | " + " | ".join(names) + " |",
+            "| --- |" + " --- |" * len(names),
+        ]
+        for key in ("requirement_recall", "red_flag_recall", "verdict_accuracy", "bid_accuracy", "unsafe_bid_avoided"):
+            cells = []
+            for c in names:
+                m = h["customers"][c]["metrics"].get(key)
+                cells.append(f"{m['right']}/{m['of']} ({_pct(m['rate'])})" if m else "n/a")
+            md.append(f"| {key.replace('_', ' ')} | " + " | ".join(cells) + " |")
+        md.append("")
+        data.setdefault("heldout", []).append(h)
     p = wb.portfolio()
     md += [
         "## Across customers",

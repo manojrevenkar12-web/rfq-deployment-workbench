@@ -20,7 +20,7 @@ Quote process: 85 tenders in 342 days, median 17.8 days to bid; most waiting bef
 
 ## Gleiswerk Maschinenbau GmbH (pilot, red)
 
-In the pilot. Of the agents in scope, 4 of 4 meet the bar to work on their own (Requirement extraction, Red-flag detection, Norms and standards, Technical documentation). Tenders lose most time the queue for technical review (4.9 days per tender). About 2,952 hours a year come back, 1,955 of them in sales engineering: the work of 2.0 people, worth 293,042 EUR against a fee of 60,000. Half of all bids go out within 8.8 days instead of 17.2 (between 7.6 and 10.4 days faster, 90 % of resamples).
+In the pilot. Of the agents in scope, 4 of 4 meet the bar to work on their own (Requirement extraction, Red-flag detection, Norms and standards, Technical documentation). Tenders lose most time in the queue for technical review (4.9 days per tender). About 2,952 hours a year come back, 1,955 of them in sales engineering: the work of 2.0 people, worth 293,042 EUR against a fee of 60,000. Half of all bids go out within 8.8 days instead of 17.2 (between 7.6 and 10.4 days faster, 90 % of resamples).
 
 | Agent | Readiness | Key metric | Right | Lower bound |
 | --- | --- | --- | --- | --- |
@@ -35,7 +35,7 @@ Quote process: 109 tenders in 330 days, median 17.2 days to bid; most waiting be
 
 ## Voltaro Ladetechnik GmbH (scale, amber)
 
-Live. Of the agents in scope, 5 of 5 meet the bar to work on their own (Requirement extraction, Red-flag detection, Norms and standards, Configuration (CPQ), Technical documentation). Tenders lose most time the queue for commercial review (1.2 days per tender). About 3,293 hours a year come back, 1,980 of them in sales engineering: the work of 2.2 people, worth 333,501 EUR against a fee of 72,000. Half of all bids go out within 2.9 days instead of 6.5 (between 3.4 and 3.8 days faster, 90 % of resamples).
+Live. Of the agents in scope, 5 of 5 meet the bar to work on their own (Requirement extraction, Red-flag detection, Norms and standards, Configuration (CPQ), Technical documentation). Tenders lose most time in the queue for commercial review (1.2 days per tender). About 3,293 hours a year come back, 1,980 of them in sales engineering: the work of 2.2 people, worth 333,501 EUR against a fee of 72,000. Half of all bids go out within 2.9 days instead of 6.5 (between 3.4 and 3.8 days faster, 90 % of resamples).
 
 | Agent | Readiness | Key metric | Right | Lower bound |
 | --- | --- | --- | --- | --- |
@@ -47,6 +47,18 @@ Live. Of the agents in scope, 5 of 5 meet the bar to work on their own (Requirem
 | Technical documentation | automate | verdict accuracy | 890/894 | 98.9% |
 
 Quote process: 252 tenders in 312 days, median 6.5 days to bid; most waiting before *Commercial review* (queue, 28.0 hours per tender).
+
+## Held-out set v1 (heldout, first run 2026-10-26)
+
+Tenders written by someone who never saw the code; these are the scores to quote.
+
+| Measure | brandt | gleiswerk | voltaro |
+| --- | --- | --- | --- |
+| requirement recall | 157/164 (95.7%) | 166/177 (93.8%) | 188/203 (92.6%) |
+| red flag recall | 9/13 (69.2%) | 18/27 (66.7%) | 16/23 (69.6%) |
+| verdict accuracy | 138/164 (84.2%) | 140/177 (79.1%) | 156/203 (76.8%) |
+| bid accuracy | 7/8 (87.5%) | 8/8 (100.0%) | 8/8 (100.0%) |
+| unsafe bid avoided | 8/8 (100.0%) | 8/8 (100.0%) | 8/8 (100.0%) |
 
 ## Across customers
 

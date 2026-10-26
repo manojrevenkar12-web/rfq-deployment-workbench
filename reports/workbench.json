@@ -357,5 +357,431 @@
     }
    }
   }
- }
+ },
+ "heldout": [
+  {
+   "set": "v1",
+   "status": "heldout",
+   "run_at": "2026-10-26T16:12:46+00:00",
+   "customers": {
+    "brandt": {
+     "tenders": 8,
+     "metrics": {
+      "bid_accuracy": {
+       "right": 7,
+       "of": 8,
+       "rate": 0.875,
+       "lower_bound": 0.5291
+      },
+      "kind_accuracy": {
+       "right": 140,
+       "of": 157,
+       "rate": 0.8917,
+       "lower_bound": 0.8334
+      },
+      "norm_precision": {
+       "right": 27,
+       "of": 27,
+       "rate": 1.0,
+       "lower_bound": 0.8754
+      },
+      "norm_recall": {
+       "right": 27,
+       "of": 28,
+       "rate": 0.9643,
+       "lower_bound": 0.8229
+      },
+      "norm_status_accuracy": {
+       "right": 27,
+       "of": 27,
+       "rate": 1.0,
+       "lower_bound": 0.8754
+      },
+      "priority_accuracy": {
+       "right": 157,
+       "of": 157,
+       "rate": 1.0,
+       "lower_bound": 0.9761
+      },
+      "red_flag_precision": {
+       "right": 9,
+       "of": 11,
+       "rate": 0.8182,
+       "lower_bound": 0.523
+      },
+      "red_flag_recall": {
+       "right": 9,
+       "of": 13,
+       "rate": 0.6923,
+       "lower_bound": 0.4237
+      },
+      "requirement_precision": {
+       "right": 157,
+       "of": 163,
+       "rate": 0.9632,
+       "lower_bound": 0.922
+      },
+      "requirement_recall": {
+       "right": 157,
+       "of": 164,
+       "rate": 0.9573,
+       "lower_bound": 0.9145
+      },
+      "unsafe_bid_avoided": {
+       "right": 8,
+       "of": 8,
+       "rate": 1.0,
+       "lower_bound": 0.6756
+      },
+      "value_accuracy": {
+       "right": 120,
+       "of": 140,
+       "rate": 0.8571,
+       "lower_bound": 0.7896
+      },
+      "variant_accuracy": {
+       "right": 5,
+       "of": 6,
+       "rate": 0.8333,
+       "lower_bound": 0.4365
+      },
+      "verdict_accuracy": {
+       "right": 138,
+       "of": 164,
+       "rate": 0.8415,
+       "lower_bound": 0.7778
+      }
+     },
+     "readiness": {
+      "requirement_extraction": "automate",
+      "red_flags": "not_enough_evidence",
+      "norms_report": "assist",
+      "bid_no_bid": "not_enough_evidence",
+      "configuration": "not_enough_evidence",
+      "technical_documentation": "assist"
+     },
+     "misses": [
+      {
+       "agent": "technical_documentation",
+       "cause": "vocabulary",
+       "owner": "platform",
+       "count": 13
+      },
+      {
+       "agent": "requirement_extraction",
+       "cause": "vocabulary",
+       "owner": "platform",
+       "count": 7
+      },
+      {
+       "agent": "technical_documentation",
+       "cause": "value",
+       "owner": "platform",
+       "count": 6
+      },
+      {
+       "agent": "requirement_extraction",
+       "cause": "noise",
+       "owner": "platform",
+       "count": 6
+      },
+      {
+       "agent": "norms_report",
+       "cause": "vocabulary",
+       "owner": "platform",
+       "count": 1
+      },
+      {
+       "agent": "bid_no_bid",
+       "cause": "rule",
+       "owner": "platform",
+       "count": 1
+      },
+      {
+       "agent": "configuration",
+       "cause": "rule",
+       "owner": "platform",
+       "count": 1
+      }
+     ]
+    },
+    "gleiswerk": {
+     "tenders": 8,
+     "metrics": {
+      "bid_accuracy": {
+       "right": 8,
+       "of": 8,
+       "rate": 1.0,
+       "lower_bound": 0.6756
+      },
+      "kind_accuracy": {
+       "right": 142,
+       "of": 166,
+       "rate": 0.8554,
+       "lower_bound": 0.7939
+      },
+      "norm_precision": {
+       "right": 28,
+       "of": 28,
+       "rate": 1.0,
+       "lower_bound": 0.8794
+      },
+      "norm_recall": {
+       "right": 28,
+       "of": 29,
+       "rate": 0.9655,
+       "lower_bound": 0.8282
+      },
+      "norm_status_accuracy": {
+       "right": 28,
+       "of": 28,
+       "rate": 1.0,
+       "lower_bound": 0.8794
+      },
+      "priority_accuracy": {
+       "right": 165,
+       "of": 166,
+       "rate": 0.994,
+       "lower_bound": 0.9667
+      },
+      "red_flag_precision": {
+       "right": 18,
+       "of": 18,
+       "rate": 1.0,
+       "lower_bound": 0.8241
+      },
+      "red_flag_recall": {
+       "right": 18,
+       "of": 27,
+       "rate": 0.6667,
+       "lower_bound": 0.4782
+      },
+      "requirement_precision": {
+       "right": 166,
+       "of": 168,
+       "rate": 0.9881,
+       "lower_bound": 0.9576
+      },
+      "requirement_recall": {
+       "right": 166,
+       "of": 177,
+       "rate": 0.9379,
+       "lower_bound": 0.8922
+      },
+      "unsafe_bid_avoided": {
+       "right": 8,
+       "of": 8,
+       "rate": 1.0,
+       "lower_bound": 0.6756
+      },
+      "value_accuracy": {
+       "right": 120,
+       "of": 148,
+       "rate": 0.8108,
+       "lower_bound": 0.7402
+      },
+      "variant_accuracy": {
+       "right": 8,
+       "of": 8,
+       "rate": 1.0,
+       "lower_bound": 0.6756
+      },
+      "verdict_accuracy": {
+       "right": 140,
+       "of": 177,
+       "rate": 0.791,
+       "lower_bound": 0.7252
+      }
+     },
+     "readiness": {
+      "requirement_extraction": "assist",
+      "red_flags": "not_yet",
+      "norms_report": "assist",
+      "bid_no_bid": "not_enough_evidence",
+      "configuration": "not_enough_evidence",
+      "technical_documentation": "not_yet"
+     },
+     "misses": [
+      {
+       "agent": "technical_documentation",
+       "cause": "vocabulary",
+       "owner": "platform",
+       "count": 20
+      },
+      {
+       "agent": "requirement_extraction",
+       "cause": "vocabulary",
+       "owner": "platform",
+       "count": 11
+      },
+      {
+       "agent": "technical_documentation",
+       "cause": "value",
+       "owner": "platform",
+       "count": 5
+      },
+      {
+       "agent": "requirement_extraction",
+       "cause": "noise",
+       "owner": "platform",
+       "count": 2
+      },
+      {
+       "agent": "norms_report",
+       "cause": "vocabulary",
+       "owner": "platform",
+       "count": 1
+      },
+      {
+       "agent": "technical_documentation",
+       "cause": "capability_profile",
+       "owner": "deployment",
+       "count": 1
+      }
+     ]
+    },
+    "voltaro": {
+     "tenders": 8,
+     "metrics": {
+      "bid_accuracy": {
+       "right": 8,
+       "of": 8,
+       "rate": 1.0,
+       "lower_bound": 0.6756
+      },
+      "kind_accuracy": {
+       "right": 167,
+       "of": 188,
+       "rate": 0.8883,
+       "lower_bound": 0.8353
+      },
+      "norm_precision": {
+       "right": 29,
+       "of": 29,
+       "rate": 1.0,
+       "lower_bound": 0.883
+      },
+      "norm_recall": {
+       "right": 29,
+       "of": 32,
+       "rate": 0.9062,
+       "lower_bound": 0.7578
+      },
+      "norm_status_accuracy": {
+       "right": 27,
+       "of": 29,
+       "rate": 0.931,
+       "lower_bound": 0.7804
+      },
+      "priority_accuracy": {
+       "right": 188,
+       "of": 188,
+       "rate": 1.0,
+       "lower_bound": 0.98
+      },
+      "red_flag_precision": {
+       "right": 16,
+       "of": 17,
+       "rate": 0.9412,
+       "lower_bound": 0.7302
+      },
+      "red_flag_recall": {
+       "right": 16,
+       "of": 23,
+       "rate": 0.6957,
+       "lower_bound": 0.4913
+      },
+      "requirement_precision": {
+       "right": 188,
+       "of": 189,
+       "rate": 0.9947,
+       "lower_bound": 0.9706
+      },
+      "requirement_recall": {
+       "right": 188,
+       "of": 203,
+       "rate": 0.9261,
+       "lower_bound": 0.8817
+      },
+      "unsafe_bid_avoided": {
+       "right": 8,
+       "of": 8,
+       "rate": 1.0,
+       "lower_bound": 0.6756
+      },
+      "value_accuracy": {
+       "right": 139,
+       "of": 170,
+       "rate": 0.8176,
+       "lower_bound": 0.7528
+      },
+      "variant_accuracy": {
+       "right": 6,
+       "of": 6,
+       "rate": 1.0,
+       "lower_bound": 0.6097
+      },
+      "verdict_accuracy": {
+       "right": 156,
+       "of": 203,
+       "rate": 0.7685,
+       "lower_bound": 0.7058
+      }
+     },
+     "readiness": {
+      "requirement_extraction": "assist",
+      "red_flags": "not_yet",
+      "norms_report": "assist",
+      "bid_no_bid": "not_enough_evidence",
+      "configuration": "not_enough_evidence",
+      "technical_documentation": "not_yet"
+     },
+     "misses": [
+      {
+       "agent": "technical_documentation",
+       "cause": "vocabulary",
+       "owner": "platform",
+       "count": 18
+      },
+      {
+       "agent": "requirement_extraction",
+       "cause": "vocabulary",
+       "owner": "platform",
+       "count": 15
+      },
+      {
+       "agent": "technical_documentation",
+       "cause": "value",
+       "owner": "platform",
+       "count": 12
+      },
+      {
+       "agent": "norms_report",
+       "cause": "vocabulary",
+       "owner": "platform",
+       "count": 3
+      },
+      {
+       "agent": "technical_documentation",
+       "cause": "norm_profile",
+       "owner": "deployment",
+       "count": 2
+      },
+      {
+       "agent": "norms_report",
+       "cause": "norm_profile",
+       "owner": "deployment",
+       "count": 2
+      },
+      {
+       "agent": "requirement_extraction",
+       "cause": "noise",
+       "owner": "platform",
+       "count": 1
+      }
+     ]
+    }
+   }
+  }
+ ]
 }

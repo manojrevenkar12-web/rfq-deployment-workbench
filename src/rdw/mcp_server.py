@@ -131,6 +131,15 @@ def platform_signals() -> dict[str, Any]:
 
 
 @mcp.tool()
+def heldout_results() -> list[dict[str, Any]]:
+    """First runs on held-out tenders written by someone who never saw the code: the scores to quote.
+
+    Counts per agent and cause only; the missed sentences stay out so nobody tunes the agents to them.
+    """
+    return wb().heldout()
+
+
+@mcp.tool()
 def tender_summary(customer: str, tender_id: str) -> dict[str, Any]:
     """One tender: bid recommendation with reasons, red flags with their source sentences, norms, variant."""
     a = wb().tender(_known(customer), tender_id)
