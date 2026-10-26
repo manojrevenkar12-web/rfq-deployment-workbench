@@ -54,6 +54,8 @@ def test_review_flow_and_compliance_matrix(client: TestClient) -> None:
         f"/api/customers/gleiswerk/tenders/{tid}/requirements/{rid}/review", json={"verdict": "maybe", "reviewer": "x"}
     )
     assert bad.status_code == 422
+    assert bad.headers["content-type"].startswith("application/problem+json")
+    assert bad.json()["detail"].startswith("verdict")
     x = client.get(f"/api/customers/gleiswerk/tenders/{tid}/compliance.xlsx")
     assert x.status_code == 200 and x.content[:2] == b"PK"
 
@@ -97,3 +99,16 @@ def test_token_is_required_when_configured(client: TestClient, monkeypatch: pyte
     monkeypatch.setenv("RDW_API_TOKEN", "s3cret")
     assert client.get("/api/health").status_code == 401
     assert client.get("/api/health", headers={"authorization": "Bearer s3cret"}).status_code == 200
+
+
+def test_timeline_adds_up_to_the_replayed_lead_time(client: TestClient) -> None:
+    v = client.post("/api/customers/gleiswerk/value", json={}).json()
+    timeline = v["what_if"]["timeline"]
+    before = sum(r["before"]["work"] + r["before"]["wait"] for r in timeline)
+    after = sum(r["after"]["work"] + r["after"]["wait"] for r in timeline)
+    lead = v["what_if"]["lead_time_days"]
+    assert after < before
+    # the average tender against the median tender: close, not equal
+    assert abs(before - lead["before"]) / lead["before"] < 0.35
+    assert abs(after - lead["after"]) / lead["after"] < 0.35
+    assert all(r["after"]["work"] <= r["before"]["work"] + 1e-9 for r in timeline)

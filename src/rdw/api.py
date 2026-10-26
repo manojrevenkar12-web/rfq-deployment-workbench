@@ -12,6 +12,7 @@ from pathlib import Path
 from typing import Annotated, Any
 
 from fastapi import Depends, FastAPI, File, HTTPException, Request, UploadFile
+from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, PlainTextResponse, Response
 from fastapi.staticfiles import StaticFiles
@@ -52,6 +53,17 @@ async def problem(_: Request, exc: HTTPException) -> JSONResponse:
     return JSONResponse(
         {"title": exc.detail, "status": exc.status_code},
         status_code=exc.status_code,
+        media_type="application/problem+json",
+    )
+
+
+@app.exception_handler(RequestValidationError)
+async def invalid(_: Request, exc: RequestValidationError) -> JSONResponse:
+    first = exc.errors()[0] if exc.errors() else {}
+    where = ".".join(str(x) for x in first.get("loc", ()) if x != "body")
+    return JSONResponse(
+        {"title": "the request is not valid", "detail": f"{where}: {first.get('msg', 'invalid')}", "status": 422},
+        status_code=422,
         media_type="application/problem+json",
     )
 

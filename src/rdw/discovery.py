@@ -199,6 +199,7 @@ def replay(cases: dict[str, list[Event]], factors: dict[str, float]) -> dict[str
     start_of: dict[int, float] = {}
     lead: dict[str, float] = {}
     hours_by_role: dict[str, float] = defaultdict(float)
+    per_activity: dict[str, list[float]] = defaultdict(lambda: [0.0, 0.0])  # calendar hours: work, wait
     while queue:
         ready, _, i, k = heapq.heappop(queue)
         cid, arrive, steps = plans[i]
@@ -206,6 +207,7 @@ def replay(cases: dict[str, list[Event]], factors: dict[str, float]) -> dict[str
         start_of.setdefault(i, arrive)
         if role in EXTERNAL_ROLES or work == 0:
             end = ready + external
+            per_activity[activity][1] += external
         else:
             slots = free.get(role) or [0.0]
             j = min(range(len(slots)), key=lambda x: slots[x])
@@ -213,12 +215,35 @@ def replay(cases: dict[str, list[Event]], factors: dict[str, float]) -> dict[str
             end = begin + work * CALENDAR_PER_WORK_HOUR
             slots[j] = end
             hours_by_role[role] += work
+            per_activity[activity][0] += end - begin
+            per_activity[activity][1] += begin - ready
         if k + 1 < len(steps):
             seq += 1
             heapq.heappush(queue, (end, seq, i, k + 1))
         elif activity == "Submitted":
             lead[cid] = (end - start_of[i]) / 24
-    return {"lead_days": lead, "hours_by_role": dict(hours_by_role)}
+    return {"lead_days": lead, "hours_by_role": dict(hours_by_role), "per_activity": dict(per_activity)}
+
+
+def _timeline(cases: dict[str, list[Event]], base: dict[str, Any], after: dict[str, Any]) -> list[dict[str, Any]]:
+    """Where the average tender's calendar time goes, per activity, today and with the agents (days per tender)."""
+    order: dict[str, int] = {}
+    for evs in cases.values():
+        for e in evs:
+            order.setdefault(e.activity, len(order))
+    n = max(1, len(cases))
+    rows = []
+    for activity in sorted(base["per_activity"], key=lambda a: order.get(a, 99)):
+        b = base["per_activity"][activity]
+        a = after["per_activity"].get(activity, [0.0, 0.0])
+        rows.append(
+            {
+                "activity": activity,
+                "before": {"work": round(b[0] / n / 24, 2), "wait": round(b[1] / n / 24, 2)},
+                "after": {"work": round(a[0] / n / 24, 2), "wait": round(a[1] / n / 24, 2)},
+            }
+        )
+    return [r for r in rows if r["before"]["work"] + r["before"]["wait"] >= 0.01]
 
 
 def what_if(
@@ -250,6 +275,7 @@ def what_if(
             "saved_low": round(_pct(diffs, 0.05), 1),
             "saved_high": round(_pct(diffs, 0.95), 1),
         },
+        "timeline": _timeline(cases, base, after),
         "hours_saved_by_role": saved_by_role,
         "hours_saved": round(sum(saved_by_role.values()), 1),
         "period_days": round(

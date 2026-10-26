@@ -235,10 +235,15 @@ class Workbench:
                     }
                 )
 
+        kinds = customer(cid).kinds
+
         def what(m: dict[str, Any]) -> str:
             e = m["expected"]
             if isinstance(e, dict):
-                return str(e["value"]) if e["kind"] == "norm" else e["kind"].replace("_", " ")
+                if e["kind"] == "norm":
+                    return str(e["value"])
+                spec = kinds.get(e["kind"])
+                return spec.label.lower() if spec else str(e["kind"]).replace("_", " ")
             return str(m["text"])
 
         profile = Counter((m["cause"], what(m)) for m in ev["misses"] if m["owner"] == "deployment")
@@ -247,7 +252,7 @@ class Workbench:
                 {
                     "kind": "profile",
                     "who": "strategist",
-                    "text": f"Fix the {cause.replace('_', ' ')} for {item}: the agents disagree with past decisions on {n} requirements.",
+                    "text": f"Fix the {cause.replace('_', ' ')} for {item}: {n} answers disagree with past decisions.",
                 }
             )
         live = self.live(cid)
@@ -261,7 +266,7 @@ class Workbench:
                         {
                             "kind": "adoption",
                             "who": "champion",
-                            "text": f"{row['activity']}: effort fell to {row['actual_factor']:.0%} of before, the plan was "
+                            "text": f"{row['activity']}: effort is {row['actual_factor']:.0%} of what it was, the plan was "
                             f"{row['projected_factor']:.0%}. Find out with the users why.",
                         }
                     )
