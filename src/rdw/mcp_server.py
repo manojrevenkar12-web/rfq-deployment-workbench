@@ -16,7 +16,7 @@ from typing import Any
 try:  # MCP Python SDK 2.x
     from mcp.server.mcpserver import MCPServer as Server
 except ImportError:  # 1.x
-    from mcp.server.fastmcp import FastMCP as Server  # type: ignore[no-redef,attr-defined,import-not-found,unused-ignore]
+    from mcp.server.fastmcp import FastMCP as Server  # type: ignore
 
 from . import store
 from .service import Workbench
