@@ -1,0 +1,102 @@
+{
+  "assumptions": {
+    "hourly_cost": {
+      "sales": 85,
+      "sales_engineering": 95,
+      "engineering": 110,
+      "quality": 90,
+      "legal": 120,
+      "management": 150
+    },
+    "hours_per_person_year": 1500,
+    "annual_fee": 72000.0,
+    "volume_growth": 0.0
+  },
+  "by_role": [
+    { "role": "sales_engineering", "hours": 1980, "rate": 95, "value": 188090, "people": 1.32 },
+    { "role": "legal", "hours": 685, "rate": 120, "value": 82153, "people": 0.46 },
+    { "role": "engineering", "hours": 335, "rate": 110, "value": 36894, "people": 0.22 },
+    { "role": "quality", "hours": 293, "rate": 90, "value": 26364, "people": 0.2 }
+  ],
+  "hours_per_year": 3293,
+  "capacity_people": 2.2,
+  "gross_per_year": 333501,
+  "net_per_year": 261501.0,
+  "payback_months": 2.6,
+  "lead_time_days": { "before": 6.5, "after": 2.9, "saved_low": 3.4, "saved_high": 3.8 },
+  "statement": "About 3,293 hours a year come back, 1,980 of them in sales engineering: the work of 2.2 people, worth 333,501 EUR against a fee of 72,000. Half of all bids go out within 2.9 days instead of 6.5 (between 3.4 and 3.8 days faster, 90 % of resamples).",
+  "what_if": {
+    "factors": {
+      "Commercial review": 0.55,
+      "Configure and price": 0.6,
+      "Norms check": 0.35,
+      "Read requirements": 0.3,
+      "Technical review": 0.7,
+      "Write documentation": 0.45
+    },
+    "model_check": { "observed_median_days": 6.5, "replayed_median_days": 6.5 },
+    "lead_time_days": { "before": 6.5, "after": 2.9, "saved_low": 3.4, "saved_high": 3.8 },
+    "timeline": [
+      {
+        "activity": "Qualify",
+        "before": { "work": 0.18, "wait": 0.0 },
+        "after": { "work": 0.18, "wait": 0.0 }
+      },
+      {
+        "activity": "Read requirements",
+        "before": { "work": 0.81, "wait": 0.01 },
+        "after": { "work": 0.24, "wait": 0.0 }
+      },
+      {
+        "activity": "Technical review",
+        "before": { "work": 0.66, "wait": 0.05 },
+        "after": { "work": 0.46, "wait": 0.01 }
+      },
+      {
+        "activity": "Norms check",
+        "before": { "work": 0.27, "wait": 0.05 },
+        "after": { "work": 0.09, "wait": 0.0 }
+      },
+      {
+        "activity": "Commercial review",
+        "before": { "work": 0.9, "wait": 1.17 },
+        "after": { "work": 0.5, "wait": 0.21 }
+      },
+      {
+        "activity": "Configure and price",
+        "before": { "work": 0.42, "wait": 0.0 },
+        "after": { "work": 0.25, "wait": 0.0 }
+      },
+      {
+        "activity": "Write documentation",
+        "before": { "work": 0.8, "wait": 0.0 },
+        "after": { "work": 0.36, "wait": 0.0 }
+      },
+      {
+        "activity": "Approve",
+        "before": { "work": 0.07, "wait": 0.0 },
+        "after": { "work": 0.07, "wait": 0.0 }
+      },
+      {
+        "activity": "Clarify with buyer",
+        "before": { "work": 0.06, "wait": 0.0 },
+        "after": { "work": 0.06, "wait": 0.0 }
+      },
+      {
+        "activity": "Buyer answer",
+        "before": { "work": 0.0, "wait": 0.44 },
+        "after": { "work": 0.0, "wait": 0.44 }
+      }
+    ],
+    "hours_saved_by_role": {
+      "sales": 0.0,
+      "sales_engineering": 1692.4,
+      "engineering": 286.7,
+      "quality": 250.4,
+      "legal": 585.2,
+      "management": 0.0
+    },
+    "hours_saved": 2814.7,
+    "period_days": 312
+  }
+}

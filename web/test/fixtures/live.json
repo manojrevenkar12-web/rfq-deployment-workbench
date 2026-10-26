@@ -1,0 +1,378 @@
+{
+  "since": "2026-08-03",
+  "discovery": {
+    "cases": 55,
+    "submitted": 43,
+    "no_bid": 12,
+    "period_days": 73,
+    "lead_time_days": { "median": 3.4, "p80": 5.2 },
+    "rework_share": 0.236,
+    "activities": [
+      {
+        "activity": "Buyer answer",
+        "role": "buyer",
+        "count": 15,
+        "share_of_cases": 0.273,
+        "work_hours_mean": 0.0,
+        "wait_hours_mean": 37.9,
+        "wait_hours_per_case": 10.3,
+        "waiting_kind": "external"
+      },
+      {
+        "activity": "Commercial review",
+        "role": "legal",
+        "count": 43,
+        "share_of_cases": 0.782,
+        "work_hours_mean": 3.34,
+        "wait_hours_mean": 6.3,
+        "wait_hours_per_case": 4.9,
+        "waiting_kind": "queue"
+      },
+      {
+        "activity": "Technical review",
+        "role": "engineering",
+        "count": 67,
+        "share_of_cases": 1.218,
+        "work_hours_mean": 3.43,
+        "wait_hours_mean": 0.5,
+        "wait_hours_per_case": 0.6,
+        "waiting_kind": "queue"
+      },
+      {
+        "activity": "Norms check",
+        "role": "quality",
+        "count": 43,
+        "share_of_cases": 0.782,
+        "work_hours_mean": 0.67,
+        "wait_hours_mean": 0.2,
+        "wait_hours_per_case": 0.1,
+        "waiting_kind": "queue"
+      },
+      {
+        "activity": "Approve",
+        "role": "management",
+        "count": 43,
+        "share_of_cases": 0.782,
+        "work_hours_mean": 0.5,
+        "wait_hours_mean": 0.1,
+        "wait_hours_per_case": 0.1,
+        "waiting_kind": "queue"
+      },
+      {
+        "activity": "Qualify",
+        "role": "sales",
+        "count": 55,
+        "share_of_cases": 1.0,
+        "work_hours_mean": 1.01,
+        "wait_hours_mean": 0.0,
+        "wait_hours_per_case": 0.0,
+        "waiting_kind": "queue"
+      },
+      {
+        "activity": "Read requirements",
+        "role": "sales_engineering",
+        "count": 52,
+        "share_of_cases": 0.945,
+        "work_hours_mean": 1.65,
+        "wait_hours_mean": 0.0,
+        "wait_hours_per_case": 0.0,
+        "waiting_kind": "queue"
+      },
+      {
+        "activity": "Configure and price",
+        "role": "sales_engineering",
+        "count": 43,
+        "share_of_cases": 0.782,
+        "work_hours_mean": 2.35,
+        "wait_hours_mean": 0.0,
+        "wait_hours_per_case": 0.0,
+        "waiting_kind": "queue"
+      },
+      {
+        "activity": "Write documentation",
+        "role": "sales_engineering",
+        "count": 43,
+        "share_of_cases": 0.782,
+        "work_hours_mean": 2.54,
+        "wait_hours_mean": 0.0,
+        "wait_hours_per_case": 0.0,
+        "waiting_kind": "queue"
+      },
+      {
+        "activity": "Submitted",
+        "role": "sales",
+        "count": 43,
+        "share_of_cases": 0.782,
+        "work_hours_mean": 0.0,
+        "wait_hours_mean": 0.0,
+        "wait_hours_per_case": 0.0,
+        "waiting_kind": "queue"
+      },
+      {
+        "activity": "No bid",
+        "role": "sales",
+        "count": 12,
+        "share_of_cases": 0.218,
+        "work_hours_mean": 0.0,
+        "wait_hours_mean": 0.0,
+        "wait_hours_per_case": 0.0,
+        "waiting_kind": "queue"
+      },
+      {
+        "activity": "Clarify with buyer",
+        "role": "sales_engineering",
+        "count": 15,
+        "share_of_cases": 0.273,
+        "work_hours_mean": 1.78,
+        "wait_hours_mean": 0.0,
+        "wait_hours_per_case": 0.0,
+        "waiting_kind": "queue"
+      }
+    ],
+    "bottleneck": { "activity": "Buyer answer", "kind": "external", "wait_hours_per_case": 10.3 },
+    "internal_bottleneck": { "activity": "Commercial review", "role": "legal", "wait_hours_per_case": 4.9 },
+    "utilisation": {
+      "engineering": 0.28,
+      "legal": 0.35,
+      "management": 0.05,
+      "quality": 0.07,
+      "sales": 0.04,
+      "sales_engineering": 0.19
+    },
+    "people": {
+      "engineering": 2,
+      "legal": 1,
+      "management": 1,
+      "quality": 1,
+      "sales": 3,
+      "sales_engineering": 4
+    },
+    "edges": [
+      { "from": "Qualify", "to": "Read requirements", "count": 52 },
+      { "from": "Read requirements", "to": "Technical review", "count": 52 },
+      { "from": "Technical review", "to": "Norms check", "count": 43 },
+      { "from": "Norms check", "to": "Commercial review", "count": 43 },
+      { "from": "Commercial review", "to": "Configure and price", "count": 43 },
+      { "from": "Configure and price", "to": "Write documentation", "count": 43 },
+      { "from": "Write documentation", "to": "Approve", "count": 43 },
+      { "from": "Approve", "to": "Submitted", "count": 43 },
+      { "from": "Technical review", "to": "Clarify with buyer", "count": 15 },
+      { "from": "Clarify with buyer", "to": "Buyer answer", "count": 15 },
+      { "from": "Buyer answer", "to": "Technical review", "count": 15 },
+      { "from": "Technical review", "to": "No bid", "count": 9 },
+      { "from": "Qualify", "to": "No bid", "count": 3 }
+    ],
+    "variants": [
+      {
+        "path": [
+          "Qualify",
+          "Read requirements",
+          "Technical review",
+          "Norms check",
+          "Commercial review",
+          "Configure and price",
+          "Write documentation",
+          "Approve",
+          "Submitted"
+        ],
+        "count": 32
+      },
+      {
+        "path": [
+          "Qualify",
+          "Read requirements",
+          "Technical review",
+          "Clarify with buyer",
+          "Buyer answer",
+          "Technical review",
+          "Norms check",
+          "Commercial review",
+          "Configure and price",
+          "Write documentation",
+          "Approve",
+          "Submitted"
+        ],
+        "count": 10
+      },
+      { "path": ["Qualify", "Read requirements", "Technical review", "No bid"], "count": 7 },
+      { "path": ["Qualify", "No bid"], "count": 3 },
+      {
+        "path": [
+          "Qualify",
+          "Read requirements",
+          "Technical review",
+          "Clarify with buyer",
+          "Buyer answer",
+          "Technical review",
+          "No bid"
+        ],
+        "count": 2
+      }
+    ],
+    "work_hours_by_role": {
+      "engineering": 230,
+      "legal": 144,
+      "management": 21,
+      "quality": 29,
+      "sales": 56,
+      "sales_engineering": 322
+    }
+  },
+  "activities": [
+    {
+      "activity": "Approve",
+      "hours_before": 0.51,
+      "hours_after": 0.5,
+      "actual_factor": 0.98,
+      "projected_factor": 1.0,
+      "gap": -0.02,
+      "status": "no_agent"
+    },
+    {
+      "activity": "Clarify with buyer",
+      "hours_before": 1.46,
+      "hours_after": 1.78,
+      "actual_factor": 1.22,
+      "projected_factor": 1.0,
+      "gap": 0.22,
+      "status": "no_agent"
+    },
+    {
+      "activity": "Commercial review",
+      "hours_before": 6.34,
+      "hours_after": 3.34,
+      "actual_factor": 0.53,
+      "projected_factor": 0.55,
+      "gap": -0.02,
+      "status": "on_plan"
+    },
+    {
+      "activity": "Configure and price",
+      "hours_before": 2.97,
+      "hours_after": 2.35,
+      "actual_factor": 0.79,
+      "projected_factor": 0.6,
+      "gap": 0.19,
+      "status": "behind"
+    },
+    {
+      "activity": "Norms check",
+      "hours_before": 1.88,
+      "hours_after": 0.67,
+      "actual_factor": 0.36,
+      "projected_factor": 0.35,
+      "gap": 0.01,
+      "status": "on_plan"
+    },
+    {
+      "activity": "Qualify",
+      "hours_before": 1.04,
+      "hours_after": 1.01,
+      "actual_factor": 0.97,
+      "projected_factor": 1.0,
+      "gap": -0.03,
+      "status": "no_agent"
+    },
+    {
+      "activity": "Read requirements",
+      "hours_before": 5.25,
+      "hours_after": 1.65,
+      "actual_factor": 0.31,
+      "projected_factor": 0.3,
+      "gap": 0.01,
+      "status": "on_plan"
+    },
+    {
+      "activity": "Technical review",
+      "hours_before": 3.37,
+      "hours_after": 3.43,
+      "actual_factor": 1.02,
+      "projected_factor": 0.7,
+      "gap": 0.32,
+      "status": "behind"
+    },
+    {
+      "activity": "Write documentation",
+      "hours_before": 5.59,
+      "hours_after": 2.54,
+      "actual_factor": 0.45,
+      "projected_factor": 0.45,
+      "gap": 0.0,
+      "status": "on_plan"
+    }
+  ],
+  "projected": {
+    "factors": {
+      "Commercial review": 0.55,
+      "Configure and price": 0.6,
+      "Norms check": 0.35,
+      "Read requirements": 0.3,
+      "Technical review": 0.7,
+      "Write documentation": 0.45
+    },
+    "model_check": { "observed_median_days": 6.5, "replayed_median_days": 6.5 },
+    "lead_time_days": { "before": 6.5, "after": 2.9, "saved_low": 3.4, "saved_high": 3.8 },
+    "timeline": [
+      {
+        "activity": "Qualify",
+        "before": { "work": 0.18, "wait": 0.0 },
+        "after": { "work": 0.18, "wait": 0.0 }
+      },
+      {
+        "activity": "Read requirements",
+        "before": { "work": 0.81, "wait": 0.01 },
+        "after": { "work": 0.24, "wait": 0.0 }
+      },
+      {
+        "activity": "Technical review",
+        "before": { "work": 0.66, "wait": 0.05 },
+        "after": { "work": 0.46, "wait": 0.01 }
+      },
+      {
+        "activity": "Norms check",
+        "before": { "work": 0.27, "wait": 0.05 },
+        "after": { "work": 0.09, "wait": 0.0 }
+      },
+      {
+        "activity": "Commercial review",
+        "before": { "work": 0.9, "wait": 1.17 },
+        "after": { "work": 0.5, "wait": 0.21 }
+      },
+      {
+        "activity": "Configure and price",
+        "before": { "work": 0.42, "wait": 0.0 },
+        "after": { "work": 0.25, "wait": 0.0 }
+      },
+      {
+        "activity": "Write documentation",
+        "before": { "work": 0.8, "wait": 0.0 },
+        "after": { "work": 0.36, "wait": 0.0 }
+      },
+      {
+        "activity": "Approve",
+        "before": { "work": 0.07, "wait": 0.0 },
+        "after": { "work": 0.07, "wait": 0.0 }
+      },
+      {
+        "activity": "Clarify with buyer",
+        "before": { "work": 0.06, "wait": 0.0 },
+        "after": { "work": 0.06, "wait": 0.0 }
+      },
+      {
+        "activity": "Buyer answer",
+        "before": { "work": 0.0, "wait": 0.44 },
+        "after": { "work": 0.0, "wait": 0.44 }
+      }
+    ],
+    "hours_saved_by_role": {
+      "sales": 0.0,
+      "sales_engineering": 1692.4,
+      "engineering": 286.7,
+      "quality": 250.4,
+      "legal": 585.2,
+      "management": 0.0
+    },
+    "hours_saved": 2814.7,
+    "period_days": 312
+  }
+}

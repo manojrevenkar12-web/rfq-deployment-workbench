@@ -186,3 +186,7 @@
     display: block;
   }
 }
+
+.rail > nav {
+  min-width: 0;
+}

@@ -1,0 +1,200 @@
+{
+  "customer": "voltaro",
+  "tenders": 40,
+  "metrics": {
+    "bid_accuracy": { "right": 40, "of": 40, "rate": 1.0, "lower_bound": 0.9124 },
+    "kind_accuracy": { "right": 894, "of": 894, "rate": 1.0, "lower_bound": 0.9957 },
+    "norm_precision": { "right": 162, "of": 162, "rate": 1.0, "lower_bound": 0.9768 },
+    "norm_recall": { "right": 162, "of": 162, "rate": 1.0, "lower_bound": 0.9768 },
+    "norm_status_accuracy": { "right": 158, "of": 162, "rate": 0.9753, "lower_bound": 0.9382 },
+    "priority_accuracy": { "right": 894, "of": 894, "rate": 1.0, "lower_bound": 0.9957 },
+    "red_flag_precision": { "right": 162, "of": 162, "rate": 1.0, "lower_bound": 0.9768 },
+    "red_flag_recall": { "right": 162, "of": 166, "rate": 0.9759, "lower_bound": 0.9397 },
+    "requirement_precision": { "right": 894, "of": 894, "rate": 1.0, "lower_bound": 0.9957 },
+    "requirement_recall": { "right": 894, "of": 894, "rate": 1.0, "lower_bound": 0.9957 },
+    "unsafe_bid_avoided": { "right": 40, "of": 40, "rate": 1.0, "lower_bound": 0.9124 },
+    "value_accuracy": { "right": 765, "of": 765, "rate": 1.0, "lower_bound": 0.995 },
+    "variant_accuracy": { "right": 36, "of": 36, "rate": 1.0, "lower_bound": 0.9036 },
+    "verdict_accuracy": { "right": 890, "of": 894, "rate": 0.9955, "lower_bound": 0.9886 }
+  },
+  "readiness": {
+    "requirement_extraction": {
+      "label": "Requirement extraction",
+      "does": "Turns specifications, bills of quantities and e-mails into a list of requirements with their source",
+      "metric": "requirement_recall",
+      "right": 894,
+      "of": 894,
+      "rate": 1.0,
+      "lower_bound": 0.9957,
+      "level": "automate",
+      "misses": 0,
+      "fix_in_platform": 0,
+      "fix_in_deployment": 0
+    },
+    "red_flags": {
+      "label": "Red-flag detection",
+      "does": "Compares every requirement with what the company can meet and accepts, and flags what needs pushback",
+      "metric": "red_flag_recall",
+      "right": 162,
+      "of": 166,
+      "rate": 0.9759,
+      "lower_bound": 0.9397,
+      "level": "automate",
+      "misses": 0,
+      "fix_in_platform": 0,
+      "fix_in_deployment": 0
+    },
+    "norms_report": {
+      "label": "Norms and standards",
+      "does": "Lists every cited norm and whether the company is certified",
+      "metric": "norm_recall",
+      "right": 162,
+      "of": 162,
+      "rate": 1.0,
+      "lower_bound": 0.9768,
+      "level": "automate",
+      "misses": 4,
+      "fix_in_platform": 0,
+      "fix_in_deployment": 4
+    },
+    "bid_no_bid": {
+      "label": "Bid / no-bid",
+      "does": "Recommends whether to bid, with the reasons",
+      "metric": "bid_accuracy",
+      "right": 40,
+      "of": 40,
+      "rate": 1.0,
+      "lower_bound": 0.9124,
+      "level": "automate",
+      "misses": 0,
+      "fix_in_platform": 0,
+      "fix_in_deployment": 0
+    },
+    "configuration": {
+      "label": "Configuration (CPQ)",
+      "does": "Picks the product variant that meets the requirements",
+      "metric": "variant_accuracy",
+      "right": 36,
+      "of": 36,
+      "rate": 1.0,
+      "lower_bound": 0.9036,
+      "level": "automate",
+      "misses": 0,
+      "fix_in_platform": 0,
+      "fix_in_deployment": 0
+    },
+    "technical_documentation": {
+      "label": "Technical documentation",
+      "does": "Drafts the compliance matrix and the clarification letter",
+      "metric": "verdict_accuracy",
+      "right": 890,
+      "of": 894,
+      "rate": 0.9955,
+      "lower_bound": 0.9886,
+      "level": "automate",
+      "misses": 4,
+      "fix_in_platform": 0,
+      "fix_in_deployment": 4
+    }
+  },
+  "misses": [
+    {
+      "tender": "VO-2026-002",
+      "agent": "technical_documentation",
+      "cause": "norm_profile",
+      "owner": "deployment",
+      "text": "Nachweis der Erfüllung von VDE-AR-N 4110: Zertifikat einer anerkannten Prüfstelle.",
+      "expected": { "kind": "norm", "value": "VDE-AR-N 4110", "verdict": "deviate" },
+      "got": { "kind": "norm", "value": "VDE-AR-N 4110", "verdict": "clarify" }
+    },
+    {
+      "tender": "VO-2026-002",
+      "agent": "norms_report",
+      "cause": "norm_profile",
+      "owner": "deployment",
+      "text": "VDE-AR-N 4110",
+      "expected": "not_certified",
+      "got": "unknown"
+    },
+    {
+      "tender": "VO-2026-003",
+      "agent": "technical_documentation",
+      "cause": "norm_profile",
+      "owner": "deployment",
+      "text": "Die Konformität mit VDE-AR-N 4110 ist durch ein gültiges Zertifikat nachzuweisen.",
+      "expected": { "kind": "norm", "value": "VDE-AR-N 4110", "verdict": "deviate" },
+      "got": { "kind": "norm", "value": "VDE-AR-N 4110", "verdict": "clarify" }
+    },
+    {
+      "tender": "VO-2026-003",
+      "agent": "norms_report",
+      "cause": "norm_profile",
+      "owner": "deployment",
+      "text": "VDE-AR-N 4110",
+      "expected": "not_certified",
+      "got": "unknown"
+    },
+    {
+      "tender": "VO-2026-025",
+      "agent": "technical_documentation",
+      "cause": "norm_profile",
+      "owner": "deployment",
+      "text": "The design shall comply with VDE-AR-N 4110.",
+      "expected": { "kind": "norm", "value": "VDE-AR-N 4110", "verdict": "deviate" },
+      "got": { "kind": "norm", "value": "VDE-AR-N 4110", "verdict": "clarify" }
+    },
+    {
+      "tender": "VO-2026-025",
+      "agent": "norms_report",
+      "cause": "norm_profile",
+      "owner": "deployment",
+      "text": "VDE-AR-N 4110",
+      "expected": "not_certified",
+      "got": "unknown"
+    },
+    {
+      "tender": "VO-2026-035",
+      "agent": "technical_documentation",
+      "cause": "norm_profile",
+      "owner": "deployment",
+      "text": "Conformity with VDE-AR-N 4110 shall be demonstrated by a valid certificate.",
+      "expected": { "kind": "norm", "value": "VDE-AR-N 4110", "verdict": "deviate" },
+      "got": { "kind": "norm", "value": "VDE-AR-N 4110", "verdict": "clarify" }
+    },
+    {
+      "tender": "VO-2026-035",
+      "agent": "norms_report",
+      "cause": "norm_profile",
+      "owner": "deployment",
+      "text": "VDE-AR-N 4110",
+      "expected": "not_certified",
+      "got": "unknown"
+    }
+  ],
+  "bar": { "confidence": 0.95, "automate": 0.9, "assist": 0.75, "min_items": 20 },
+  "kind_labels": {
+    "penalty_cap_percent": "Penalty cap for late delivery",
+    "warranty_months": "Warranty period",
+    "payment_days": "Payment term",
+    "liability": "Liability",
+    "delivery_weeks": "Delivery time after award",
+    "spare_parts_years": "Spare parts availability",
+    "training_days": "Operator training",
+    "documentation_language": "Documentation language",
+    "bid_validity_days": "Offer validity",
+    "charging_power_kw": "Charging power per charge point",
+    "charge_points": "Charge points per station",
+    "output_voltage_v": "Output voltage range",
+    "max_current_a": "Maximum charging current",
+    "efficiency_percent": "Efficiency at rated power",
+    "ip_rating": "Protection rating (IEC 60529)",
+    "ambient_temperature": "Ambient temperature range",
+    "ocpp_version": "Backend protocol (OCPP)",
+    "iso15118_part": "Plug & Charge (ISO 15118)",
+    "calibration_law": "Calibration law (Eichrecht)",
+    "adhoc_payment": "Ad-hoc payment by card (AFIR)",
+    "availability_percent": "Charge point availability",
+    "service_response_hours": "Service response time",
+    "cable_length_m": "Charging cable length"
+  }
+}

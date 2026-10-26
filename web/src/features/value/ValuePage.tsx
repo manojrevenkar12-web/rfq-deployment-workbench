@@ -81,6 +81,7 @@ function NumberField({
           className={ui.input}
           type="number"
           inputMode="decimal"
+          aria-label={label}
           min={0}
           step={step}
           value={Number.isFinite(value) ? value : ""}
@@ -157,6 +158,7 @@ function Result({ v, d }: { v: ValueCase; d: Discovery | undefined }) {
         <Figure compact value={eur(v.gross_per_year)} label="worth a year" />
         <Figure compact value={eur(v.net_per_year)} label="after the fee" />
         <Figure
+          compact
           value={v.payback_months == null ? "never" : `${v.payback_months} months`}
           label="to pay back the fee"
         />

@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import type { Discovery, LiveComparison, ValueCase } from "../../shared/api/types";
 import { LeadTimeStrip, type StripMode } from "../../shared/charts/LeadTimeStrip";
-import { days, hours, int, pct, role } from "../../shared/lib/format";
+import { date, days, hours, int, pct, role } from "../../shared/lib/format";
 import { EmptyState, Figure, QueryView, Section, SkeletonBlock, Table, Tag, ui } from "../../shared/ui";
 import { Segmented } from "../../shared/ui/Segmented";
 import { useDeployment } from "../customer/api";
@@ -155,7 +155,7 @@ function Live({ live }: { live: LiveComparison }) {
   return (
     <Section
       title="Since go-live"
-      lead={`${live.discovery.cases} tenders since ${live.since}: half of all bids now leave within ${days(live.discovery.lead_time_days.median)}, against ${days(live.projected.lead_time_days.after)} projected.`}
+      lead={`${live.discovery.cases} tenders since ${date(live.since)}: half of all bids now leave within ${days(live.discovery.lead_time_days.median)}, against ${days(live.projected.lead_time_days.after)} projected.`}
     >
       <Table caption="Effort per activity since go-live">
         <thead>

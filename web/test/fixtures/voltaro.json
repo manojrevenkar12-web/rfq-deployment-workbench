@@ -1,0 +1,202 @@
+{
+  "customer": {
+    "id": "voltaro",
+    "name": "Voltaro Ladetechnik GmbH",
+    "industry": "DC fast charging infrastructure",
+    "location": "Regensburg"
+  },
+  "stage": "scale",
+  "kickoff": "2026-06-15",
+  "go_live": "2026-08-03",
+  "live": true,
+  "renewal": "2027-07-31",
+  "contract": { "annual_fee": 72000, "seats": 25 },
+  "health": "amber",
+  "scope": [
+    "requirement_extraction",
+    "red_flags",
+    "norms_report",
+    "configuration",
+    "technical_documentation"
+  ],
+  "not_in_scope": {
+    "bid_no_bid": "Sales qualifies on the first call with the buyer; revisit when inbound volume passes 400 a year."
+  },
+  "stakeholders": [
+    {
+      "name": "Dr. Katrin Albers",
+      "role": "Managing Director",
+      "side": "executive",
+      "note": "Signs the renewal. Cares about bids per head, not hours."
+    },
+    {
+      "name": "Jonas Reiter",
+      "role": "Head of Sales Engineering",
+      "side": "champion",
+      "note": "Owns the rollout internally."
+    },
+    {
+      "name": "Miriam Okafor",
+      "role": "Legal Counsel",
+      "side": "user",
+      "note": "Was the bottleneck; now reviews pre-flagged terms only."
+    },
+    {
+      "name": "Tobias Lenz",
+      "role": "Engineering Lead",
+      "side": "user",
+      "note": "Still reads every specification in full."
+    }
+  ],
+  "milestones": [
+    {
+      "name": "Kickoff and process walk-through",
+      "planned": "2026-06-15",
+      "done": "2026-06-15",
+      "state": "done",
+      "days_late": 0
+    },
+    {
+      "name": "Pilot on 40 past tenders scored",
+      "planned": "2026-07-10",
+      "done": "2026-07-14",
+      "state": "done",
+      "days_late": 4
+    },
+    {
+      "name": "Capability profile signed off by sales engineering",
+      "planned": "2026-07-20",
+      "done": "2026-07-22",
+      "state": "done",
+      "days_late": 2
+    },
+    {
+      "name": "Go-live for sales engineering and legal",
+      "planned": "2026-08-03",
+      "done": "2026-08-03",
+      "state": "done",
+      "days_late": 0
+    },
+    {
+      "name": "Engineering uses red flags instead of a full read",
+      "planned": "2026-10-15",
+      "done": null,
+      "state": "overdue",
+      "days_late": 11
+    },
+    {
+      "name": "Quarterly business review with the managing director",
+      "planned": "2026-11-05",
+      "done": null,
+      "state": "planned",
+      "days_late": 0
+    },
+    { "name": "Renewal decision", "planned": "2027-06-30", "done": null, "state": "planned", "days_late": 0 }
+  ],
+  "kpis": [
+    {
+      "key": "requirement_recall",
+      "label": "Requirements found on scored tenders",
+      "target": 0.95,
+      "better": "higher",
+      "format": "percent",
+      "actual": 1.0,
+      "baseline": null,
+      "basis": "scored on 40 past tenders",
+      "status": "green"
+    },
+    {
+      "key": "red_flag_recall",
+      "label": "Red flags found",
+      "target": 0.95,
+      "better": "higher",
+      "format": "percent",
+      "actual": 0.9759,
+      "baseline": null,
+      "basis": "scored on 40 past tenders",
+      "status": "green"
+    },
+    {
+      "key": "lead_time_days",
+      "label": "Median days from request to bid",
+      "target": 4.0,
+      "better": "lower",
+      "format": "days",
+      "actual": 3.4,
+      "baseline": 6.5,
+      "basis": "measured since go-live",
+      "status": "green"
+    },
+    {
+      "key": "se_hours_per_tender",
+      "label": "Sales engineering hours per submitted bid",
+      "target": 9.0,
+      "better": "lower",
+      "format": "hours",
+      "actual": 7.5,
+      "baseline": 14.7,
+      "basis": "measured since go-live",
+      "status": "green"
+    },
+    {
+      "key": "review_acceptance",
+      "label": "Agent answers confirmed unchanged",
+      "target": 0.85,
+      "better": "higher",
+      "format": "percent",
+      "actual": null,
+      "baseline": null,
+      "basis": "reviews in the workbench",
+      "status": "unknown"
+    }
+  ],
+  "risks": [
+    {
+      "risk": "Engineering keeps reading every specification in full, so technical review time has not moved.",
+      "owner": "Jonas Reiter",
+      "mitigation": "Calibration session: engineering reviews 10 tenders from the red-flag list only and compares."
+    },
+    {
+      "risk": "Grid-connection norm VDE-AR-N 4110 missing from the capability profile: the agents ask on every tender.",
+      "owner": "Strategist",
+      "mitigation": "Confirm the certificate status with quality and update the profile."
+    }
+  ],
+  "decisions": [
+    {
+      "date": "2026-07-22",
+      "decision": "Bid / no-bid stays with sales for now.",
+      "by": "Jonas Reiter",
+      "source": "plan"
+    },
+    {
+      "date": "2026-09-10",
+      "decision": "Legal reviews flagged terms only; unflagged terms are accepted as standard.",
+      "by": "Miriam Okafor",
+      "source": "plan"
+    }
+  ],
+  "next_steps": [
+    {
+      "kind": "milestone",
+      "who": "strategist",
+      "text": "Overdue by 11 days: Engineering uses red flags instead of a full read. Agree a new date or remove it."
+    },
+    {
+      "kind": "profile",
+      "who": "strategist",
+      "text": "Fix the norm profile for VDE-AR-N 4110: 8 answers disagree with past decisions."
+    },
+    {
+      "kind": "adoption",
+      "who": "champion",
+      "text": "Configure and price: effort is 79% of what it was, the plan was 60%. Find out with the users why."
+    },
+    {
+      "kind": "adoption",
+      "who": "champion",
+      "text": "Technical review: effort is 102% of what it was, the plan was 70%. Find out with the users why."
+    }
+  ],
+  "summary": "Live. Of the agents in scope, 5 of 5 meet the bar to work on their own (Requirement extraction, Red-flag detection, Norms and standards, Configuration (CPQ), Technical documentation). Tenders lose most time in the queue for commercial review (1.2 days per tender). About 3,293 hours a year come back, 1,980 of them in sales engineering: the work of 2.2 people, worth 333,501 EUR against a fee of 72,000. Half of all bids go out within 2.9 days instead of 6.5 (between 3.4 and 3.8 days faster, 90 % of resamples)."
+}

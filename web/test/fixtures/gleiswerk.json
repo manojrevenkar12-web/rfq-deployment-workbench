@@ -1,0 +1,146 @@
+{
+  "customer": {
+    "id": "gleiswerk",
+    "name": "Gleiswerk Maschinenbau GmbH",
+    "industry": "Rail maintenance machines",
+    "location": "Schwäbisch Hall"
+  },
+  "stage": "pilot",
+  "kickoff": "2026-09-21",
+  "go_live": "2026-11-16",
+  "live": false,
+  "renewal": "2027-11-15",
+  "contract": { "annual_fee": 60000, "seats": 15 },
+  "health": "red",
+  "scope": ["requirement_extraction", "red_flags", "norms_report", "technical_documentation"],
+  "not_in_scope": {
+    "configuration": "Machines are built to order; variant choice is the easy part. Revisit for spare-part tenders.",
+    "bid_no_bid": "Scored, but the decision stays with the managing director."
+  },
+  "stakeholders": [
+    {
+      "name": "Helmut Brenner",
+      "role": "Managing Director",
+      "side": "executive",
+      "note": "Former chief engineer; wants proof on rail norms."
+    },
+    {
+      "name": "Sabine Krauß",
+      "role": "Head of Sales",
+      "side": "champion",
+      "note": "Lost two tenders last year to late submissions."
+    },
+    {
+      "name": "Markus Vogt",
+      "role": "Engineering (technical review)",
+      "side": "user",
+      "note": "The single engineer every tender waits for."
+    }
+  ],
+  "milestones": [
+    {
+      "name": "Kickoff and process walk-through",
+      "planned": "2026-09-21",
+      "done": "2026-09-21",
+      "state": "done",
+      "days_late": 0
+    },
+    {
+      "name": "CRM export of the quote process received",
+      "planned": "2026-09-28",
+      "done": "2026-09-30",
+      "state": "done",
+      "days_late": 2
+    },
+    {
+      "name": "Pilot on 36 past tenders scored",
+      "planned": "2026-10-16",
+      "done": "2026-10-20",
+      "state": "done",
+      "days_late": 4
+    },
+    {
+      "name": "Pilot readout to the managing director",
+      "planned": "2026-10-30",
+      "done": null,
+      "state": "planned",
+      "days_late": 0
+    },
+    {
+      "name": "Go-live for sales engineering",
+      "planned": "2026-11-16",
+      "done": null,
+      "state": "planned",
+      "days_late": 0
+    }
+  ],
+  "kpis": [
+    {
+      "key": "requirement_recall",
+      "label": "Requirements found on scored tenders",
+      "target": 0.95,
+      "better": "higher",
+      "format": "percent",
+      "actual": 1.0,
+      "baseline": null,
+      "basis": "scored on 36 past tenders",
+      "status": "green"
+    },
+    {
+      "key": "red_flag_recall",
+      "label": "Red flags found",
+      "target": 0.98,
+      "better": "higher",
+      "format": "percent",
+      "actual": 1.0,
+      "baseline": null,
+      "basis": "scored on 36 past tenders",
+      "status": "green"
+    },
+    {
+      "key": "lead_time_days",
+      "label": "Median days from request to bid",
+      "target": 10.0,
+      "better": "lower",
+      "format": "days",
+      "actual": 8.8,
+      "baseline": 17.2,
+      "basis": "projected from the replay",
+      "status": "green"
+    },
+    {
+      "key": "engineering_wait_days",
+      "label": "Days a tender waits for technical review",
+      "target": 2.0,
+      "better": "lower",
+      "format": "days",
+      "actual": 3.4,
+      "baseline": null,
+      "basis": "today, from the CRM export",
+      "status": "red"
+    }
+  ],
+  "risks": [
+    {
+      "risk": "One engineer reviews every tender: if he is ill, bids stop.",
+      "owner": "Sabine Krauß",
+      "mitigation": "Red-flag list first, so technical review covers only flagged requirements."
+    }
+  ],
+  "decisions": [
+    {
+      "date": "2026-09-21",
+      "decision": "Pilot measured on 36 past tenders with their submitted compliance matrices.",
+      "by": "Helmut Brenner",
+      "source": "plan"
+    }
+  ],
+  "next_steps": [
+    {
+      "kind": "kpi",
+      "who": "strategist",
+      "text": "Days a tender waits for technical review is off target: 3.4 against 2.0."
+    }
+  ],
+  "summary": "In the pilot. Of the agents in scope, 4 of 4 meet the bar to work on their own (Requirement extraction, Red-flag detection, Norms and standards, Technical documentation). Tenders lose most time in the queue for technical review (4.9 days per tender). About 2,952 hours a year come back, 1,955 of them in sales engineering: the work of 2.0 people, worth 293,042 EUR against a fee of 60,000. Half of all bids go out within 8.8 days instead of 17.2 (between 7.6 and 10.4 days faster, 90 % of resamples)."
+}

@@ -1,0 +1,569 @@
+{
+  "tender_id": "VO-2026-001",
+  "customer": "voltaro",
+  "language": "de",
+  "subject": "Lieferung und Installation von 4 DC-Schnellladesäulen",
+  "buyer": "Energieversorgung Mittelrhein",
+  "due": "2026-02-07",
+  "documents": ["cover.eml", "spec.pdf"],
+  "requirements": [
+    {
+      "id": "VO-2026-001-01",
+      "source": {
+        "doc": "spec",
+        "file": "spec.pdf",
+        "locator": "page 1, 2.1",
+        "text": "Die Ladeleistung je Ladepunkt muss mindestens 240 kW betragen."
+      },
+      "kind": "charging_power_kw",
+      "label": "Charging power per charge point",
+      "value": 240,
+      "unit": "kW",
+      "priority": "mandatory",
+      "norms": [],
+      "verdict": "comply",
+      "reason": "240 is within the standard of 400",
+      "red_flag": false,
+      "severity": null,
+      "confidence": 0.91
+    },
+    {
+      "id": "VO-2026-001-02",
+      "source": {
+        "doc": "spec",
+        "file": "spec.pdf",
+        "locator": "page 1, 2.2",
+        "text": "Ein Ad-hoc-Laden mit Debit- und Kreditkarte muss gemäß AFIR am Ladepunkt möglich sein."
+      },
+      "kind": "adhoc_payment",
+      "label": "Ad-hoc payment by card (AFIR)",
+      "value": true,
+      "unit": null,
+      "priority": "mandatory",
+      "norms": [],
+      "verdict": "comply",
+      "reason": "offered",
+      "red_flag": false,
+      "severity": null,
+      "confidence": 1.0
+    },
+    {
+      "id": "VO-2026-001-03",
+      "source": {
+        "doc": "spec",
+        "file": "spec.pdf",
+        "locator": "page 1, 2.3",
+        "text": "Die Ladesäule muss mindestens die Schutzart IP65 nach IEC 60529 aufweisen."
+      },
+      "kind": "ip_rating",
+      "label": "Protection rating (IEC 60529)",
+      "value": 65,
+      "unit": null,
+      "priority": "mandatory",
+      "norms": ["IEC 60529"],
+      "verdict": "deviate",
+      "reason": "65 is beyond what the company offers (55)",
+      "red_flag": true,
+      "severity": "major",
+      "confidence": 0.95
+    },
+    {
+      "id": "VO-2026-001-04",
+      "source": {
+        "doc": "spec",
+        "file": "spec.pdf",
+        "locator": "page 1, 2.4",
+        "text": "Die Abrechnung muss den Anforderungen des Mess- und Eichrechts entsprechen."
+      },
+      "kind": "calibration_law",
+      "label": "Calibration law (Eichrecht)",
+      "value": true,
+      "unit": null,
+      "priority": "mandatory",
+      "norms": [],
+      "verdict": "comply",
+      "reason": "offered",
+      "red_flag": false,
+      "severity": null,
+      "confidence": 1.0
+    },
+    {
+      "id": "VO-2026-001-05",
+      "source": {
+        "doc": "spec",
+        "file": "spec.pdf",
+        "locator": "page 1, 2.5",
+        "text": "Jede Ladesäule muss über 2 gleichzeitig nutzbare Ladepunkte verfügen."
+      },
+      "kind": "charge_points",
+      "label": "Charge points per station",
+      "value": 2,
+      "unit": "charge points",
+      "priority": "mandatory",
+      "norms": [],
+      "verdict": "comply",
+      "reason": "2 is within the standard of 2",
+      "red_flag": false,
+      "severity": null,
+      "confidence": 0.95
+    },
+    {
+      "id": "VO-2026-001-06",
+      "source": {
+        "doc": "spec",
+        "file": "spec.pdf",
+        "locator": "page 1, 2.6",
+        "text": "Reaktionszeit im Störungsfall: maximal 24 h (wünschenswert)."
+      },
+      "kind": "service_response_hours",
+      "label": "Service response time",
+      "value": 24,
+      "unit": "h",
+      "priority": "desirable",
+      "norms": [],
+      "verdict": "comply",
+      "reason": "24 meets the standard of 24",
+      "red_flag": false,
+      "severity": null,
+      "confidence": 1.0
+    },
+    {
+      "id": "VO-2026-001-07",
+      "source": {
+        "doc": "spec",
+        "file": "spec.pdf",
+        "locator": "page 1, 2.7",
+        "text": "Der Wirkungsgrad bei Nennleistung soll mindestens 95 % betragen."
+      },
+      "kind": "efficiency_percent",
+      "label": "Efficiency at rated power",
+      "value": 95,
+      "unit": "%",
+      "priority": "desirable",
+      "norms": [],
+      "verdict": "comply",
+      "reason": "95 is within the standard of 95",
+      "red_flag": false,
+      "severity": null,
+      "confidence": 0.91
+    },
+    {
+      "id": "VO-2026-001-08",
+      "source": {
+        "doc": "spec",
+        "file": "spec.pdf",
+        "locator": "page 1, 2.8",
+        "text": "Die Verfügbarkeit der Ladepunkte soll im Jahresmittel mindestens 97 % betragen."
+      },
+      "kind": "availability_percent",
+      "label": "Charge point availability",
+      "value": 97,
+      "unit": "%",
+      "priority": "desirable",
+      "norms": [],
+      "verdict": "comply",
+      "reason": "97 is within the standard of 97",
+      "red_flag": false,
+      "severity": null,
+      "confidence": 0.92
+    },
+    {
+      "id": "VO-2026-001-09",
+      "source": {
+        "doc": "spec",
+        "file": "spec.pdf",
+        "locator": "page 1, 2.9",
+        "text": "Die Anbindung an das Backend muss über OCPP 2.0.1 erfolgen."
+      },
+      "kind": "ocpp_version",
+      "label": "Backend protocol (OCPP)",
+      "value": "2.0.1",
+      "unit": null,
+      "priority": "mandatory",
+      "norms": [],
+      "verdict": "comply",
+      "reason": "2.0.1 is offered",
+      "red_flag": false,
+      "severity": null,
+      "confidence": 1.0
+    },
+    {
+      "id": "VO-2026-001-10",
+      "source": {
+        "doc": "spec",
+        "file": "spec.pdf",
+        "locator": "page 1, 2.10",
+        "text": "Plug & Charge muss nach ISO 15118-2 unterstützt werden."
+      },
+      "kind": "iso15118_part",
+      "label": "Plug & Charge (ISO 15118)",
+      "value": "2",
+      "unit": null,
+      "priority": "mandatory",
+      "norms": ["ISO 15118-2"],
+      "verdict": "comply",
+      "reason": "2 is offered",
+      "red_flag": false,
+      "severity": null,
+      "confidence": 0.93
+    },
+    {
+      "id": "VO-2026-001-11",
+      "source": {
+        "doc": "spec",
+        "file": "spec.pdf",
+        "locator": "page 1, 2.11",
+        "text": "Der Ausgangsspannungsbereich muss 150 V bis 1000 V abdecken."
+      },
+      "kind": "output_voltage_v",
+      "label": "Output voltage range",
+      "value": [150, 1000],
+      "unit": "V",
+      "priority": "mandatory",
+      "norms": [],
+      "verdict": "comply",
+      "reason": "150..1000 inside 150..1000",
+      "red_flag": false,
+      "severity": null,
+      "confidence": 1.0
+    },
+    {
+      "id": "VO-2026-001-12",
+      "source": {
+        "doc": "spec",
+        "file": "spec.pdf",
+        "locator": "page 1, 2.12",
+        "text": "Die Länge der Ladekabel muss mindestens 7,5 m betragen."
+      },
+      "kind": "cable_length_m",
+      "label": "Charging cable length",
+      "value": 7.5,
+      "unit": "m",
+      "priority": "mandatory",
+      "norms": [],
+      "verdict": "clarify",
+      "reason": "7.5 is above the standard 5.0 but within 7.5: needs approval or a surcharge",
+      "red_flag": false,
+      "severity": null,
+      "confidence": 0.9
+    },
+    {
+      "id": "VO-2026-001-13",
+      "source": {
+        "doc": "spec",
+        "file": "spec.pdf",
+        "locator": "page 1, 2.13",
+        "text": "Der maximale Ladestrom muss mindestens 400 A betragen."
+      },
+      "kind": "max_current_a",
+      "label": "Maximum charging current",
+      "value": 400,
+      "unit": "A",
+      "priority": "mandatory",
+      "norms": [],
+      "verdict": "comply",
+      "reason": "400 is within the standard of 500",
+      "red_flag": false,
+      "severity": null,
+      "confidence": 0.9
+    },
+    {
+      "id": "VO-2026-001-14",
+      "source": {
+        "doc": "spec",
+        "file": "spec.pdf",
+        "locator": "page 1, 3.1",
+        "text": "Nachweis der Erfüllung von EN 61000-6-2: Zertifikat einer anerkannten Prüfstelle."
+      },
+      "kind": "norm",
+      "label": "Norm",
+      "value": "EN 61000-6-2",
+      "unit": null,
+      "priority": "mandatory",
+      "norms": ["EN 61000-6-2"],
+      "verdict": "comply",
+      "reason": "certified",
+      "red_flag": false,
+      "severity": null,
+      "confidence": 0.9
+    },
+    {
+      "id": "VO-2026-001-15",
+      "source": {
+        "doc": "spec",
+        "file": "spec.pdf",
+        "locator": "page 1, 3.2",
+        "text": "Die Konformität mit IEC 61851-23 ist durch ein gültiges Zertifikat nachzuweisen."
+      },
+      "kind": "norm",
+      "label": "Norm",
+      "value": "IEC 61851-23",
+      "unit": null,
+      "priority": "mandatory",
+      "norms": ["IEC 61851-23"],
+      "verdict": "comply",
+      "reason": "certified",
+      "red_flag": false,
+      "severity": null,
+      "confidence": 0.9
+    },
+    {
+      "id": "VO-2026-001-16",
+      "source": {
+        "doc": "spec",
+        "file": "spec.pdf",
+        "locator": "page 1, 4.1",
+        "text": "Die Lieferung muss spätestens 30 Wochen nach Zuschlagserteilung erfolgen."
+      },
+      "kind": "delivery_weeks",
+      "label": "Delivery time after award",
+      "value": 30,
+      "unit": "weeks",
+      "priority": "mandatory",
+      "norms": [],
+      "verdict": "comply",
+      "reason": "30 meets the standard of 16",
+      "red_flag": false,
+      "severity": null,
+      "confidence": 0.74
+    },
+    {
+      "id": "VO-2026-001-17",
+      "source": {
+        "doc": "spec",
+        "file": "spec.pdf",
+        "locator": "page 1, 4.2",
+        "text": "Die Bindefrist für das Angebot beträgt 90 Tage."
+      },
+      "kind": "bid_validity_days",
+      "label": "Offer validity",
+      "value": 90,
+      "unit": "days",
+      "priority": "mandatory",
+      "norms": [],
+      "verdict": "comply",
+      "reason": "90 is within the standard of 90",
+      "red_flag": false,
+      "severity": null,
+      "confidence": 0.9
+    },
+    {
+      "id": "VO-2026-001-18",
+      "source": {
+        "doc": "spec",
+        "file": "spec.pdf",
+        "locator": "page 1, 4.3",
+        "text": "Der Auftragnehmer haftet für Schäden aus diesem Vertrag in unbegrenzter Höhe."
+      },
+      "kind": "liability",
+      "label": "Liability",
+      "value": "unlimited",
+      "unit": null,
+      "priority": "mandatory",
+      "norms": [],
+      "verdict": "deviate",
+      "reason": "unlimited, the company accepts a cap",
+      "red_flag": true,
+      "severity": "major",
+      "confidence": 0.73
+    },
+    {
+      "id": "VO-2026-001-19",
+      "source": {
+        "doc": "spec",
+        "file": "spec.pdf",
+        "locator": "page 1, 4.4",
+        "text": "Bei Überschreitung des vereinbarten Liefertermins wird eine Vertragsstrafe von 0,2 % des Auftragswertes je Werktag fällig, insgesamt höchstens 10 % des Auftragswertes."
+      },
+      "kind": "penalty_cap_percent",
+      "label": "Penalty cap for late delivery",
+      "value": 10,
+      "unit": "%",
+      "priority": "mandatory",
+      "norms": [],
+      "verdict": "clarify",
+      "reason": "10 is above the standard 5 but within 10: needs approval or a surcharge",
+      "red_flag": true,
+      "severity": "major",
+      "confidence": 0.77
+    },
+    {
+      "id": "VO-2026-001-20",
+      "source": {
+        "doc": "spec",
+        "file": "spec.pdf",
+        "locator": "page 1, 4.5",
+        "text": "Betriebsanleitungen und Wartungshandbücher müssen in französischer Sprache vorliegen."
+      },
+      "kind": "documentation_language",
+      "label": "Documentation language",
+      "value": "fr",
+      "unit": null,
+      "priority": "mandatory",
+      "norms": [],
+      "verdict": "clarify",
+      "reason": "fr only on request",
+      "red_flag": false,
+      "severity": null,
+      "confidence": 0.94
+    },
+    {
+      "id": "VO-2026-001-21",
+      "source": {
+        "doc": "spec",
+        "file": "spec.pdf",
+        "locator": "page 1, 4.6",
+        "text": "Ersatzteile müssen für mindestens 5 Jahre nach Lieferung verfügbar sein."
+      },
+      "kind": "spare_parts_years",
+      "label": "Spare parts availability",
+      "value": 5,
+      "unit": "years",
+      "priority": "mandatory",
+      "norms": [],
+      "verdict": "comply",
+      "reason": "5 is within the standard of 10",
+      "red_flag": false,
+      "severity": null,
+      "confidence": 0.9
+    },
+    {
+      "id": "VO-2026-001-22",
+      "source": {
+        "doc": "spec",
+        "file": "spec.pdf",
+        "locator": "page 2, 4.7",
+        "text": "Der Auftragnehmer hat eine Einweisung des Bedienpersonals im Umfang von 8 Tagen durchzuführen."
+      },
+      "kind": "training_days",
+      "label": "Operator training",
+      "value": 8,
+      "unit": "days",
+      "priority": "mandatory",
+      "norms": [],
+      "verdict": "deviate",
+      "reason": "8 is beyond what the company offers (3)",
+      "red_flag": true,
+      "severity": "minor",
+      "confidence": 0.9
+    },
+    {
+      "id": "VO-2026-001-23",
+      "source": {
+        "doc": "spec",
+        "file": "spec.pdf",
+        "locator": "page 2, 4.8",
+        "text": "Die Zahlung erfolgt 90 Tage nach Abnahme und Eingang einer prüffähigen Rechnung."
+      },
+      "kind": "payment_days",
+      "label": "Payment term",
+      "value": 90,
+      "unit": "days",
+      "priority": "mandatory",
+      "norms": [],
+      "verdict": "deviate",
+      "reason": "90 is beyond what the company offers (60)",
+      "red_flag": true,
+      "severity": "minor",
+      "confidence": 1.0
+    },
+    {
+      "id": "VO-2026-001-24",
+      "source": {
+        "doc": "spec",
+        "file": "spec.pdf",
+        "locator": "page 2, 5.1",
+        "text": "Dem Angebot muss ein Nachweis über eine Betriebshaftpflichtversicherung beigefügt werden."
+      },
+      "kind": "procedural",
+      "label": "Bid procedure",
+      "value": null,
+      "unit": null,
+      "priority": "mandatory",
+      "norms": [],
+      "verdict": "comply",
+      "reason": "about the bid, not the product: goes on the submission checklist",
+      "red_flag": false,
+      "severity": null,
+      "confidence": 0.8
+    },
+    {
+      "id": "VO-2026-001-25",
+      "source": {
+        "doc": "spec",
+        "file": "spec.pdf",
+        "locator": "page 2, 5.2",
+        "text": "Das Angebot ist ausschließlich elektronisch über die Vergabeplattform einzureichen."
+      },
+      "kind": "procedural",
+      "label": "Bid procedure",
+      "value": null,
+      "unit": null,
+      "priority": "mandatory",
+      "norms": [],
+      "verdict": "comply",
+      "reason": "about the bid, not the product: goes on the submission checklist",
+      "red_flag": false,
+      "severity": null,
+      "confidence": 0.8
+    },
+    {
+      "id": "VO-2026-001-26",
+      "source": {
+        "doc": "spec",
+        "file": "spec.pdf",
+        "locator": "page 2, 5.3",
+        "text": "Nebenangebote sind nicht zugelassen."
+      },
+      "kind": "procedural",
+      "label": "Bid procedure",
+      "value": null,
+      "unit": null,
+      "priority": "mandatory",
+      "norms": [],
+      "verdict": "comply",
+      "reason": "about the bid, not the product: goes on the submission checklist",
+      "red_flag": false,
+      "severity": null,
+      "confidence": 0.8
+    },
+    {
+      "id": "VO-2026-001-27",
+      "source": {
+        "doc": "spec",
+        "file": "spec.pdf",
+        "locator": "page 2, 5.4",
+        "text": "Bieterfragen sind bis spätestens sieben Kalendertage vor Ablauf der Angebotsfrist schriftlich zu stellen."
+      },
+      "kind": "procedural",
+      "label": "Bid procedure",
+      "value": null,
+      "unit": null,
+      "priority": "mandatory",
+      "norms": [],
+      "verdict": "comply",
+      "reason": "about the bid, not the product: goes on the submission checklist",
+      "red_flag": false,
+      "severity": null,
+      "confidence": 0.8
+    }
+  ],
+  "norms": [
+    { "norm": "EN 61000-6-2", "status": "certified", "cited_in": ["VO-2026-001-14"] },
+    { "norm": "IEC 60529", "status": "certified", "cited_in": ["VO-2026-001-03"] },
+    { "norm": "IEC 61851-23", "status": "certified", "cited_in": ["VO-2026-001-15"] },
+    { "norm": "ISO 15118-2", "status": "certified", "cited_in": ["VO-2026-001-10"] }
+  ],
+  "bid": {
+    "decision": "bid_with_conditions",
+    "reasons": ["3 terms need a decision before the offer"],
+    "knockouts": [],
+    "conditions": [
+      "Protection rating (IEC 60529): 65 is beyond what the company offers (55)",
+      "Liability: unlimited, the company accepts a cap",
+      "Penalty cap for late delivery: 10 is above the standard 5 but within 10: needs approval or a surcharge"
+    ]
+  },
+  "configuration": { "variant": "VOLT 240", "reason": "smallest variant covering 240 (charging power kw)" },
+  "reviews": []
+}

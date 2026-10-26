@@ -1,0 +1,303 @@
+{
+  "customers": [
+    {
+      "id": "brandt",
+      "name": "Brandt Fahrzeugbau GmbH",
+      "industry": "Fire-fighting vehicles",
+      "stage": "discovery",
+      "health": "red",
+      "renewal": "2028-01-17",
+      "readiness": {
+        "requirement_extraction": "automate",
+        "red_flags": "automate",
+        "norms_report": "automate",
+        "bid_no_bid": "assist",
+        "configuration": "assist",
+        "technical_documentation": "automate"
+      },
+      "scope": ["requirement_extraction", "red_flags", "technical_documentation"],
+      "tenders_scored": 32,
+      "value_per_year": 139846,
+      "next_step": "Fix the capability profile for water tank: 4 answers disagree with past decisions."
+    },
+    {
+      "id": "gleiswerk",
+      "name": "Gleiswerk Maschinenbau GmbH",
+      "industry": "Rail maintenance machines",
+      "stage": "pilot",
+      "health": "red",
+      "renewal": "2027-11-15",
+      "readiness": {
+        "requirement_extraction": "automate",
+        "red_flags": "automate",
+        "norms_report": "automate",
+        "bid_no_bid": "automate",
+        "configuration": "automate",
+        "technical_documentation": "automate"
+      },
+      "scope": ["requirement_extraction", "red_flags", "norms_report", "technical_documentation"],
+      "tenders_scored": 36,
+      "value_per_year": 293042,
+      "next_step": "Days a tender waits for technical review is off target: 3.4 against 2.0."
+    },
+    {
+      "id": "voltaro",
+      "name": "Voltaro Ladetechnik GmbH",
+      "industry": "DC fast charging infrastructure",
+      "stage": "scale",
+      "health": "amber",
+      "renewal": "2027-07-31",
+      "readiness": {
+        "requirement_extraction": "automate",
+        "red_flags": "automate",
+        "norms_report": "automate",
+        "bid_no_bid": "automate",
+        "configuration": "automate",
+        "technical_documentation": "automate"
+      },
+      "scope": [
+        "requirement_extraction",
+        "red_flags",
+        "norms_report",
+        "configuration",
+        "technical_documentation"
+      ],
+      "tenders_scored": 40,
+      "value_per_year": 333501,
+      "next_step": "Overdue by 11 days: Engineering uses red flags instead of a full read. Agree a new date or remove it."
+    }
+  ],
+  "platform_backlog": [],
+  "profile_fixes": [
+    {
+      "customer": "brandt",
+      "tender": "BR-2026-003",
+      "agent": "technical_documentation",
+      "cause": "capability_profile",
+      "owner": "deployment",
+      "text": "Löschwassertank: mindestens 4.500 Liter.",
+      "expected": { "kind": "water_tank_l", "value": 4500, "verdict": "clarify" },
+      "got": { "kind": "water_tank_l", "value": 4500, "verdict": "deviate" }
+    },
+    {
+      "customer": "brandt",
+      "tender": "BR-2026-011",
+      "agent": "technical_documentation",
+      "cause": "capability_profile",
+      "owner": "deployment",
+      "text": "Löschwasserbehälter: mind. 4500 l",
+      "expected": { "kind": "water_tank_l", "value": 4500, "verdict": "clarify" },
+      "got": { "kind": "water_tank_l", "value": 4500, "verdict": "deviate" }
+    },
+    {
+      "customer": "brandt",
+      "tender": "BR-2026-018",
+      "agent": "technical_documentation",
+      "cause": "capability_profile",
+      "owner": "deployment",
+      "text": "Löschwassertank: mindestens 4.500 Liter.",
+      "expected": { "kind": "water_tank_l", "value": 4500, "verdict": "clarify" },
+      "got": { "kind": "water_tank_l", "value": 4500, "verdict": "deviate" }
+    },
+    {
+      "customer": "brandt",
+      "tender": "BR-2026-032",
+      "agent": "technical_documentation",
+      "cause": "capability_profile",
+      "owner": "deployment",
+      "text": "Löschwassertank: mindestens 4.500 Liter.",
+      "expected": { "kind": "water_tank_l", "value": 4500, "verdict": "clarify" },
+      "got": { "kind": "water_tank_l", "value": 4500, "verdict": "deviate" }
+    },
+    {
+      "customer": "voltaro",
+      "tender": "VO-2026-002",
+      "agent": "technical_documentation",
+      "cause": "norm_profile",
+      "owner": "deployment",
+      "text": "Nachweis der Erfüllung von VDE-AR-N 4110: Zertifikat einer anerkannten Prüfstelle.",
+      "expected": { "kind": "norm", "value": "VDE-AR-N 4110", "verdict": "deviate" },
+      "got": { "kind": "norm", "value": "VDE-AR-N 4110", "verdict": "clarify" }
+    },
+    {
+      "customer": "voltaro",
+      "tender": "VO-2026-002",
+      "agent": "norms_report",
+      "cause": "norm_profile",
+      "owner": "deployment",
+      "text": "VDE-AR-N 4110",
+      "expected": "not_certified",
+      "got": "unknown"
+    },
+    {
+      "customer": "voltaro",
+      "tender": "VO-2026-003",
+      "agent": "technical_documentation",
+      "cause": "norm_profile",
+      "owner": "deployment",
+      "text": "Die Konformität mit VDE-AR-N 4110 ist durch ein gültiges Zertifikat nachzuweisen.",
+      "expected": { "kind": "norm", "value": "VDE-AR-N 4110", "verdict": "deviate" },
+      "got": { "kind": "norm", "value": "VDE-AR-N 4110", "verdict": "clarify" }
+    },
+    {
+      "customer": "voltaro",
+      "tender": "VO-2026-003",
+      "agent": "norms_report",
+      "cause": "norm_profile",
+      "owner": "deployment",
+      "text": "VDE-AR-N 4110",
+      "expected": "not_certified",
+      "got": "unknown"
+    },
+    {
+      "customer": "voltaro",
+      "tender": "VO-2026-025",
+      "agent": "technical_documentation",
+      "cause": "norm_profile",
+      "owner": "deployment",
+      "text": "The design shall comply with VDE-AR-N 4110.",
+      "expected": { "kind": "norm", "value": "VDE-AR-N 4110", "verdict": "deviate" },
+      "got": { "kind": "norm", "value": "VDE-AR-N 4110", "verdict": "clarify" }
+    },
+    {
+      "customer": "voltaro",
+      "tender": "VO-2026-025",
+      "agent": "norms_report",
+      "cause": "norm_profile",
+      "owner": "deployment",
+      "text": "VDE-AR-N 4110",
+      "expected": "not_certified",
+      "got": "unknown"
+    },
+    {
+      "customer": "voltaro",
+      "tender": "VO-2026-035",
+      "agent": "technical_documentation",
+      "cause": "norm_profile",
+      "owner": "deployment",
+      "text": "Conformity with VDE-AR-N 4110 shall be demonstrated by a valid certificate.",
+      "expected": { "kind": "norm", "value": "VDE-AR-N 4110", "verdict": "deviate" },
+      "got": { "kind": "norm", "value": "VDE-AR-N 4110", "verdict": "clarify" }
+    },
+    {
+      "customer": "voltaro",
+      "tender": "VO-2026-035",
+      "agent": "norms_report",
+      "cause": "norm_profile",
+      "owner": "deployment",
+      "text": "VDE-AR-N 4110",
+      "expected": "not_certified",
+      "got": "unknown"
+    }
+  ],
+  "shared_kinds": [
+    "bid_validity_days",
+    "delivery_weeks",
+    "documentation_language",
+    "liability",
+    "norm",
+    "payment_days",
+    "penalty_cap_percent",
+    "procedural",
+    "spare_parts_years",
+    "training_days",
+    "warranty_months"
+  ],
+  "customer_specific_kinds": {
+    "brandt": [
+      "crew_cab",
+      "drive",
+      "fire_pump",
+      "foam_tank_l",
+      "generator_kva",
+      "gross_mass_t",
+      "light_mast",
+      "vehicle_type",
+      "water_tank_l"
+    ],
+    "gleiswerk": [
+      "ambient_temperature",
+      "availability_percent",
+      "axle_load_t",
+      "emission_stage",
+      "engine_power_kw",
+      "fire_protection_level",
+      "gradient_permille",
+      "noise_dba",
+      "track_gauge_mm",
+      "travel_speed_kmh"
+    ],
+    "voltaro": [
+      "adhoc_payment",
+      "ambient_temperature",
+      "availability_percent",
+      "cable_length_m",
+      "calibration_law",
+      "charge_points",
+      "charging_power_kw",
+      "efficiency_percent",
+      "ip_rating",
+      "iso15118_part",
+      "max_current_a",
+      "ocpp_version",
+      "output_voltage_v",
+      "service_response_hours"
+    ]
+  },
+  "kind_labels": {
+    "penalty_cap_percent": "Penalty cap for late delivery",
+    "warranty_months": "Warranty period",
+    "payment_days": "Payment term",
+    "liability": "Liability",
+    "delivery_weeks": "Delivery time after award",
+    "spare_parts_years": "Spare parts availability",
+    "training_days": "Operator training",
+    "documentation_language": "Documentation language",
+    "bid_validity_days": "Offer validity",
+    "vehicle_type": "Vehicle type",
+    "gross_mass_t": "Gross vehicle mass",
+    "water_tank_l": "Water tank",
+    "foam_tank_l": "Foam tank",
+    "fire_pump": "Fire pump (DIN EN 1028)",
+    "crew_cab": "Crew",
+    "generator_kva": "Portable generator",
+    "light_mast": "Light mast",
+    "drive": "Drive",
+    "travel_speed_kmh": "Travel speed (self-propelled)",
+    "axle_load_t": "Axle load",
+    "engine_power_kw": "Engine power",
+    "emission_stage": "Emission stage",
+    "ambient_temperature": "Ambient temperature range",
+    "track_gauge_mm": "Track gauge",
+    "fire_protection_level": "Fire protection hazard level (EN 45545-2)",
+    "noise_dba": "Sound pressure at the operator position",
+    "availability_percent": "Charge point availability",
+    "gradient_permille": "Gradient",
+    "charging_power_kw": "Charging power per charge point",
+    "charge_points": "Charge points per station",
+    "output_voltage_v": "Output voltage range",
+    "max_current_a": "Maximum charging current",
+    "efficiency_percent": "Efficiency at rated power",
+    "ip_rating": "Protection rating (IEC 60529)",
+    "ocpp_version": "Backend protocol (OCPP)",
+    "iso15118_part": "Plug & Charge (ISO 15118)",
+    "calibration_law": "Calibration law (Eichrecht)",
+    "adhoc_payment": "Ad-hoc payment by card (AFIR)",
+    "service_response_hours": "Service response time",
+    "cable_length_m": "Charging cable length",
+    "norm": "Norm",
+    "procedural": "Bid procedure"
+  },
+  "reviews": { "acceptance": null, "corrected_by_kind": [] },
+  "playbook": {
+    "days_kickoff_to_scored_pilot": 29.0,
+    "days_kickoff_to_go_live": 49,
+    "late_steps": [
+      { "step": "Pilot", "median_days_late": 4.0, "times": 2 },
+      { "step": "CRM export of the quote process received", "median_days_late": 2.0, "times": 2 },
+      { "step": "Capability profile signed off by sales engineering", "median_days_late": 2, "times": 1 },
+      { "step": "Kickoff and process walk-through", "median_days_late": 0, "times": 3 },
+      { "step": "Go-live", "median_days_late": 0, "times": 1 }
+    ]
+  }
+}
