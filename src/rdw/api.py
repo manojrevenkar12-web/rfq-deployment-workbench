@@ -19,7 +19,7 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
 from . import store
-from .config import agents, customer, data_dir, root
+from .config import agents, customer, data_dir, root, settings
 from .outputs import clarification_letter, compliance_matrix
 from .pipeline import analyse
 from .service import Workbench
@@ -89,6 +89,11 @@ def portfolio() -> dict[str, Any]:
     return workbench().portfolio()
 
 
+@app.get("/api/heldout")
+def heldout() -> list[dict[str, Any]]:
+    return workbench().heldout()
+
+
 @app.get("/api/customers/{cid}")
 def deployment(cid: str) -> dict[str, Any]:
     wb = workbench()
@@ -104,7 +109,8 @@ def discovery(cid: str) -> dict[str, Any]:
 @app.get("/api/customers/{cid}/readiness")
 def readiness(cid: str) -> dict[str, Any]:
     ev = workbench().evaluation(_customer(cid))
-    return {**ev, "misses": ev["misses"][:200]}
+    labels = {k: spec.label for k, spec in customer(cid).kinds.items()}
+    return {**ev, "misses": ev["misses"][:200], "bar": settings()["readiness"], "kind_labels": labels}
 
 
 class ValueQuery(BaseModel):

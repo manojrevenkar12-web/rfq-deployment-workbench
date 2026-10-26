@@ -1,0 +1,149 @@
+.summary {
+  max-width: var(--measure);
+  font-size: var(--text-lg);
+  line-height: var(--leading-body);
+}
+
+.soft {
+  color: var(--ink-soft);
+  font-size: var(--text-sm);
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-7);
+}
+
+@media (min-width: 64rem) {
+  .grid {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    gap: var(--space-6);
+  }
+}
+
+.stack {
+  display: grid;
+  gap: var(--space-7);
+  align-content: start;
+}
+
+.steps {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+}
+
+.steps li {
+  display: grid;
+  grid-template-columns: var(--space-6) minmax(0, 1fr);
+  column-gap: var(--space-3);
+  padding: var(--space-4);
+  border: var(--border);
+  border-radius: var(--radius-panel);
+  background: var(--surface);
+  counter-increment: step;
+}
+
+.steps li::before {
+  content: counter(step);
+  grid-row: span 2;
+  font-size: var(--text-xl);
+  font-weight: var(--weight-heading);
+  font-variation-settings: "wdth" var(--width-wide);
+  line-height: var(--leading-tight);
+  color: var(--signal-blue);
+}
+
+.who {
+  color: var(--ink-soft);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-strong);
+}
+
+.timeline {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline li {
+  display: grid;
+  gap: var(--space-1);
+  padding: var(--space-2) 0 var(--space-3) var(--space-4);
+  border-left: 2px solid var(--rule-strong);
+}
+
+.timeline li.done {
+  border-left-color: var(--signal-green);
+}
+
+.timeline li.overdue {
+  border-left-color: var(--signal-red);
+}
+
+.timeline li.planned {
+  border-left-style: dashed;
+}
+
+.people,
+.risks,
+.decisions {
+  display: grid;
+  gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.people li,
+.risks li,
+.decisions li {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.people span {
+  color: var(--ink-soft);
+  font-size: var(--text-sm);
+}
+
+.decisions li {
+  padding-left: var(--space-3);
+  border-left: 2px solid var(--signal-blue);
+}
+
+.form {
+  display: grid;
+  gap: var(--space-3);
+  justify-items: start;
+}
+
+.form label {
+  display: grid;
+  gap: var(--space-1);
+  width: 100%;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-strong);
+}
+
+.form textarea,
+.form input {
+  width: 100%;
+  min-width: 0;
+  padding: var(--space-2) var(--space-3);
+  font-weight: var(--weight-body);
+}
+
+.packWrap {
+  overflow: hidden;
+}
+
+.pack {
+  display: grid;
+  gap: var(--space-4);
+  justify-items: start;
+}

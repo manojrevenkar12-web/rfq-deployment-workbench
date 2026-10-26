@@ -1,0 +1,153 @@
+.page {
+  display: grid;
+  gap: var(--space-7);
+}
+
+.customer {
+  display: block;
+  font-weight: var(--weight-strong);
+  font-variation-settings: "wdth" var(--width-normal);
+}
+
+.sub {
+  display: block;
+  margin-top: var(--space-1);
+  color: var(--ink-soft);
+  font-size: var(--text-sm);
+}
+
+.next {
+  min-width: 16rem;
+  max-width: 28rem;
+  font-size: var(--text-sm);
+}
+
+.split {
+  display: grid;
+  gap: var(--space-7);
+}
+
+@media (min-width: 64rem) {
+  .split {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-6);
+  }
+}
+
+.quietNote {
+  color: var(--ink-soft);
+}
+
+.backlog,
+.fixes,
+.custom {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.backlog li,
+.fixes li {
+  display: grid;
+  gap: var(--space-1);
+  padding: var(--space-3) 0;
+  border-top: var(--border);
+}
+
+.backlog span,
+.fixes span {
+  color: var(--ink-soft);
+  font-size: var(--text-sm);
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: var(--space-4);
+  margin: 0;
+}
+
+.facts dt {
+  color: var(--ink-soft);
+  font-size: var(--text-sm);
+}
+
+.facts dd {
+  margin: 0;
+  font-size: var(--text-xl);
+  font-weight: var(--weight-heading);
+  font-variation-settings: "wdth" var(--width-wide);
+}
+
+.kinds {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.kinds li {
+  padding: var(--space-1) var(--space-3);
+  border: var(--border-strong);
+  border-radius: var(--radius-control);
+  background: var(--surface);
+  font-size: var(--text-sm);
+}
+
+.custom li {
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+}
+
+.custom strong {
+  color: var(--ink);
+}
+
+.causes {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.causes ul {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.causes li {
+  display: grid;
+  grid-template-columns: minmax(12rem, 1fr) minmax(0, 3fr) 3rem;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-sm);
+}
+
+@media (max-width: 40rem) {
+  .causes li {
+    grid-template-columns: minmax(0, 1fr) 3rem;
+  }
+
+  .causeTrack {
+    display: none;
+  }
+}
+
+.causeTrack {
+  display: block;
+  height: var(--meter-height);
+  border-radius: var(--radius-control);
+  background: var(--surface-sunk);
+}
+
+.causeBar {
+  display: block;
+  height: var(--meter-height);
+  border-radius: var(--radius-control);
+  background: var(--signal-blue);
+}

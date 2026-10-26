@@ -1,0 +1,53 @@
+.strip {
+  display: flex;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cell {
+  display: inline-block;
+  width: var(--space-4);
+  height: var(--space-4);
+  border-radius: 1px;
+  background: var(--ink-faint);
+}
+
+.good {
+  background: var(--signal-green);
+}
+
+.info {
+  background: var(--signal-blue);
+}
+
+.bad {
+  background: var(--signal-red);
+}
+
+.quiet {
+  background: var(--rule);
+}
+
+.out {
+  background: transparent;
+  box-shadow: inset 0 0 0 2px var(--rule-strong);
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-5);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--ink-soft);
+  font-size: var(--text-sm);
+}
+
+.legend li {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}

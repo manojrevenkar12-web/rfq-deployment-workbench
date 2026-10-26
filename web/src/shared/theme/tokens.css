@@ -1,0 +1,159 @@
+/*
+ * Design tokens. Every colour, size, space, radius and duration the console uses is defined here; components
+ * never carry their own numbers.
+ *
+ * Colours: the paper is drafting film, the signal colours are the RAL traffic colours the customers' own
+ * shop floors use (5017 traffic blue, 6024 traffic green, 1003 signal yellow, 3020 traffic red). Text on
+ * yellow is ink, never yellow on white.
+ * Type: Archivo (variable width) for everything the workbench says; Source Serif 4 for the buyer's own words,
+ * so a quoted requirement never reads like our analysis.
+ */
+:root {
+  color-scheme: light;
+
+  --paper: #eef1ee;
+  --surface: #ffffff;
+  --surface-sunk: #f5f7f5;
+  --ink: #16202a;
+  --ink-soft: #46515d;
+  --ink-faint: #66707b;
+  --rule: #cdd3cf;
+  --rule-strong: #9aa39f;
+
+  --signal-blue: #005b8c;
+  --signal-blue-ink: #ffffff;
+  --signal-blue-wash: #e1edf4;
+  --signal-green: #008351;
+  --signal-green-wash: #e0f1e9;
+  --signal-yellow: #f9a800;
+  --signal-yellow-ink: #6b4600;
+  --signal-yellow-wash: #fdf1d3;
+  --signal-red: #c1121c;
+  --signal-red-wash: #f8e0e0;
+
+  --hatch: #8d979f;
+  --focus: #005b8c;
+  --scrim: rgb(22 32 42 / 0.45);
+
+  --font-ui: "Archivo Variable", "Archivo", system-ui, sans-serif;
+  --font-source: "Source Serif 4 Variable", "Source Serif 4", Georgia, serif;
+
+  /* width axis of Archivo: names, headings and big figures run wide; tables run slightly narrow */
+  --width-wide: 118;
+  --width-normal: 100;
+  --width-narrow: 88;
+  --width-display: 125;
+
+  /* type scale, ratio 1.25 from 16 */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5625rem;
+  --text-2xl: 1.953rem;
+  --text-3xl: 2.441rem;
+  --text-4xl: 3.052rem;
+
+  --leading-tight: 1.15;
+  --leading-body: 1.5;
+  --leading-source: 1.6;
+
+  --weight-body: 420;
+  --weight-strong: 600;
+  --weight-heading: 680;
+  --weight-display: 760;
+  --tracking-display: -0.01em;
+  --leading-display: 1.02;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+
+  --gutter: 1rem;
+  --rail-width: 15.5rem;
+  --measure: 72ch;
+  --content-max: 82rem;
+
+  --radius-control: 3px;
+  --radius-panel: 6px;
+  --radius-pill: 999px;
+
+  --border: 1px solid var(--rule);
+  --border-strong: 1px solid var(--rule-strong);
+  --lift: 0 1px 0 var(--rule), 0 8px 24px -16px rgb(22 32 42 / 0.35);
+
+  --strip-height: 3.25rem;
+  --hatch-line: 1.5px;
+  --hatch-gap: 6px;
+  --meter-height: 0.625rem;
+  --dot: 0.625rem;
+
+  --duration-quick: 140ms;
+  --duration-move: 420ms;
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@media (min-width: 48rem) {
+  :root {
+    --gutter: 2rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #0f151b;
+    --surface: #161e26;
+    --surface-sunk: #121921;
+    --ink: #e6ebee;
+    --ink-soft: #b2bcc5;
+    --ink-faint: #8e99a3;
+    --rule: #2c3742;
+    --rule-strong: #4a5764;
+    --signal-blue: #5aaee0;
+    --signal-blue-ink: #0f151b;
+    --signal-blue-wash: #16303f;
+    --signal-green: #45c08a;
+    --signal-green-wash: #12301f;
+    --signal-yellow: #f9b826;
+    --signal-yellow-ink: #f9c95a;
+    --signal-yellow-wash: #3a2d0c;
+    --signal-red: #f2645e;
+    --signal-red-wash: #3d1719;
+    --hatch: #6b7781;
+    --focus: #5aaee0;
+    --scrim: rgb(0 0 0 / 0.6);
+    --lift: 0 1px 0 var(--rule), 0 10px 28px -16px rgb(0 0 0 / 0.8);
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #0f151b;
+  --surface: #161e26;
+  --surface-sunk: #121921;
+  --ink: #e6ebee;
+  --ink-soft: #b2bcc5;
+  --ink-faint: #8e99a3;
+  --rule: #2c3742;
+  --rule-strong: #4a5764;
+  --signal-blue: #5aaee0;
+  --signal-blue-ink: #0f151b;
+  --signal-blue-wash: #16303f;
+  --signal-green: #45c08a;
+  --signal-green-wash: #12301f;
+  --signal-yellow: #f9b826;
+  --signal-yellow-ink: #f9c95a;
+  --signal-yellow-wash: #3a2d0c;
+  --signal-red: #f2645e;
+  --signal-red-wash: #3d1719;
+  --hatch: #6b7781;
+  --focus: #5aaee0;
+  --scrim: rgb(0 0 0 / 0.6);
+  --lift: 0 1px 0 var(--rule), 0 10px 28px -16px rgb(0 0 0 / 0.8);
+}

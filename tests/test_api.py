@@ -27,6 +27,8 @@ def test_portfolio_and_customer(client: TestClient) -> None:
     assert len(p["customers"]) == 3
     d = client.get("/api/customers/voltaro").json()
     assert d["stage"] == "scale" and d["summary"]
+    bar = client.get("/api/customers/voltaro/readiness").json()["bar"]
+    assert bar["assist"] < bar["automate"] <= 1
 
 
 def test_unknown_things_are_404_problems(client: TestClient) -> None:
@@ -112,3 +114,13 @@ def test_timeline_adds_up_to_the_replayed_lead_time(client: TestClient) -> None:
     assert abs(before - lead["before"]) / lead["before"] < 0.35
     assert abs(after - lead["after"]) / lead["after"] < 0.35
     assert all(r["after"]["work"] <= r["before"]["work"] + 1e-9 for r in timeline)
+
+
+def test_heldout_summary_has_counts_not_sentences(client: TestClient) -> None:
+    sets = client.get("/api/heldout").json()
+    assert sets, "reports/heldout/v1/first_run.json is committed"
+    v1 = next(s for s in sets if s["set"] == "v1")
+    for c in v1["customers"].values():
+        assert c["tenders"] > 0
+        for m in c["misses"]:
+            assert set(m) == {"agent", "cause", "owner", "count"}

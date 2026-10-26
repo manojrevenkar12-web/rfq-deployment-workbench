@@ -1,0 +1,135 @@
+.hero {
+  display: grid;
+  gap: var(--space-5);
+  padding: var(--space-5);
+  border: var(--border);
+  border-radius: var(--radius-panel);
+  background: var(--surface);
+  box-shadow: var(--lift);
+}
+
+@media (min-width: 48rem) {
+  .hero {
+    padding: var(--space-6);
+  }
+}
+
+.heroHead {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.heroHead h2 {
+  font-size: var(--text-xl);
+}
+
+.lead {
+  margin-top: var(--space-2);
+  color: var(--ink-soft);
+}
+
+.note {
+  color: var(--ink-soft);
+  font-size: var(--text-sm);
+}
+
+.soft {
+  color: var(--ink-soft);
+  font-size: var(--text-sm);
+}
+
+.figures {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: var(--space-5);
+}
+
+.split {
+  display: grid;
+  gap: var(--space-7);
+}
+
+@media (min-width: 64rem) {
+  .split {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+    gap: var(--space-6);
+  }
+}
+
+.bars {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.bars li {
+  display: grid;
+  grid-template-columns: minmax(12rem, 1fr) minmax(0, 2fr) 3.5rem;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.barLabel {
+  font-weight: var(--weight-strong);
+}
+
+.barTrack {
+  height: var(--meter-height);
+  border-radius: var(--radius-control);
+  background: var(--surface-sunk);
+  box-shadow: inset 0 0 0 1px var(--rule);
+}
+
+.barFill {
+  display: block;
+  height: 100%;
+  border-radius: var(--radius-control);
+  background: var(--ink-soft);
+}
+
+.barFill[data-high="true"] {
+  background: var(--signal-yellow);
+  box-shadow: inset 0 0 0 1px var(--signal-yellow-ink);
+}
+
+.variants {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.variants > li {
+  display: grid;
+  grid-template-columns: 3.5rem minmax(0, 1fr);
+  gap: var(--space-3);
+  align-items: start;
+}
+
+.count {
+  font-weight: var(--weight-heading);
+  font-variation-settings: "wdth" var(--width-wide);
+}
+
+.path {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--text-sm);
+}
+
+.path li {
+  padding: 0 var(--space-2);
+  border: var(--border);
+  border-radius: var(--radius-control);
+  background: var(--surface);
+}

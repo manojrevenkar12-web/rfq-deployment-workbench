@@ -7,6 +7,7 @@ customer until the customer's data changes.
 from __future__ import annotations
 
 import datetime as dt
+import json
 import statistics as st
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -14,7 +15,7 @@ from threading import Lock
 from typing import Any
 
 from . import store
-from .config import agents, customer, customer_ids, data_dir, deployment_config, settings
+from .config import agents, customer, customer_ids, data_dir, deployment_config, root, settings
 from .discovery import analyse_log, compare_live, effort_factors, load_log, log_path, what_if
 from .evaluate import evaluate_customer
 from .models import TenderAnalysis
@@ -62,7 +63,9 @@ class Workbench:
         return self._cached(cid, "evaluation", lambda: evaluate_customer(cid, self.analyses(cid), self.base))
 
     def discovery(self, cid: str) -> dict[str, Any]:
-        return self._cached(cid, "discovery", lambda: analyse_log(load_log(log_path(cid, base=self.base))))
+        d = self._cached(cid, "discovery", lambda: analyse_log(load_log(log_path(cid, base=self.base))))
+        busy = settings()["deployment"]["busy_utilisation"]
+        return {**d, "busy_roles": sorted(r for r, u in d["utilisation"].items() if u >= busy)}
 
     def scope(self, cid: str) -> list[str]:
         return list(deployment_config(cid).get("scope", agents().keys()))
@@ -95,10 +98,16 @@ class Workbench:
         def run() -> dict[str, Any]:
             history, live = load_log(log_path(cid, base=self.base)), load_log(path)
             factors = effort_factors(self.evaluation(cid)["readiness"], self.scope(cid))
+            gap = settings()["deployment"]["adoption_gap"]
+            rows = compare_live(history, live, factors)
+            for row in rows:
+                row["status"] = (
+                    "no_agent" if row["projected_factor"] >= 1 else "behind" if row["gap"] > gap else "on_plan"
+                )
             return {
                 "since": deployment_config(cid).get("go_live"),
                 "discovery": analyse_log(live),
-                "activities": compare_live(history, live, factors),
+                "activities": rows,
                 "projected": self.what_if(cid),
             }
 
@@ -195,7 +204,8 @@ class Workbench:
             "customer": {"id": c.id, "name": c.name, "industry": c.industry, "location": c.location},
             "stage": cfg.get("stage"),
             "kickoff": str(cfg.get("kickoff")),
-            "go_live": str(cfg.get("go_live")),
+            "go_live": str(cfg["go_live"]) if cfg.get("go_live") else None,
+            "live": bool(cfg.get("go_live")) and dt.date.fromisoformat(str(cfg["go_live"])) <= self.today,
             "renewal": str(cfg.get("renewal")),
             "contract": cfg.get("contract", {}),
             "health": health,
@@ -261,7 +271,7 @@ class Workbench:
             for name in scope:
                 in_scope |= set(agents()[name]["activities"])
             for row in live["activities"]:
-                if row["activity"] in in_scope and row["gap"] > 0.15:
+                if row["activity"] in in_scope and row["status"] == "behind":
                     steps.append(
                         {
                             "kind": "adoption",
@@ -341,7 +351,7 @@ class Workbench:
         where = (
             f"waiting for buyers to answer questions ({b['wait_hours_per_case'] / 24:.1f} days per tender)"
             if b and b["kind"] == "external"
-            else f"the queue for {b['activity'].lower()} ({b['wait_hours_per_case'] / 24:.1f} days per tender)"
+            else f"in the queue for {b['activity'].lower()} ({b['wait_hours_per_case'] / 24:.1f} days per tender)"
             if b
             else "nowhere in particular"
         )
@@ -421,9 +431,42 @@ class Workbench:
             "profile_fixes": profile[:50],
             "shared_kinds": sorted(common - {"other"}),
             "customer_specific_kinds": {c: sorted(k - common - {"other"}) for c, k in kinds_by_customer.items()},
+            "kind_labels": {k: spec.label for cid in self.customers() for k, spec in customer(cid).kinds.items()}
+            | {"norm": "Norm", "procedural": "Bid procedure"},
             "reviews": {"acceptance": reviews["acceptance"], "corrected_by_kind": corrected},
             "playbook": self.playbook(),
         }
+
+    def heldout(self) -> list[dict[str, Any]]:
+        """First runs of the held-out sets: tenders written by someone who never saw the code.
+
+        Counts only, never the missed sentences: whoever reads a set's failures has to retire it as a
+        regression set (heldout/<set>/STATUS), so the console does not show them.
+        """
+        out = []
+        for first in sorted((root() / "reports" / "heldout").glob("*/first_run.json")):
+            run = json.loads(first.read_text(encoding="utf-8"))
+            status_file = root() / "heldout" / run["set"] / "STATUS"
+            customers = {}
+            for cid, r in run["customers"].items():
+                causes = Counter((m["agent"], m["cause"], m["owner"]) for m in r["misses"])
+                customers[cid] = {
+                    "tenders": r["tenders"],
+                    "metrics": r["metrics"],
+                    "readiness": {k: v["level"] for k, v in r["readiness"].items()},
+                    "misses": [
+                        {"agent": a, "cause": c, "owner": o, "count": n} for (a, c, o), n in causes.most_common()
+                    ],
+                }
+            out.append(
+                {
+                    "set": run["set"],
+                    "status": status_file.read_text().strip() if status_file.exists() else "heldout",
+                    "run_at": run["run_at"],
+                    "customers": customers,
+                }
+            )
+        return out
 
     def playbook(self) -> dict[str, Any]:
         lateness: dict[str, list[int]] = defaultdict(list)

@@ -1,0 +1,48 @@
+.drop {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-5);
+  border: 2px dashed var(--rule-strong);
+  border-radius: var(--radius-panel);
+  background: var(--surface);
+  transition: border-color var(--duration-quick) var(--ease-out);
+}
+
+.drop[data-over="true"] {
+  border-color: var(--signal-blue);
+  background: var(--signal-blue-wash);
+}
+
+.result {
+  overflow: hidden;
+  padding-top: var(--space-4);
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.search input {
+  width: 100%;
+}
+
+.subject {
+  display: block;
+  font-weight: var(--weight-strong);
+}
+
+.sub {
+  display: block;
+  color: var(--ink-soft);
+  font-size: var(--text-sm);
+}
+
+.nowrap {
+  white-space: nowrap;
+}

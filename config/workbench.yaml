@@ -34,3 +34,7 @@ deployment:
   # SteerCo health thresholds
   kpi_amber_share: 0.9  # amber when a KPI reaches 90 % of its target
   stale_review_days: 14
+  # Since go-live: an activity whose effort is this far above the plan (share of the old effort) is behind.
+  adoption_gap: 0.15
+  # A role busier than this share of its week makes a queue; the console marks it.
+  busy_utilisation: 0.7

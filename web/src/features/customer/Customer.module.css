@@ -1,0 +1,74 @@
+.header {
+  display: grid;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+/* The customer's name is the one loud thing on the page: wide, heavy, set tight. */
+.name {
+  font-size: clamp(var(--text-2xl), 5vw, var(--text-4xl));
+  font-weight: var(--weight-display);
+  font-variation-settings: "wdth" var(--width-display);
+  letter-spacing: var(--tracking-display);
+  line-height: var(--leading-display);
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-4);
+  color: var(--ink-soft);
+}
+
+.loading {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.tabs {
+  margin-bottom: var(--space-6);
+  border-bottom: var(--border-strong);
+  overflow-x: auto;
+}
+
+.tabs ul {
+  display: flex;
+  gap: var(--space-5);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tab {
+  position: relative;
+  display: inline-block;
+  padding: var(--space-3) 0;
+  color: var(--ink-soft);
+  font-weight: var(--weight-strong);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.tab:hover {
+  color: var(--ink);
+}
+
+.tab[aria-current="page"],
+.tab:has(.underline) {
+  color: var(--ink);
+}
+
+.underline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 3px;
+  background: var(--signal-blue);
+}
+
+.body {
+  display: grid;
+  gap: var(--space-7);
+}

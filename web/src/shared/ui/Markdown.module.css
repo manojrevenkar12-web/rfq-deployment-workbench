@@ -1,0 +1,50 @@
+.doc {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.doc h2 {
+  font-size: var(--text-xl);
+}
+
+.doc h3 {
+  margin-top: var(--space-4);
+  font-size: var(--text-lg);
+}
+
+.doc h4 {
+  font-size: var(--text-md);
+}
+
+.doc ul {
+  margin: 0;
+  padding-left: var(--space-5);
+}
+
+.doc li + li {
+  margin-top: var(--space-2);
+}
+
+.doc code {
+  padding: 0 var(--space-1);
+  border-radius: var(--radius-control);
+  background: var(--surface-sunk);
+  font-size: var(--text-sm);
+}
+
+.tableWrap {
+  overflow-x: auto;
+}
+
+.tableWrap table {
+  font-size: var(--text-sm);
+  font-variation-settings: "wdth" var(--width-narrow);
+}
+
+.tableWrap th,
+.tableWrap td {
+  padding: var(--space-2) var(--space-3);
+  border-bottom: var(--border);
+  text-align: left;
+  vertical-align: top;
+}
